@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-01T15:26:29.804207+00:00",
+  "method": "anonymous HTTPS; no cookies or Git credential manager; equivalent access boundary to signed-out viewing, not browser incognito UI",
+  "checks": [
+    {
+      "url": "https://github.com/vege12138/quvideo-knowledge-qa-agent",
+      "status_code": 200,
+      "final_url": "https://github.com/vege12138/quvideo-knowledge-qa-agent",
+      "content_match": true,
+      "request_credentials": "none; new anonymous HTTP client"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/vege12138/quvideo-knowledge-qa-agent/main/README.md",
+      "status_code": 200,
+      "final_url": "https://raw.githubusercontent.com/vege12138/quvideo-knowledge-qa-agent/main/README.md",
+      "content_match": true,
+      "request_credentials": "none; new anonymous HTTP client"
+    }
+  ],
+  "public_access_pass": true
+}

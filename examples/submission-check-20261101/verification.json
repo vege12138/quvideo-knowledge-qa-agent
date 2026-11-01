@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-11-01T15:30:39.662607+00:00",
+  "runtime_commit": "d1b7310ea39f0f8278ce18f7fa03bdf1c239d080",
+  "runtime_unchanged": true,
+  "operator": "Codex, user-authorized delegated verification",
+  "human_confirmation": "pending",
+  "personal_time": {
+    "hours_min": 1,
+    "hours_max": 3,
+    "source": "user self-report in current conversation",
+    "measurement": "retrospective estimate; not continuously timed; active personal involvement only"
+  },
+  "tests": {
+    "passed": 57,
+    "elapsed_seconds": 12.94,
+    "artifact": "examples\\submission-check-20261101\\tests.xml"
+  },
+  "reviews": [
+    {
+      "directory": "examples\\evaluation\\submission-check-20261101",
+      "count": 9,
+      "mode": "real",
+      "dataset_role": "dev",
+      "structural": {
+        "pass": 9,
+        "fail": 0
+      },
+      "semantic": {
+        "pass": 9,
+        "fail": 0,
+        "pending": 0
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    },
+    {
+      "directory": "examples\\evaluation\\dev-20261101T150806Z-18de4314",
+      "count": 2,
+      "mode": "real",
+      "dataset_role": "dev",
+      "structural": {
+        "pass": 2,
+        "fail": 0
+      },
+      "semantic": {
+        "pass": 2,
+        "fail": 0,
+        "pending": 0
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    }
+  ],
+  "public_access": {
+    "checked_at": "2026-11-01T15:26:29.804207+00:00",
+    "method": "anonymous HTTPS; no cookies or Git credential manager; equivalent access boundary to signed-out viewing, not browser incognito UI",
+    "checks": [
+      {
+        "url": "https://github.com/vege12138/quvideo-knowledge-qa-agent",
+        "status_code": 200,
+        "final_url": "https://github.com/vege12138/quvideo-knowledge-qa-agent",
+        "content_match": true,
+        "request_credentials": "none; new anonymous HTTP client"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/vege12138/quvideo-knowledge-qa-agent/main/README.md",
+        "status_code": 200,
+        "final_url": "https://raw.githubusercontent.com/vege12138/quvideo-knowledge-qa-agent/main/README.md",
+        "content_match": true,
+        "request_credentials": "none; new anonymous HTTP client"
+      }
+    ],
+    "public_access_pass": true
+  },
+  "checks": {
+    "local_markdown_links": "passed",
+    "secret_scan": "passed"
+  },
+  "sha256": {
+    "README.md": "6056171064606266d47076d1646ae2475c93eb82eb07303c5628d2c0c91dc26d",
+    "docs/03-evaluation.md": "878e2ae0943b4504037401b0fc329ca50db3a26f15e400ee211c4946bed5abf3",
+    "docs/04-ai-usage.md": "f42c67273e621331e574d5267b707343ba437200e10531ada98c523164570e78",
+    "docs/05-retrospective.md": "ecef54d966a5259c20b2e345ec5b26f1cf419998af105b615aa48961bddcd8c6",
+    "docs/06-acceptance.md": "e2b6cdac6551601a7121ed8603a331290660c89ed63415140b88f29304f0457b",
+    "docs/submission.md": "7179e9715c20acd15da83f89d52ae892df0f940c90fceba79bb5d7a26ffbab45",
+    "examples/README.md": "46bb71675ce0ccefae4bc64773edd60e6fb557ff024283594a5d0486c2ac9bb8",
+    "examples/submission-check-20261101/public-access.json": "db487643ae5ee290a34fa7d591aab874f23cbb64e8cf75f7bf8caaf2e3ad08bb",
+    "examples/submission-check-20261101/review-summary.json": "dcdb7e87570c84651bbef265212db772fc394aca009186721aeb07bb3274ef3f",
+    "examples/submission-check-20261101/tests.xml": "ecaf1e8458bd088255c9a4506c1b1a446dfbf7cbc33ec9c23e8c9c7a853fa8d8",
+    "examples/evaluation/submission-check-20261101/C01.json": "c5fa5f4cc4be281520b28ba92722644799cb2b6918bdd9359bbfbd547cd1c307",
+    "examples/evaluation/submission-check-20261101/C03.json": "804a997ae327302f2d67f5ec37be07a2462842cca108eee312f57d1df44ac531",
+    "examples/evaluation/submission-check-20261101/F01.json": "952a9a80157f68b6b9697bf1c230dc54cf90cbb7aae9dc9700000a0107930413",
+    "examples/evaluation/submission-check-20261101/F03.json": "2173c463f0fc7e7d8c4ff4aaf01f630904c46355f63aad1c9e4aad20473e2078",
+    "examples/evaluation/submission-check-20261101/H01.json": "9d1c33a2e40a04b739c11ffb7c31bf21e1b4c3e3492911b8442fba7f5dd11668",
+    "examples/evaluation/submission-check-20261101/K01.json": "418d7231f8a8a1466d74213f6221d98de6508c22588910a65fe575ba5dcf693a",
+    "examples/evaluation/submission-check-20261101/K03.json": "69b0b2f7e8aea82fe2daee0c066b07276c27b492b3c948bf673c5cbcb16eb9a1",
+    "examples/evaluation/submission-check-20261101/O01.json": "2670d7105fa0f01854a87ba90b7ed325139abe3e01a8348a869a62826d5cf898",
+    "examples/evaluation/submission-check-20261101/P01.json": "cb4cc5c8bb91aeffca38530e834defac47fb57222e2281086bc2bed195caea49",
+    "examples/evaluation/submission-check-20261101/review.json": "3ee31d1cdca6059a10f42031e3e3555e4a676ce9dc167c019473e1c86d1350a9",
+    "examples/evaluation/submission-check-20261101/summary.json": "d4f7816a88cfd57da5081bb429dd544202f94ea8423324784ab34dc95f3e615b",
+    "examples/evaluation/dev-20261101T150806Z-18de4314/F01.json": "e9ec4c7e44ca0b99baa8d6f1902196c544398dfe184d96ebd58391be68fb4ffd",
+    "examples/evaluation/dev-20261101T150806Z-18de4314/F03.json": "9ceba5070b4b0310b466140cf52a00076cd96909188e5e03a9355d558ee995bc",
+    "examples/evaluation/dev-20261101T150806Z-18de4314/review.json": "e44842fdaaf27d41a68a50a17ac06de7483ed92f860957745ac66aa1f14e91fa",
+    "examples/evaluation/dev-20261101T150806Z-18de4314/summary.json": "6e0f84377afdabf8282e52e2b949e1413036b49edd89b28a77fcd8e522ab8205"
+  }
+}

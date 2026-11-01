@@ -7,32 +7,52 @@
       "case_id": "F01",
       "run_id": "f4fa9803d7a9408396a5979cd68b63e1",
       "artifact_sha256": "e9ec4c7e44ca0b99baa8d6f1902196c544398dfe184d96ebd58391be68fb4ffd",
-      "verdict": "pending",
+      "verdict": "pass",
       "criteria": {
         "key_facts": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "恢复后答标准版5名含所有者、停用不计。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
         },
         "citation_support": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "成功读取D03-C02后引用。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
         },
         "scope_conflict": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "故障不等于资料不存在。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
         },
         "must_not": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "未凭失败观察猜业务事实。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
         },
         "failure_status": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "用户先前记录step2搜索失败，下一模型动作step4改写查询成功，step6读取D03后回答。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
         }
       }
     },
@@ -40,34 +60,56 @@
       "case_id": "F03",
       "run_id": "713c9868e27c4cccb565f22c4464f473",
       "artifact_sha256": "9ceba5070b4b0310b466140cf52a00076cd96909188e5e03a9355d558ee995bc",
-      "verdict": "pending",
+      "verdict": "pass",
       "criteria": {
         "key_facts": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "连续失败后停止，无业务答案。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
         },
         "citation_support": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "未读原文也未编造引用。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
         },
         "scope_conflict": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "明确工具不可用，不说资料不存在。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
         },
         "must_not": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "未凭记忆答导出规格。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
         },
         "failure_status": {
-          "verdict": "pending",
-          "reason": "",
-          "evidence": []
+          "verdict": "pass",
+          "reason": "三次失败streak1/2/3后tool_failure_limit，工具次数3。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
         }
       }
     }
-  ]
+  ],
+  "reviewed_at": "2026-11-01T15:28:18.551659+00:00",
+  "review_note": "Codex读取实际答案、原文引用及工具事件后辅助复核；human_confirmation仍pending，本轮新运行operator为AI，不冒称候选人亲自执行。"
 }

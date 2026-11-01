@@ -4,6 +4,8 @@ Python + LangGraph + DeepSeek 的企业知识问答，支持单轮 CLI、连续�
 
 考核原文见 [docs/assignment.md](docs/assignment.md)。最新验收：57项测试通过；28/28结构检查及AI辅助语义复核通过；C03修正，实际Edge网页交互及桌面/手机宽度截图检查完成。用户亲自查收仍待进行。提交说明见 [答题与提交材料](docs/submission.md)，详细结果见 [评估报告](docs/03-evaluation.md)。
 
+本次提交补充见 [受托验收与访问核验](docs/06-acceptance.md)：57项测试、六类9题再次通过；仓库匿名访问已核验，个人主动投入自述约1—3小时。
+
 ## 安装与配置
 
 Windows PowerShell，项目根目录运行；本次环境为 Python 3.10.15。requirements.txt 固定依赖，pyproject.toml 声明兼容范围。

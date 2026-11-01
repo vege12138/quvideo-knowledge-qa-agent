@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C01",
+      "run_id": "bc33d2e8ea2446c4bacc058551744c8c",
+      "artifact_sha256": "c5fa5f4cc4be281520b28ba92722644799cb2b6918bdd9359bbfbd547cd1c307",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版每工作区5名含所有者、停用不计。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D03-C01/C02支持套餐和人数。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "没有混用专业版。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未答50名。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "双搜索后读取D03再回答。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "C03",
+      "run_id": "5b4abc8436144e49affb2ca20c055464",
+      "artifact_sha256": "804a997ae327302f2d67f5ec37be07a2462842cca108eee312f57d1df44ac531",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "预扣20积分，成功后正式扣除。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C01/C02支持范围与扣费条件。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "未扩展退款争议，gaps为空。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未答40积分或将金额判为冲突。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "双搜索、读D05/D06后只回答当前金额。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K01",
+      "run_id": "af80e7ca8cfb4b9fae4fd25aaa6756a5",
+      "artifact_sha256": "418d7231f8a8a1466d74213f6221d98de6508c22588910a65fe575ba5dcf693a",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "30与15自然日并列，未确定选一条。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D01-C02/D02-C02支持期限，D02-C04支持未载明优先级。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同范围真正冲突，要求权威确认，未按日期覆盖。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未直接答15或30为唯一制度。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "搜索后读取双方再返回conflict。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K03",
+      "run_id": "1398ec538605499191b847c822ad9e1f",
+      "artifact_sha256": "69b0b2f7e8aea82fe2daee0c066b07276c27b492b3c948bf673c5cbcb16eb9a1",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "失败退款60分钟内与满24小时后均列出。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C03/D06-C03支持双方规定；范围/状态见已读元信息。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同一退款属性确需澄清，未把新日期当覆盖。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未确定承诺某个到账时间。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "搜索并读取双方后返回conflict。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O01",
+      "run_id": "e145b9ae3ff142b2a562e747bb87b55d",
+      "artifact_sha256": "2670d7105fa0f01854a87ba90b7ed325139abe3e01a8348a869a62826d5cf898",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "无2027营收数字，说明缺少经营目标文档。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "无虚构引用，搜索候选不支持营收目标。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "未将费用制度当作营收目标。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未用外部常识预测。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两次成功搜索后insufficient_evidence，未误报故障。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P01",
+      "run_id": "54bd3e2656ef42ef9050d49fd61caf30",
+      "artifact_sha256": "cb4cc5c8bb91aeffca38530e834defac47fb57222e2281086bc2bed195caea49",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版5名含所有者，其他最多4名；停用不计。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D03-C02支持计数，C04支持到上限后停用或升级，C01支持范围。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "标准档口语正确映射标准版；4人是题意下减去所有者的推导。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未混入50名。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "补充检索后读D03再回答。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H01",
+      "run_id": "d68bd74e8a42461a9e5aaf5b405c3e75",
+      "artifact_sha256": "9d1c33a2e40a04b739c11ffb7c31bf21e1b4c3e3492911b8442fba7f5dd11668",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "承接成员上限，专业版50名含所有者，按工作区。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C02支持人数与单位。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "历史只用于指代，本轮重新读专业版。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未答标准版5人。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "检索专业版并读D04后answered。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F01",
+      "run_id": "92d8a69eca434848964eed28ff2a86c4",
+      "artifact_sha256": "952a9a80157f68b6b9697bf1c230dc54cf90cbb7aae9dc9700000a0107930413",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "恢复后答标准版5名含所有者、停用不计。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "成功读取D03-C02后引用。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "故障不等于资料不存在。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未凭失败观察猜业务事实。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "本轮step2失败、同批step3成功、step5读D03；证明恢复，不单独证明看到失败后再决定重试。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F03",
+      "run_id": "7a6fe79fc7644898a2373095bdbfff83",
+      "artifact_sha256": "2173c463f0fc7e7d8c4ff4aaf01f630904c46355f63aad1c9e4aad20473e2078",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "连续失败后停止，无业务答案。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "未读原文也未编造引用。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "明确工具不可用，不说资料不存在。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未凭记忆答导出规格。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "三次失败streak1/2/3后tool_failure_limit，工具次数3。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        }
+      }
+    }
+  ],
+  "reviewed_at": "2026-11-01T15:28:18.537056+00:00",
+  "review_note": "Codex读取实际答案、原文引用及工具事件后辅助复核；human_confirmation仍pending，本轮新运行operator为AI，不冒称候选人亲自执行。"
+}

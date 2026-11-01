@@ -1,0 +1,38 @@
+[
+  {
+    "directory": "examples\\evaluation\\submission-check-20261101",
+    "count": 9,
+    "mode": "real",
+    "dataset_role": "dev",
+    "structural": {
+      "pass": 9,
+      "fail": 0
+    },
+    "semantic": {
+      "pass": 9,
+      "pending": 0,
+      "fail": 0
+    },
+    "reviewer_type": "ai_assisted",
+    "human_confirmation": "pending",
+    "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+  },
+  {
+    "directory": "examples\\evaluation\\dev-20261101T150806Z-18de4314",
+    "count": 2,
+    "mode": "real",
+    "dataset_role": "dev",
+    "structural": {
+      "pass": 2,
+      "fail": 0
+    },
+    "semantic": {
+      "pass": 2,
+      "pending": 0,
+      "fail": 0
+    },
+    "reviewer_type": "ai_assisted",
+    "human_confirmation": "pending",
+    "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+  }
+]

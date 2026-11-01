@@ -1,3 +1,7 @@
+# 提交前新增记录
+
+本轮AI受托执行57项测试及六类9题，均通过；不是用户亲自完整验收。见 [补充验收说明](../docs/06-acceptance.md)、[逐题复核](evaluation/submission-check-20261101/review.json)、[测试XML](submission-check-20261101/tests.xml)、[匿名访问](submission-check-20261101/public-access.json)。候选人此前生成的两道故障记录本轮复核完成，原件保留。
+
 # 最新查收入口
 
 当前为followup-20261101-r2：57项测试，28/28结构及AI辅助语义复核，实际网页14项检查通过；用户确认pending。
