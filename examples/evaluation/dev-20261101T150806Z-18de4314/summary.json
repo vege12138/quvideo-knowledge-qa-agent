@@ -1,0 +1,64 @@
+{
+  "split": "dev",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "count": 2,
+  "dataset_role": "dev",
+  "structural_pass": 2,
+  "semantic_review": "pending; structure checks are not semantic correctness",
+  "elapsed_seconds": 3.984,
+  "cases": [
+    {
+      "id": "F01",
+      "category": "tool_failure",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "5名"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 4,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.969,
+        "usage": {
+          "prompt_tokens": 9175,
+          "completion_tokens": 266,
+          "total_tokens": 9441
+        }
+      },
+      "artifact": "F01.json",
+      "structural_pass": true
+    },
+    {
+      "id": "F03",
+      "category": "tool_failure",
+      "expected_status": "tool_error",
+      "actual_status": "tool_error",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 2.86,
+        "usage": {
+          "prompt_tokens": 5317,
+          "completion_tokens": 182,
+          "total_tokens": 5499
+        }
+      },
+      "artifact": "F03.json",
+      "structural_pass": true
+    }
+  ]
+}

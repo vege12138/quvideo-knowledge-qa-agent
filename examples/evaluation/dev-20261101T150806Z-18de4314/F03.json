@@ -1,0 +1,123 @@
+{
+  "question": "标准版的视频导出上限是多少？",
+  "history": [],
+  "result": {
+    "answer": "知识库检索连续失败 3 次，已达到工具故障上限，无法完成查证。",
+    "status": "tool_error",
+    "clarification_reason": null,
+    "citations": [],
+    "gaps": [
+      "知识库检索连续失败 3 次，已达到工具故障上限，无法完成查证。"
+    ],
+    "run_id": "713c9868e27c4cccb565f22c4464f473",
+    "mode": "real",
+    "reason_code": "tool_failure_limit",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "标准版 视频导出 上限",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 1
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "标准版 视频导出 数量上限",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 2
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "视频导出上限 套餐",
+            "top_k": 6
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 3
+        }
+      },
+      {
+        "step": 7,
+        "event": "run_finished",
+        "data": {
+          "status": "tool_error",
+          "reason_code": "tool_failure_limit"
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 3,
+      "elapsed_seconds": 2.86,
+      "usage": {
+        "prompt_tokens": 5317,
+        "completion_tokens": 182,
+        "total_tokens": 5499
+      }
+    }
+  }
+}
