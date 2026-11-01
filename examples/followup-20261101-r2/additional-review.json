@@ -1,0 +1,188 @@
+{
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "reviewed_at": "2026-11-01T14:50:49.582943+00:00",
+  "cases": [
+    {
+      "artifact": "examples/followup-20261101-r2/scope-probes/1.json",
+      "artifact_sha256": "ff067065ed23464778f6daf92c40c30e1cb0a4cd99359b69a840418c4c740aef",
+      "run_id": "9fb74d959378442b9c6038a40bc97d0f",
+      "verdict": "pass",
+      "reason": "预扣问法只答20积分及必要条件，D05-C01/C02支持，gaps为空。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/scope-probes/2.json",
+      "artifact_sha256": "342d33b2023a6da20386e0ee7bb4b43948be6cc9f8f435e42709a96a39710faf",
+      "run_id": "6bd134863aa1466a9cb1d4bcd26d8647",
+      "verdict": "pass",
+      "reason": "预扣问法只答20积分及必要条件，D05-C01/C02支持，gaps为空。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/scope-probes/3.json",
+      "artifact_sha256": "5379bbc2316cfb99b34588a6f89c9b300d67599c816d58ffdc2aeb13faf603c8",
+      "run_id": "bd6eb7b3ea3d4bbcb32d066dd7bc4081",
+      "verdict": "pass",
+      "reason": "预扣问法只答20积分及必要条件，D05-C01/C02支持，gaps为空。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/scope-probes/4.json",
+      "artifact_sha256": "34d68588f9dd114c86f8ae41c117a1f73b8d32e298406ea72c829e9c32bd53b4",
+      "run_id": "3a69812b76db41c794b7dc35549cb77d",
+      "verdict": "pass",
+      "reason": "退款问题列60分钟与满24小时的冲突，引用D05-C03/D06-C03并请求确认。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/03-c03-response.json",
+      "artifact_sha256": "873eec6410d8312ee4a565330cb82ae581d71586404da00a7f04ec10a4d9abd0",
+      "run_id": "818d41be29be439894e472fc0ec65c11",
+      "verdict": "pass",
+      "reason": "20积分及正式扣除有D05-C01/C02支持，无退款扩展。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/04-refund-response.json",
+      "artifact_sha256": "0aa43c7776d7b61461562311366fec2c64daab517f7b0c29fa72099ad334a484",
+      "run_id": "6f3a1a524b1e470aaf9dbf4adcd3ff8f",
+      "verdict": "pass",
+      "reason": "同会话退款追问列双规则、双引用并澄清。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/05-context-response.json",
+      "artifact_sha256": "af6e274ddcdccc7afb3ed552f18cfef50e39113f01bb2c9a550105b6fc98c352",
+      "run_id": "6d8d4b82cc974a4aa32b53fd3115a47b",
+      "verdict": "pass",
+      "reason": "新会话缺套餐，列5/50条件并询问，missing_context正确。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/06-standard-response.json",
+      "artifact_sha256": "a10d90cd4c81e17b0fe34b924458924f3bc9a701eaf161316c23ede9e27a5ec5",
+      "run_id": "6a3234b36b814565a80ccc6529ae90d7",
+      "verdict": "pass",
+      "reason": "补充标准版答5名含所有者、停用不计，D03-C02支持。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/08-recovered-response.json",
+      "artifact_sha256": "cabc90ed3ced6def86cbdd6bd88eaafdbe4eadfd2182f8c5458aa0a7f12967fa",
+      "run_id": "bb740860498d40d59a78057891a76f56",
+      "verdict": "pass",
+      "reason": "503注入解除后真实请求成功，标准版5人及引用正确。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/cli-c03.json",
+      "artifact_sha256": "efc8d20b00c26a20b51c54d5e61b7e6ebf906d9c6bf02794f206706f39779c6d",
+      "run_id": "33990660aadf44849c482e29dcffd691",
+      "verdict": "pass",
+      "reason": "CLI正确答20积分，无退款扩展，范围和扣费条件引用完整。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    },
+    {
+      "artifact": "examples/followup-20261101/browser/03-c03-response.json",
+      "artifact_sha256": "ef0a03a93da50688b6b849d71e24fd6608ed924d465b62d63ed21bd4672fde6f",
+      "run_id": "424d1c6b47894797b55a4b041b8108c8",
+      "verdict": "fail",
+      "reason": "首次网页同题误扩展退款冲突并澄清；促成v1.6修订，原件保留。",
+      "evidence": [
+        "result.answer",
+        "result.citations",
+        "result.gaps",
+        "result.trace"
+      ]
+    }
+  ],
+  "visual_review": [
+    {
+      "artifact": "examples/followup-20261101-r2/browser/01-welcome.png",
+      "artifact_sha256": "3391bdf7a0a06a39f7ae8a417591fd2e6dcd882a0b0537dcce26a801137b2970",
+      "verdict": "pass",
+      "reason": "桌面欢迎页卡片与输入布局完整。"
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/03-c03-result.png",
+      "artifact_sha256": "e24ab6db2f42a981015526d0c3bc265bb9cdd9ffb220cf20e5a8cf3e277c7e07",
+      "verdict": "pass",
+      "reason": "正文、状态、引用和展开步骤可读。"
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/04-refund-result.png",
+      "artifact_sha256": "fd7c2b2eb0b6f4575e873fb49c541db43aa1d467347c7c67570b0b78c3d16fbe",
+      "verdict": "pass",
+      "reason": "双引用和缺口可辨认，长对话纵向滚动。"
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/07-error.png",
+      "artifact_sha256": "3c27b576a1bfdab353705a348091df8eb5586cbf369230b17e9db1dc71df7b9c",
+      "verdict": "pass",
+      "reason": "错误提示可见，输入恢复。"
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/09-mobile-result.png",
+      "artifact_sha256": "7fb19a0549b4d2854530497e0f26d5ca1cc4ccc16411c9f7f7da2363c5412e40",
+      "verdict": "pass",
+      "reason": "390宽自动换行，无横向裁切，输入与发送可见。"
+    },
+    {
+      "artifact": "examples/followup-20261101-r2/browser/10-mobile-welcome.png",
+      "artifact_sha256": "a08abf56de9fed8800bf78eae6471356e823953e66670fe3dcb54ba6b287f40a",
+      "verdict": "pass",
+      "reason": "手机宽度单列卡片和图标侧栏，输入入口可见。"
+    }
+  ]
+}

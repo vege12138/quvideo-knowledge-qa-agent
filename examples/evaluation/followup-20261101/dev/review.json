@@ -1,0 +1,705 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C01",
+      "run_id": "cbe12bc7206241ef8a0c6377f45ffac8",
+      "artifact_sha256": "6f5f3937471c3b69bdaf409ae144b581179fd9ce3366a31bac1b5f978fb8f240",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版每工作区5名含所有者、停用不计。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/gaps",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D03-C02支持数字与限定。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/gaps",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仅标准版人数，无专业版混用。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/gaps",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未错误给50名。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/gaps",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '团队标准版 工作区 活跃成员 上限'} ok=True streak=0；step3 search_documents {'query': '标准版 成员数量限制 套餐'} ok=True streak=0；step5 read_document {'doc_id': 'D03'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "C01.json#/result/answer",
+            "C01.json#/result/gaps",
+            "C01.json#/result/citations",
+            "C01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "C03",
+      "run_id": "7718a525fc394a1da84c133d9305c5d7",
+      "artifact_sha256": "346e912e52f1e10fbb4f3e124de7d0499ee6406831d3ff501d25ea43a2a9893a",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "预扣20积分，成功后正式扣除。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/gaps",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C01/C02支持范围与扣费事实。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/gaps",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "只答所问金额，无退款时限扩展，gaps为空。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/gaps",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有40积分，也没有把金额当作冲突。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/gaps",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '生成AI视频 预扣积分'} ok=True streak=0；step3 search_documents {'query': 'AI视频生成 积分扣除规则'} ok=True streak=0；step5 read_document {'doc_id': 'D05'} ok=True streak=0；step6 read_document {'doc_id': 'D06'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "C03.json#/result/answer",
+            "C03.json#/result/gaps",
+            "C03.json#/result/citations",
+            "C03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K01",
+      "run_id": "f5595475dd264b1eafdd59305423a36d",
+      "artifact_sha256": "fd60fd8ab5d982715b40af9656299ee1d40fa6549c788b0c3684c3cb8f35efdf",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "报销30与15自然日同时列出，请求确认。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/gaps",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D01-C02/D02-C02支持双方；D02-C04支持未载明优先级。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/gaps",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同范围冲突，未按日期裁决；范围/状态见已读元信息。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/gaps",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未确定选15或30天。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/gaps",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '费用报销提交时限 多少天内提交', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '报销 单据 逾期 提交 财务', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D01'} ok=True streak=0；step6 read_document {'doc_id': 'D02'} ok=True streak=0；status=clarification_required；reason_code=。",
+          "evidence": [
+            "K01.json#/result/answer",
+            "K01.json#/result/gaps",
+            "K01.json#/result/citations",
+            "K01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K03",
+      "run_id": "c8953bcee6014b08a2e32dd8cc02b478",
+      "artifact_sha256": "f1ddca43772a87df926efd425c78543a1ca2f92203c63409bdaa50d5387746f1",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "失败返还60分钟内与满24小时后的矛盾均保留。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/gaps",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C03/D06-C03支持两条规定；日期/范围见已读元信息。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/gaps",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同范围同属性冲突，未伪称原文明示不存在优先级。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/gaps",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未承诺某一时限一定适用。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/gaps",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': 'AI视频任务失败 积分退回 到账时间'} ok=True streak=0；step3 search_documents {'query': '视频生成失败 积分返还规则'} ok=True streak=0；step5 read_document {'doc_id': 'D05'} ok=True streak=0；step6 read_document {'doc_id': 'D06'} ok=True streak=0；status=clarification_required；reason_code=。",
+          "evidence": [
+            "K03.json#/result/answer",
+            "K03.json#/result/gaps",
+            "K03.json#/result/citations",
+            "K03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O01",
+      "run_id": "690ef3a6700d456ba18ee748fe3fe40b",
+      "artifact_sha256": "285855aa8c81c328146d6b04cdd5421c1ba0a09ecf3f7421ac983c7b40329d60",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "明确没有2027营收目标依据，不猜数字。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/gaps",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "无伪造引用；成功搜索结果没有经营目标证据。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/gaps",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "报销等弱相关资料未被用作营收目标。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/gaps",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未借通用常识预测营收。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/gaps",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '星映科技 2027年 营收目标'} ok=True streak=0；step3 search_documents {'query': '星映科技 营收目标 年度经营计划'} ok=True streak=0；status=insufficient_evidence；reason_code=。",
+          "evidence": [
+            "O01.json#/result/answer",
+            "O01.json#/result/gaps",
+            "O01.json#/result/citations",
+            "O01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O03",
+      "run_id": "14d72fdbdfcc41e28c8681fe76f8645d",
+      "artifact_sha256": "92f5b0011e09cf85deb6baf254dce22dae69ecd082a2c30aa62b4235079c4d62",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "未给出安卓最低系统版本，说明所缺文档。",
+          "evidence": [
+            "O03.json#/result/answer",
+            "O03.json#/result/gaps",
+            "O03.json#/result/citations",
+            "O03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "无虚构引用或版本号。",
+          "evidence": [
+            "O03.json#/result/answer",
+            "O03.json#/result/gaps",
+            "O03.json#/result/citations",
+            "O03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "成功补充搜索后仍无对应资料。",
+          "evidence": [
+            "O03.json#/result/answer",
+            "O03.json#/result/gaps",
+            "O03.json#/result/citations",
+            "O03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未猜常见安卓版本。",
+          "evidence": [
+            "O03.json#/result/answer",
+            "O03.json#/result/gaps",
+            "O03.json#/result/citations",
+            "O03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '安卓客户端 最低系统版本要求'} ok=True streak=0；step3 search_documents {'query': 'Android 客户端 支持 系统版本'} ok=True streak=0；step5 search_documents {'query': '客户端 安装 最低配置 操作系统 版本 要求 桌面端 移动端'} ok=True streak=0；step6 search_documents {'query': '应用下载 安装 支持机型 安卓版本'} ok=True streak=0；status=insufficient_evidence；reason_code=。",
+          "evidence": [
+            "O03.json#/result/answer",
+            "O03.json#/result/gaps",
+            "O03.json#/result/citations",
+            "O03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P01",
+      "run_id": "ba38ba67c0a04b2abf326c0872148dd2",
+      "artifact_sha256": "247a642f8f7c2a98e9e315869ee3b2392d9031a0d313735b1072a1c8ea5fd62a",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版5名含所有者，停用不计。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/gaps",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D03-C02支持成员计数；r2扣除所有者得4人的推导与开空间题意相符。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/gaps",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "口语标准档正确解释为标准版工作区。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/gaps",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未混入50名。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/gaps",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '团队空间 成员人数上限 标准版', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '套餐 协作 人数 限制 视频制作', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D03'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "P01.json#/result/answer",
+            "P01.json#/result/gaps",
+            "P01.json#/result/citations",
+            "P01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P03",
+      "run_id": "4339c6b584074a93b85f55bd3aaa4f42",
+      "artifact_sha256": "2d49b642898c382cefcb797b2a738bbfb2129d51ad95aba8f0c69bfb944189d6",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "签约API客户的企业管理员申请，需三项申请信息。",
+          "evidence": [
+            "P03.json#/result/answer",
+            "P03.json#/result/gaps",
+            "P03.json#/result/citations",
+            "P03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D07-C01/C02支持资格、控制台和材料。",
+          "evidence": [
+            "P03.json#/result/answer",
+            "P03.json#/result/gaps",
+            "P03.json#/result/citations",
+            "P03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "接口意图正确映射企业API，未把套餐购买等同开通权限。",
+          "evidence": [
+            "P03.json#/result/answer",
+            "P03.json#/result/gaps",
+            "P03.json#/result/citations",
+            "P03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未允许普通成员直接开通。",
+          "evidence": [
+            "P03.json#/result/answer",
+            "P03.json#/result/gaps",
+            "P03.json#/result/citations",
+            "P03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '视频服务接口 开通 申请', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '程序直接调用视频服务 API 权限申请 人员范围', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D07'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "P03.json#/result/answer",
+            "P03.json#/result/gaps",
+            "P03.json#/result/citations",
+            "P03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H01",
+      "run_id": "fa0e81aa30414054825622d8bb77bdd3",
+      "artifact_sha256": "be13b0f5a7013e146295ac0d65104862cb3794e8a6d0089bf97c7f8cde057104",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "专业版50名含所有者，按工作区。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/gaps",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C02支持计数及限定。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/gaps",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "历史用于指代，本轮读取专业版。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/gaps",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未沿用标准版5人。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/gaps",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '专业版 活跃成员 数量 上限'} ok=True streak=0；step3 search_documents {'query': '套餐 活跃成员上限 标准版 专业版 对比'} ok=True streak=0；step5 read_document {'doc_id': 'D04'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "H01.json#/result/answer",
+            "H01.json#/result/gaps",
+            "H01.json#/result/citations",
+            "H01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H03",
+      "run_id": "4a4402c93ee54ce8a61438d9e9fb0a54",
+      "artifact_sha256": "9c1cf6017364b324a13dd91abf7ff880aba048229de28696dc5c041dba1b3ffc",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "失败退款追问列60分钟内和满24小时后。",
+          "evidence": [
+            "H03.json#/result/answer",
+            "H03.json#/result/gaps",
+            "H03.json#/result/citations",
+            "H03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C03/D06-C03支持冲突，不伪称缺失为原文明示。",
+          "evidence": [
+            "H03.json#/result/answer",
+            "H03.json#/result/gaps",
+            "H03.json#/result/citations",
+            "H03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "正确承接积分历史，当前属性确需澄清。",
+          "evidence": [
+            "H03.json#/result/answer",
+            "H03.json#/result/gaps",
+            "H03.json#/result/citations",
+            "H03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未自行选时限。",
+          "evidence": [
+            "H03.json#/result/answer",
+            "H03.json#/result/gaps",
+            "H03.json#/result/citations",
+            "H03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': 'AI视频生成 失败 积分 退还 预扣', 'top_k': 8} ok=True streak=0；step4 read_document {'doc_id': 'D05'} ok=True streak=0；step5 read_document {'doc_id': 'D06'} ok=True streak=0；status=clarification_required；reason_code=。",
+          "evidence": [
+            "H03.json#/result/answer",
+            "H03.json#/result/gaps",
+            "H03.json#/result/citations",
+            "H03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F01",
+      "run_id": "b6eecc2315d24151a3fda6c10ae847d1",
+      "artifact_sha256": "9d25890b2adeb795c60776e2c72f9943a9e8a94c6f951084c85748333c0f8a64",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "恢复后正确回答标准版5名及计数范围。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/gaps",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "成功读取D03-C02后才引用。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/gaps",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "没有因搜索故障改变套餐或认为资料缺失。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/gaps",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未用失败观察猜业务答案。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/gaps",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '团队标准版 成员 人数上限'} ok=False streak=1；step4 search_documents {'query': '团队标准版 成员数量 上限'} ok=True streak=0；step6 read_document {'doc_id': 'D03'} ok=True streak=0；status=answered；reason_code=。 首次搜索失败后下一次模型动作重试，成功后读取D03。",
+          "evidence": [
+            "F01.json#/result/answer",
+            "F01.json#/result/gaps",
+            "F01.json#/result/citations",
+            "F01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F03",
+      "run_id": "e034a0333c20483a9bab0f16de59de49",
+      "artifact_sha256": "cd85c946ef3ddf13f999b381343cd8ca95fe69b59214876930e18aa48b175fed",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "持续检索失败时停止，不给导出上限。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/gaps",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "未读取原文也未伪造引用。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/gaps",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仅报告工具不可用，没有认定资料不存在。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/gaps",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未凭记忆回答1080p。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/gaps",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '标准版 视频导出 上限', 'top_k': 10} ok=False streak=1；step3 search_documents {'query': '套餐 导出次数 限制 标准版', 'top_k': 10} ok=False streak=2；step5 search_documents {'query': '标准版 视频导出 上限', 'top_k': 8} ok=False streak=3；status=tool_error；reason_code=tool_failure_limit。",
+          "evidence": [
+            "F03.json#/result/answer",
+            "F03.json#/result/gaps",
+            "F03.json#/result/citations",
+            "F03.json#/result/trace"
+          ]
+        }
+      }
+    }
+  ],
+  "reviewed_at": "2026-11-01T08:41:38.505245+00:00",
+  "review_note": "逐题阅读本轮输出、引用、元信息与工具行为后的AI辅助判断；非模型裁判、非用户亲自验收。首次K02漏引保留失败，r2独立复核。"
+}

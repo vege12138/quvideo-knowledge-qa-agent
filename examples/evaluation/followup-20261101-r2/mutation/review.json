@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "M01",
+      "run_id": "d97ed64ee2e24c2dad84cad9a0ea5be4",
+      "artifact_sha256": "9658130edc0349513e30aa59d1aaf3e7f71a64b340621a4e2d2f1ee4dd07441d",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "变更后45与15自然日仍冲突。",
+          "evidence": [
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps",
+            "M01.json#/result/citations",
+            "M01.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "实际D01-C02为45，D02-C02为15，D02-C04支持未载明优先级。",
+          "evidence": [
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps",
+            "M01.json#/result/citations",
+            "M01.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同范围仍需确认，无按日期覆盖。",
+          "evidence": [
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps",
+            "M01.json#/result/citations",
+            "M01.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有沿用30或选唯一时限。",
+          "evidence": [
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps",
+            "M01.json#/result/citations",
+            "M01.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '员工报销提交时限 多少天内提交'} ok=True streak=0；step4 read_document {'doc_id': 'D01'} ok=True streak=0；step5 read_document {'doc_id': 'D02'} ok=True streak=0；status=clarification_required；reason_code=。",
+          "evidence": [
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps",
+            "M01.json#/result/citations",
+            "M01.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "M02",
+      "run_id": "4d2c5cfd1e9b488189e5cd3da13d5d78",
+      "artifact_sha256": "b05890ed9113542f83404a64bf499b67976874ee7a19b76a24aabce460688d5d",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "删除D02后明确30个自然日，超期人工复核不保证受理。",
+          "evidence": [
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps",
+            "M02.json#/result/citations",
+            "M02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D01-C02/C04支持期限及后果；范围见已读D01。",
+          "evidence": [
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps",
+            "M02.json#/result/citations",
+            "M02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仅使用剩余制度，不捏造冲突。",
+          "evidence": [
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps",
+            "M02.json#/result/citations",
+            "M02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有沿用已删除15日。",
+          "evidence": [
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps",
+            "M02.json#/result/citations",
+            "M02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '员工报销提交时限 最晚多少天内提交'} ok=True streak=0；step4 read_document {'doc_id': 'D01'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps",
+            "M02.json#/result/citations",
+            "M02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "M03",
+      "run_id": "fe2674c88d684b6c88fa10a29ff42b2b",
+      "artifact_sha256": "d50ca675d7cf5a290b8af592f44362476f01c0b0ac2232c5392a4ecf089dbcda",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版变更后8名含所有者、停用不计。",
+          "evidence": [
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps",
+            "M03.json#/result/citations",
+            "M03.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "实际引用D03-C02包含8名。",
+          "evidence": [
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps",
+            "M03.json#/result/citations",
+            "M03.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仍按标准版每工作区解释。",
+          "evidence": [
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps",
+            "M03.json#/result/citations",
+            "M03.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未沿用旧5名或专业版50名。",
+          "evidence": [
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps",
+            "M03.json#/result/citations",
+            "M03.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '标准版 工作区 活跃成员 数量上限'} ok=True streak=0；step3 search_documents {'query': '套餐 成员数限制 标准版'} ok=True streak=0；step5 read_document {'doc_id': 'D03'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps",
+            "M03.json#/result/citations",
+            "M03.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "M04",
+      "run_id": "36ff1085243741a1a9619f9764c54761",
+      "artifact_sha256": "081740ec9ff7f94eb3901cddacb7bf33da653a109c8875c077d9e6a24992b684",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "删除D06后失败60分钟内返还20积分到原工作区。",
+          "evidence": [
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps",
+            "M04.json#/result/citations",
+            "M04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C01/C03支持范围、条件、时限、金额与目的余额。",
+          "evidence": [
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps",
+            "M04.json#/result/citations",
+            "M04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "只依现存文档回答，不沿用删除文件。",
+          "evidence": [
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps",
+            "M04.json#/result/citations",
+            "M04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有24小时结论或虚假冲突。",
+          "evidence": [
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps",
+            "M04.json#/result/citations",
+            "M04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': 'AI视频生成失败 积分返还', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '视频生成失败 退还积分 时长', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D05'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps",
+            "M04.json#/result/citations",
+            "M04.json#/result/trace"
+          ]
+        }
+      }
+    }
+  ],
+  "reviewed_at": "2026-11-01T08:41:38.590917+00:00",
+  "review_note": "逐题阅读本轮输出、引用、元信息与工具行为后的AI辅助判断；非模型裁判、非用户亲自验收。首次K02漏引保留失败，r2独立复核。"
+}

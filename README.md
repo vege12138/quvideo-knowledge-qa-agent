@@ -2,7 +2,7 @@
 
 Python + LangGraph + DeepSeek 的企业知识问答，支持单轮 CLI、连续对话和本地网页。回答从合成知识库检索并读取原文，附可核查引用；资料冲突、信息不足和执行失败分别返回明确状态。
 
-考核原文见 [docs/assignment.md](docs/assignment.md)。本地材料已整理：53项测试通过，28/28结构通过，AI辅助语义27通过、1失败（C03附带未问退款信息）。当前成绩与未完成项以 [评估报告](docs/03-evaluation.md) 为准，网页视觉检查尚未执行。
+考核原文见 [docs/assignment.md](docs/assignment.md)。最新验收：57项测试通过；28/28结构检查及AI辅助语义复核通过；C03修正，实际Edge网页交互及桌面/手机宽度截图检查完成。用户亲自查收仍待进行。提交说明见 [答题与提交材料](docs/submission.md)，详细结果见 [评估报告](docs/03-evaluation.md)。
 
 ## 安装与配置
 
@@ -30,7 +30,7 @@ if (-not (Test-Path -LiteralPath '.env')) { Copy-Item -LiteralPath '.env.example
 
 输出包含 answer、status、clarification_reason、citations、gaps、run_id、reason_code、trace、metrics 和 mode。状态为 answered、clarification_required、insufficient_evidence、tool_error、incomplete。澄清原因区分冲突 conflict 与缺少上下文 missing_context。退出码：正常回答/澄清/资料不足为 0，配置或输入错误为 1，工具失败或未完成为 2。
 
-默认预算为模型 8 次、工具 12 次、模型请求 45 秒、整次运行 180 秒；连续工具故障的第三次触发停止，细则见 [规格 v1.4](docs/01-requirements.md)。
+默认预算为模型 8 次、工具 12 次、模型请求 45 秒、整次运行 180 秒；连续工具故障的第三次触发停止，细则见 [规格 v1.6](docs/01-requirements.md)。
 
 ## 离线检查
 
@@ -48,7 +48,7 @@ Mock 只演示搜索、读取和故障处理流程，不生成业务结论，不
 .\.venv\Scripts\python.exe -m uvicorn knowledge_qa.web.app:app --host 127.0.0.1 --port 8000
 ~~~
 
-打开 [本地页面](http://127.0.0.1:8000)。POST /api/chat 接收 question 和可选 session_id，返回 session_id 与统一结果。网页显示回答、状态、引用、缺口和可展开执行记录。会话在服务端内存中，重启后清空；界面不是远程生产部署。本轮接口检查和未执行的浏览器视觉检查分别记录。
+打开 [本地页面](http://127.0.0.1:8000)。POST /api/chat 接收 question 和可选 session_id，返回 session_id 与统一结果。网页显示回答、状态、引用、缺口和可展开执行记录。会话在服务端内存中，重启后清空；界面不是远程生产部署。实际浏览器检查见 [网页验收](examples/followup-20261101-r2/browser/browser.json)。
 
 ## 评估与复核
 
@@ -65,12 +65,12 @@ Mock 只演示搜索、读取和故障处理流程，不生成业务结论，不
 核验已保存正式复核：
 
 ~~~powershell
-.\.venv\Scripts\python.exe scripts/verify_reviews.py examples/evaluation/final-20261101/dev
-.\.venv\Scripts\python.exe scripts/verify_reviews.py examples/evaluation/final-20261101/regression
-.\.venv\Scripts\python.exe scripts/verify_reviews.py examples/evaluation/final-20261101/mutation
+.\.venv\Scripts\python.exe scripts/verify_reviews.py examples/evaluation/followup-20261101-r2/dev
+.\.venv\Scripts\python.exe scripts/verify_reviews.py examples/evaluation/followup-20261101-r2/regression
+.\.venv\Scripts\python.exe scripts/verify_reviews.py examples/evaluation/followup-20261101-r2/mutation
 ~~~
 
-verify_reviews 只核验记录格式、绑定及汇总一致性，不替代语义判断。退出码 0 表示结构与所附语义结论均通过，1 表示存在失败/待复核，2 表示记录或哈希无效。用户亲自确认独立标记，不能由 AI 代称。本次 dev 复核命令预期退出码为1，因保留C03失败；另外两集为0。
+verify_reviews 只核验记录格式、绑定及汇总一致性，不替代语义判断。退出码 0 表示结构与所附语义结论均通过，1 表示存在失败/待复核，2 表示记录或哈希无效。用户亲自确认独立标记，不能由 AI 代称。当前三个复核命令均预期退出0；首次followup回归K02漏引和网页C03失败仍保留。
 
 真实 CLI/HTTP 冒烟验收（先在另一终端启动本地网页，输出目录须尚不存在）：
 
@@ -79,6 +79,17 @@ verify_reviews 只核验记录格式、绑定及汇总一致性，不替代语�
 ~~~
 
 脚本保存三类单轮、chat追问/清空、HTTP澄清与新会话的实际记录；格式/运输检查不自动判断语义。[已保存接口记录](examples/final-20261101/interfaces/interfaces.json)。
+
+## 可选浏览器验收
+
+本机安装 Microsoft Edge，并在验证环境安装 Playwright（不属于业务运行依赖）：
+
+~~~powershell
+.\.venv\Scripts\python.exe -m pip install playwright==1.56.0
+.\.venv\Scripts\python.exe scripts/smoke_browser.py --url http://127.0.0.1:8000 --output .runtime/browser-check
+~~~
+
+输出目录须不存在。脚本在本机Edge无头浏览器中操作真实页面；仅503错误用例明确注入响应，其余调用真实模型。截图视觉结论由AI辅助复核，不代表用户已验收或全部浏览器兼容。
 
 ## 评审入口
 

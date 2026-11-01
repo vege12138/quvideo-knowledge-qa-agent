@@ -1,0 +1,298 @@
+{
+  "question": "AI生成失败一小时积分还没退，是不是一定有故障？",
+  "history": [],
+  "result": {
+    "answer": "在已读到的两份文件中，关于积分返还时限的规定不一致，无法仅凭资料确认“一小时未退”是否一定属于故障：\n\n- 《AI视频生成积分与扣费规则》（版本1.5，生效2026-05-12）规定：若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还。\n- 《AI视频生成失败排障FAQ》（版本1.3，生效2026-06-05）规定：生成失败任务的预扣积分必须在失败发生满24小时后才会返还，不能提前到账。\n\n两份文件都适用于团队标准版和团队专业版工作区使用AI视频生成时出现的失败任务；已读原文未明示哪一份文件优先或废止另一份文件，因此需要权威确认后才能判断“一小时未退”是否构成异常。",
+    "status": "clarification_required",
+    "clarification_reason": "conflict",
+    "citations": [
+      {
+        "doc_id": "D05",
+        "chunk_id": "D05-C03",
+        "quote": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+      },
+      {
+        "doc_id": "D06",
+        "chunk_id": "D06-C03",
+        "quote": "生成失败任务的预扣积分必须在失败发生满24小时后才会返还，不能提前到账。"
+      }
+    ],
+    "gaps": [
+      "两份在行文件对生成失败积分返还时限的规定冲突（60分钟内 vs 满24小时后），需要权威确认以哪份为准"
+    ],
+    "run_id": "3733deed72c7408689477a7a1e8147ff",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "AI生成失败 积分退回",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "AI生成失败 积分退回",
+              "hits": [
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C03",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "失败任务积分返还",
+                  "score": 0.2152,
+                  "snippet": "生成失败任务的预扣积分必须在失败发生满24小时后才会返还，不能提前到账。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C03",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "任务失败返还",
+                  "score": 0.1631,
+                  "snippet": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                },
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C01",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "适用范围",
+                  "score": 0.1574,
+                  "snippet": "本FAQ适用于团队标准版与团队专业版工作区使用AI视频生成时出现的失败任务。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.1514,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C04",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "工单信息",
+                  "score": 0.1398,
+                  "snippet": "提交故障工单时需提供工作区ID、失败任务ID、失败时间以及错误提示截图。"
+                },
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C02",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "故障排查",
+                  "score": 0.1308,
+                  "snippet": "先检查工作区积分余额与任务状态；再刷新任务列表确认是否为暂时性网络问题；仍失败时记录任务ID并提交支持工单。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C01",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "适用范围",
+                  "score": 0.0748,
+                  "snippet": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C04",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "查询方法",
+                  "score": 0.0678,
+                  "snippet": "管理员可以通过工作区设置中的“积分流水”查看预扣、扣除与返还记录。"
+                }
+              ],
+              "candidate_count": 8,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document",
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D05"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D05",
+              "title": "AI视频生成积分与扣费规则",
+              "category": "产品规则",
+              "version": "1.5",
+              "version_date": "2026-05-08",
+              "effective_date": "2026-05-12",
+              "owner": "AI产品组",
+              "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D05-C01",
+                  "section": "适用范围",
+                  "text": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+                },
+                {
+                  "chunk_id": "D05-C02",
+                  "section": "积分消耗",
+                  "text": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "chunk_id": "D05-C03",
+                  "section": "任务失败返还",
+                  "text": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                },
+                {
+                  "chunk_id": "D05-C04",
+                  "section": "查询方法",
+                  "text": "管理员可以通过工作区设置中的“积分流水”查看预扣、扣除与返还记录。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D06"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D06",
+              "title": "AI视频生成失败排障FAQ",
+              "category": "技术支持",
+              "version": "1.3",
+              "version_date": "2026-06-02",
+              "effective_date": "2026-06-05",
+              "owner": "客户支持部",
+              "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D06-C01",
+                  "section": "适用范围",
+                  "text": "本FAQ适用于团队标准版与团队专业版工作区使用AI视频生成时出现的失败任务。"
+                },
+                {
+                  "chunk_id": "D06-C02",
+                  "section": "故障排查",
+                  "text": "先检查工作区积分余额与任务状态；再刷新任务列表确认是否为暂时性网络问题；仍失败时记录任务ID并提交支持工单。"
+                },
+                {
+                  "chunk_id": "D06-C03",
+                  "section": "失败任务积分返还",
+                  "text": "生成失败任务的预扣积分必须在失败发生满24小时后才会返还，不能提前到账。"
+                },
+                {
+                  "chunk_id": "D06-C04",
+                  "section": "工单信息",
+                  "text": "提交故障工单时需提供工作区ID、失败任务ID、失败时间以及错误提示截图。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 6,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 7,
+        "event": "final_answer",
+        "data": {
+          "answer": "在已读到的两份文件中，关于积分返还时限的规定不一致，无法仅凭资料确认“一小时未退”是否一定属于故障：\n\n- 《AI视频生成积分与扣费规则》（版本1.5，生效2026-05-12）规定：若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还。\n- 《AI视频生成失败排障FAQ》（版本1.3，生效2026-06-05）规定：生成失败任务的预扣积分必须在失败发生满24小时后才会返还，不能提前到账。\n\n两份文件都适用于团队标准版和团队专业版工作区使用AI视频生成时出现的失败任务；已读原文未明示哪一份文件优先或废止另一份文件，因此需要权威确认后才能判断“一小时未退”是否构成异常。",
+          "status": "clarification_required",
+          "clarification_reason": "conflict",
+          "citations": [
+            {
+              "doc_id": "D05",
+              "chunk_id": "D05-C03",
+              "quote": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+            },
+            {
+              "doc_id": "D06",
+              "chunk_id": "D06-C03",
+              "quote": "生成失败任务的预扣积分必须在失败发生满24小时后才会返还，不能提前到账。"
+            }
+          ],
+          "gaps": [
+            "两份在行文件对生成失败积分返还时限的规定冲突（60分钟内 vs 满24小时后），需要权威确认以哪份为准"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "event": "run_finished",
+        "data": {
+          "status": "clarification_required",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 3,
+      "elapsed_seconds": 3.953,
+      "usage": {
+        "prompt_tokens": 7014,
+        "completion_tokens": 472,
+        "total_tokens": 7486
+      }
+    }
+  }
+}

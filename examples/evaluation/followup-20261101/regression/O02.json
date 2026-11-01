@@ -1,0 +1,222 @@
+{
+  "question": "公司婚假是几天？",
+  "history": [],
+  "result": {
+    "answer": "所读资料未提供公司婚假天数的规定。公司《员工请假与审批制度》明确说明该文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数，因此无法据此给出婚假天数。",
+    "status": "insufficient_evidence",
+    "clarification_reason": null,
+    "citations": [
+      {
+        "doc_id": "D08",
+        "chunk_id": "D08-C04",
+        "quote": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+      }
+    ],
+    "gaps": [
+      "知识库中未检索到规定婚假天数的制度文件；需补充提供婚假相关规定的文档或向人力资源部确认。"
+    ],
+    "run_id": "9438af66dbf44b7b9baf501046d45f05",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "婚假 天数 公司规定",
+            "top_k": 10
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "婚假 天数 公司规定",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.169,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C04",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "超期处理",
+                  "score": 0.0443,
+                  "snippet": "超过规定提交期限的申请进入财务人工复核，不保证受理。"
+                }
+              ],
+              "candidate_count": 2,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "婚假 产假 陪产假",
+            "top_k": 10
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "婚假 产假 陪产假",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.2043,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                }
+              ],
+              "candidate_count": 1,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D08"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D08",
+              "title": "员工请假与审批制度",
+              "category": "人事行政",
+              "version": "2.2",
+              "version_date": "2026-07-01",
+              "effective_date": "2026-07-10",
+              "owner": "人力资源部",
+              "scope": "全体正式员工（含试用期员工）",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D08-C01",
+                  "section": "年假申请",
+                  "text": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "chunk_id": "D08-C02",
+                  "section": "年假审批",
+                  "text": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "chunk_id": "D08-C03",
+                  "section": "病假申请",
+                  "text": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "chunk_id": "D08-C04",
+                  "section": "未覆盖事项",
+                  "text": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 7,
+        "event": "model_action",
+        "data": {
+          "call": 4,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "event": "final_answer",
+        "data": {
+          "answer": "所读资料未提供公司婚假天数的规定。公司《员工请假与审批制度》明确说明该文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数，因此无法据此给出婚假天数。",
+          "status": "insufficient_evidence",
+          "clarification_reason": null,
+          "citations": [
+            {
+              "doc_id": "D08",
+              "chunk_id": "D08-C04",
+              "quote": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+            }
+          ],
+          "gaps": [
+            "知识库中未检索到规定婚假天数的制度文件；需补充提供婚假相关规定的文档或向人力资源部确认。"
+          ]
+        }
+      },
+      {
+        "step": 9,
+        "event": "run_finished",
+        "data": {
+          "status": "insufficient_evidence",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 4,
+      "tool_calls": 3,
+      "elapsed_seconds": 4.062,
+      "usage": {
+        "prompt_tokens": 7573,
+        "completion_tokens": 321,
+        "total_tokens": 7894
+      }
+    }
+  }
+}

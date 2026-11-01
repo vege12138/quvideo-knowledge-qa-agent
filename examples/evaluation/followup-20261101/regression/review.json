@@ -1,0 +1,705 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C02",
+      "run_id": "c485ec8c02644f8f8736f506cfe406cf",
+      "artifact_sha256": "16d45ee4bccc7ef584a4c948d9ee588bc35a4ade7df035bee1bfef09698ef9ae",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "专业版最高4K（3840×2160）。",
+          "evidence": [
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps",
+            "C02.json#/result/citations",
+            "C02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C03支持分辨率。",
+          "evidence": [
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps",
+            "C02.json#/result/citations",
+            "C02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仅使用专业版规则。",
+          "evidence": [
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps",
+            "C02.json#/result/citations",
+            "C02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未错误限制为1080p。",
+          "evidence": [
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps",
+            "C02.json#/result/citations",
+            "C02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '团队专业版 导出分辨率'} ok=True streak=0；step4 read_document {'doc_id': 'D04'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps",
+            "C02.json#/result/citations",
+            "C02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "C04",
+      "run_id": "00cf1822b13647ae8574a319af63198c",
+      "artifact_sha256": "1d22999b5e5cf4df55d157b2e3571e4bb0bb1014a1677daceab7c59e4f0e1b16",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "年假提前2个工作日通过OA申请。",
+          "evidence": [
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps",
+            "C04.json#/result/citations",
+            "C04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C01支持时限和渠道；员工范围来自已读元信息。",
+          "evidence": [
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps",
+            "C04.json#/result/citations",
+            "C04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "未混入病假补交规则。",
+          "evidence": [
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps",
+            "C04.json#/result/citations",
+            "C04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未换成自然日。",
+          "evidence": [
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps",
+            "C04.json#/result/citations",
+            "C04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '年假申请 提前多久 提前天数', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '年休假 请假流程 审批 提前申请', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D08'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps",
+            "C04.json#/result/citations",
+            "C04.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K02",
+      "run_id": "3d7f0c287234482dbd45f1c06749e06c",
+      "artifact_sha256": "33632cdff8e8616369d1f3a8a02727325f298fbf5e8640570e5b621017bf9be0",
+      "verdict": "fail",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "第20天在30日规则下未超期、15日规则下超期，仅作条件判断。",
+          "evidence": [
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps",
+            "K02.json#/result/citations",
+            "K02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "fail",
+          "reason": "正文附注说明D01超期人工复核、不保证受理，但citations未列D01-C04；已读全文可证其事实，引用完整性仍失败。",
+          "evidence": [
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps",
+            "K02.json#/result/citations",
+            "K02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同范围提交期限冲突，需权威确认，未选择更新文件。",
+          "evidence": [
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps",
+            "K02.json#/result/citations",
+            "K02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未确定认定超期或未超期。",
+          "evidence": [
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps",
+            "K02.json#/result/citations",
+            "K02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '报销 超期 费用发生 天 时限'} ok=True streak=0；step3 search_documents {'query': '报销期限 规定 超过 不予报销'} ok=True streak=0；step5 read_document {'doc_id': 'D01'} ok=True streak=0；step6 read_document {'doc_id': 'D02'} ok=True streak=0；status=clarification_required；reason_code=。",
+          "evidence": [
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps",
+            "K02.json#/result/citations",
+            "K02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K04",
+      "run_id": "3733deed72c7408689477a7a1e8147ff",
+      "artifact_sha256": "d324d6af9a35c9c8f460c0ea2491da1e46f47e473e5c54493ad403d92f500412",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "退款60分钟与满24小时冲突，不能确定一小时未到账必定故障。",
+          "evidence": [
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps",
+            "K04.json#/result/citations",
+            "K04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C03/D06-C03支持两种条件判断；未虚构积分流水查任务状态。",
+          "evidence": [
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps",
+            "K04.json#/result/citations",
+            "K04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仅就退款时限/故障认定回答；不存在故障定义是阅读观察。",
+          "evidence": [
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps",
+            "K04.json#/result/citations",
+            "K04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未无条件保证正常或认定一定故障。",
+          "evidence": [
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps",
+            "K04.json#/result/citations",
+            "K04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': 'AI生成失败 积分退回', 'top_k': 8} ok=True streak=0；step4 read_document {'doc_id': 'D05'} ok=True streak=0；step5 read_document {'doc_id': 'D06'} ok=True streak=0；status=clarification_required；reason_code=。",
+          "evidence": [
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps",
+            "K04.json#/result/citations",
+            "K04.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O02",
+      "run_id": "9438af66dbf44b7b9baf501046d45f05",
+      "artifact_sha256": "4616158fc749b5f143c9fa12c792dd78f7eab6539a7c306c3ad66f6f96059653",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "不提供婚假天数，指出制度不覆盖。",
+          "evidence": [
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps",
+            "O02.json#/result/citations",
+            "O02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C04直接说明不规定婚假天数。",
+          "evidence": [
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps",
+            "O02.json#/result/citations",
+            "O02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "年假病假流程未冒充婚假规则。",
+          "evidence": [
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps",
+            "O02.json#/result/citations",
+            "O02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有引入外部法律填补。",
+          "evidence": [
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps",
+            "O02.json#/result/citations",
+            "O02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '婚假 天数 公司规定', 'top_k': 10} ok=True streak=0；step4 search_documents {'query': '婚假 产假 陪产假', 'top_k': 10} ok=True streak=0；step6 read_document {'doc_id': 'D08'} ok=True streak=0；status=insufficient_evidence；reason_code=。",
+          "evidence": [
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps",
+            "O02.json#/result/citations",
+            "O02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O04",
+      "run_id": "07c9672bd21a43b1a23454438c2279ca",
+      "artifact_sha256": "b75a55f3f0f09e0369dd019c7ee76e9aa1c89dfb02f083622f0a5c83773ec859",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "拒绝猜测北京办公室街道地址。",
+          "evidence": [
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps",
+            "O04.json#/result/citations",
+            "O04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "无伪造引用；搜索未检索到办公地址资料。",
+          "evidence": [
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps",
+            "O04.json#/result/citations",
+            "O04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "弱相关报销命中未被认作地址。",
+          "evidence": [
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps",
+            "O04.json#/result/citations",
+            "O04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未编造地址。",
+          "evidence": [
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps",
+            "O04.json#/result/citations",
+            "O04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '星映科技 北京办公室 地址'} ok=True streak=0；step4 search_documents {'query': '办公地点 街道 北京市 办公地址 通讯地址', 'top_k': 10} ok=True streak=0；status=insufficient_evidence；reason_code=。",
+          "evidence": [
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps",
+            "O04.json#/result/citations",
+            "O04.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P02",
+      "run_id": "b65020f31867437aba8e0f737ce24e50",
+      "artifact_sha256": "a69ec74b69433dd5d69b1b442def2576c7d58818831259b2fb092e59cc9b6794",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "专业套餐可导出4K（3840×2160）MP4。",
+          "evidence": [
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps",
+            "P02.json#/result/citations",
+            "P02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C01/C03支持范围与能力。",
+          "evidence": [
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps",
+            "P02.json#/result/citations",
+            "P02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "片子正确映射视频导出。",
+          "evidence": [
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps",
+            "P02.json#/result/citations",
+            "P02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未混淆1080p上限。",
+          "evidence": [
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps",
+            "P02.json#/result/citations",
+            "P02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '专业套餐 4K 导出 分辨率'} ok=True streak=0；step3 search_documents {'query': '套餐 视频导出 清晰度 限制'} ok=True streak=0；step5 read_document {'doc_id': 'D04'} ok=True streak=0；step6 read_document {'doc_id': 'D03'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps",
+            "P02.json#/result/citations",
+            "P02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P04",
+      "run_id": "254c04f500f94d69b95821e28e4b172b",
+      "artifact_sha256": "e38c0f2c199e10fa5a927294b6424fd529b78d225945e5395fd3a321977bd608",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "突发病假返岗后1个工作日补交OA和诊断证明，可先通知主管。",
+          "evidence": [
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps",
+            "P04.json#/result/citations",
+            "P04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C03支持时限、材料与主管通知。",
+          "evidence": [
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps",
+            "P04.json#/result/citations",
+            "P04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "使用突发病假而非年假。",
+          "evidence": [
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps",
+            "P04.json#/result/citations",
+            "P04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有用2个工作日规则。",
+          "evidence": [
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps",
+            "P04.json#/result/citations",
+            "P04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '临时生病未走流程 返岗后补请假单 时限', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '病假 补办请假手续 规定', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D08'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps",
+            "P04.json#/result/citations",
+            "P04.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H02",
+      "run_id": "be921e7f417148b988c8322a887a8ea1",
+      "artifact_sha256": "80f34f91052a54e2e9402dbcb460c918ad86f99f5897c333e9e4ad53aed54373",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "专业版50名按工作区计数，而非按账号。",
+          "evidence": [
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps",
+            "H02.json#/result/citations",
+            "H02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C02支持数字和单位。",
+          "evidence": [
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps",
+            "H02.json#/result/citations",
+            "H02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "本轮重新读取专业版，历史仅帮助解释上限。",
+          "evidence": [
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps",
+            "H02.json#/result/citations",
+            "H02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有把50人按单个账号分配。",
+          "evidence": [
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps",
+            "H02.json#/result/citations",
+            "H02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '团队专业版 活跃成员 上限 50 工作区 计算方式', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '活跃成员 定义 每工作区 席位 计量', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D04'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps",
+            "H02.json#/result/citations",
+            "H02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H04",
+      "run_id": "316e6a304821480eb8528c6b2aee6f1f",
+      "artifact_sha256": "9657ad4483ffff6903a14f63bf3a514160a6df876d9a3a6a04e3d3a7d73109fe",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "承接年假主题，提前2个工作日OA申请。",
+          "evidence": [
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps",
+            "H04.json#/result/citations",
+            "H04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C01支持时限，范围见已读元信息。",
+          "evidence": [
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps",
+            "H04.json#/result/citations",
+            "H04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "没有把问题解释成病假；初次附审批流程有D08-C02引用。",
+          "evidence": [
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps",
+            "H04.json#/result/citations",
+            "H04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未改为自然日或病假1日。",
+          "evidence": [
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps",
+            "H04.json#/result/citations",
+            "H04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '年假申请 提前 提交 时限', 'top_k': 8} ok=True streak=0；step3 search_documents {'query': '年假制度 申请流程 审批', 'top_k': 8} ok=True streak=0；step5 read_document {'doc_id': 'D08'} ok=True streak=0；status=answered；reason_code=。",
+          "evidence": [
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps",
+            "H04.json#/result/citations",
+            "H04.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F02",
+      "run_id": "78b68e7e36454df692a19e614f1c5672",
+      "artifact_sha256": "9c304b59281737512e2fca056b256c1d703af2ebd793367559602dc1553f48db",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "已签约企业API客户的企业管理员可申请。",
+          "evidence": [
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps",
+            "F02.json#/result/citations",
+            "F02.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "故障恢复后的D07-C01/C02支持资格和申请主体。",
+          "evidence": [
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps",
+            "F02.json#/result/citations",
+            "F02.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "套餐不自动赋予API权限。",
+          "evidence": [
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps",
+            "F02.json#/result/citations",
+            "F02.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有用首次读取失败或检索摘要直接给结论。",
+          "evidence": [
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps",
+            "F02.json#/result/citations",
+            "F02.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '企业API权限申请 谁可以申请', 'top_k': 10} ok=True streak=0；step4 read_document {'doc_id': 'D07'} ok=False streak=1；step6 read_document {'doc_id': 'D07', 'chunk_ids': ['D07-C01', 'D07-C02']} ok=True streak=0；status=answered；reason_code=。 首次D07读取异常后模型继续读取并恢复。",
+          "evidence": [
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps",
+            "F02.json#/result/citations",
+            "F02.json#/result/trace"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F04",
+      "run_id": "40d110af7f354562b5eaa8e430c37668",
+      "artifact_sha256": "709c49ef07b90fa69881b0966b6b9805ad8f6910d7f0ba5e57be7e085c004b2a",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "D01连续读取3次失败后终止，不给报销期限。",
+          "evidence": [
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps",
+            "F04.json#/result/citations",
+            "F04.json#/result/trace"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "无伪造引用，也未把只读D02当完整证据。",
+          "evidence": [
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps",
+            "F04.json#/result/citations",
+            "F04.json#/result/trace"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "另一文件成功不能消除关键证据无法核实。",
+          "evidence": [
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps",
+            "F04.json#/result/citations",
+            "F04.json#/result/trace"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有直接答15天。",
+          "evidence": [
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps",
+            "F04.json#/result/citations",
+            "F04.json#/result/trace"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际工具序列与最终状态一致：step2 search_documents {'query': '报销提交截止时间 几天内提交'} ok=True streak=0；step4 read_document {'doc_id': 'D02'} ok=True streak=0；step5 read_document {'doc_id': 'D01'} ok=False streak=1；step7 read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02', 'D01-C04']} ok=False streak=2；step9 read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02']} ok=False streak=3；status=tool_error；reason_code=tool_failure_limit。",
+          "evidence": [
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps",
+            "F04.json#/result/citations",
+            "F04.json#/result/trace"
+          ]
+        }
+      }
+    }
+  ],
+  "reviewed_at": "2026-11-01T08:41:38.523898+00:00",
+  "review_note": "逐题阅读本轮输出、引用、元信息与工具行为后的AI辅助判断；非模型裁判、非用户亲自验收。首次K02漏引保留失败，r2独立复核。"
+}

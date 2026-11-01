@@ -1,0 +1,17 @@
+{
+  "command": [
+    "E:\\CS\\job\\ying\\.runtime\\delivery-venv\\Scripts\\python.exe",
+    "-m",
+    "knowledge_qa",
+    "ask",
+    "生成一条AI视频会预扣多少积分？",
+    "--json",
+    "--trace",
+    "examples\\followup-20261101-r2\\cli-c03.json"
+  ],
+  "finished_at": "2026-11-01T08:42:27.807714+00:00",
+  "returncode": 0,
+  "stderr": "",
+  "run_id": "33990660aadf44849c482e29dcffd691",
+  "status": "answered"
+}

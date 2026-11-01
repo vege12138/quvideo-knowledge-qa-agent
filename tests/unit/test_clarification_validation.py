@@ -76,3 +76,11 @@ def test_legacy_results_can_still_be_loaded_without_clarification_reason():
                                      "gaps": ["需确认适用制度"], "run_id": "legacy", "mode": "real"})
     assert result.clarification_reason is None
 
+
+
+def test_answered_cannot_carry_unresolved_gaps(runner):
+    answer = Answer(answer="规则已核实", status="answered",
+                    citations=[citation(runner, "D01-C02")], gaps=["另一事项尚需确认"])
+    assert any("gaps 必须为空" in error for error in validate_answer(answer, runner))
+    answer.gaps = []
+    assert not validate_answer(answer, runner)

@@ -1,0 +1,117 @@
+{
+  "started_at": "2026-11-01T08:39:03.948861+00:00",
+  "url": "http://127.0.0.1:8001",
+  "method": "Playwright / local Edge headless; real service except explicit HTTP error fixture",
+  "checks": [
+    {
+      "name": "desktop page and real service health",
+      "passed": true
+    },
+    {
+      "name": "waiting state and duplicate submit guard",
+      "passed": true
+    },
+    {
+      "name": "03-c03: real answer, citations, gaps, expandable trace",
+      "passed": true
+    },
+    {
+      "name": "04-refund: real answer, citations, gaps, expandable trace",
+      "passed": true
+    },
+    {
+      "name": "follow-up uses same session and preserves actual refund conflict",
+      "passed": true
+    },
+    {
+      "name": "new chat clears visible conversation and deletes old server session",
+      "passed": true
+    },
+    {
+      "name": "05-context: real answer, citations, gaps, expandable trace",
+      "passed": true
+    },
+    {
+      "name": "06-standard: real answer, citations, gaps, expandable trace",
+      "passed": true
+    },
+    {
+      "name": "new session does not inherit prior topic; clarification follow-up works",
+      "passed": true
+    },
+    {
+      "name": "explicit HTTP 503 fixture: error shown, input restored, controls re-enabled",
+      "passed": true
+    },
+    {
+      "name": "08-recovered: real answer, citations, gaps, expandable trace",
+      "passed": true
+    },
+    {
+      "name": "real request after HTTP error recovers",
+      "passed": true
+    },
+    {
+      "name": "390px viewport: no horizontal overflow; input, new-chat and send visible",
+      "passed": true
+    },
+    {
+      "name": "no uncaught browser JavaScript errors",
+      "passed": true
+    }
+  ],
+  "responses": [
+    {
+      "question": "生成一条AI视频会预扣多少积分？",
+      "run_id": "818d41be29be439894e472fc0ec65c11",
+      "session_id": "9f0d578c882c4f048c044342b7743daf",
+      "status": "answered"
+    },
+    {
+      "question": "那失败以后多久返还？",
+      "run_id": "6f3a1a524b1e470aaf9dbf4adcd3ff8f",
+      "session_id": "9f0d578c882c4f048c044342b7743daf",
+      "status": "clarification_required"
+    },
+    {
+      "question": "最多能加多少名活跃成员？",
+      "run_id": "6d8d4b82cc974a4aa32b53fd3115a47b",
+      "session_id": "0a25723c4a9e40d8a4001b2dd38e4fec",
+      "status": "clarification_required"
+    },
+    {
+      "question": "团队标准版。",
+      "run_id": "6a3234b36b814565a80ccc6529ae90d7",
+      "session_id": "0a25723c4a9e40d8a4001b2dd38e4fec",
+      "status": "answered"
+    },
+    {
+      "question": "团队标准版最多支持几名活跃成员？",
+      "run_id": "bb740860498d40d59a78057891a76f56",
+      "session_id": "0a25723c4a9e40d8a4001b2dd38e4fec",
+      "status": "answered"
+    }
+  ],
+  "page_errors": [],
+  "human_confirmation": "pending",
+  "browser_version": "154.0.4258.53",
+  "status": "passed",
+  "finished_at": "2026-11-01T08:39:23.481606+00:00",
+  "artifacts": {
+    "01-welcome.png": "3391bdf7a0a06a39f7ae8a417591fd2e6dcd882a0b0537dcce26a801137b2970",
+    "02-waiting.png": "3d817457467fe1e7e051f3a9ce5810a2928d611b7dd66789f174f4b3d78b589c",
+    "03-c03-response.json": "873eec6410d8312ee4a565330cb82ae581d71586404da00a7f04ec10a4d9abd0",
+    "03-c03-result.png": "e24ab6db2f42a981015526d0c3bc265bb9cdd9ffb220cf20e5a8cf3e277c7e07",
+    "04-refund-response.json": "0aa43c7776d7b61461562311366fec2c64daab517f7b0c29fa72099ad334a484",
+    "04-refund-result.png": "fd7c2b2eb0b6f4575e873fb49c541db43aa1d467347c7c67570b0b78c3d16fbe",
+    "05-context-response.json": "af6e274ddcdccc7afb3ed552f18cfef50e39113f01bb2c9a550105b6fc98c352",
+    "05-context-result.png": "5a080e666d64d980b2c3c30995c733519bc7f1cd6be4d79c9aa2783cd75865c9",
+    "06-standard-response.json": "a10d90cd4c81e17b0fe34b924458924f3bc9a701eaf161316c23ede9e27a5ec5",
+    "06-standard-result.png": "e720acefb96d977ababda012fcab31f00d2f6f38ed0b9e503808399a44efea7c",
+    "07-error.png": "3c27b576a1bfdab353705a348091df8eb5586cbf369230b17e9db1dc71df7b9c",
+    "08-recovered-response.json": "cabc90ed3ced6def86cbdd6bd88eaafdbe4eadfd2182f8c5458aa0a7f12967fa",
+    "08-recovered-result.png": "24ff76dd51e734633e1d6cf794d40f4866117952675460af2b0f8c6e257a9ecf",
+    "09-mobile-result.png": "7fb19a0549b4d2854530497e0f26d5ca1cc4ccc16411c9f7f7da2363c5412e40",
+    "10-mobile-welcome.png": "a08abf56de9fed8800bf78eae6471356e823953e66670fe3dcb54ba6b287f40a"
+  }
+}

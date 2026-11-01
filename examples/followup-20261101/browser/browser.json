@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-11-01T08:34:11.562214+00:00",
+  "url": "http://127.0.0.1:8001",
+  "method": "Playwright / local Edge headless; real service except explicit HTTP error fixture",
+  "checks": [
+    {
+      "name": "desktop page and real service health",
+      "passed": true
+    },
+    {
+      "name": "waiting state and duplicate submit guard",
+      "passed": true
+    }
+  ],
+  "responses": [],
+  "page_errors": [],
+  "human_confirmation": "pending",
+  "browser_version": "154.0.4258.53",
+  "status": "failed",
+  "failure": "发起一条AI视频生成任务的预扣积分：D05《AI视频生成积分与扣费规则》规定发起任务时预扣20积分，任务成功完成后该20积分正式扣除。但关于失败任务的返还时限，D05（失败后60分钟内返还）与D06《AI视频生成失败排障FAQ》（须满24小时后返还）规定不一致，两份文件适用范围相同且均未明示优先级或废止关系，需确认适用哪一规定。",
+  "finished_at": "2026-11-01T08:34:38.282569+00:00",
+  "artifacts": {
+    "01-welcome.png": "3391bdf7a0a06a39f7ae8a417591fd2e6dcd882a0b0537dcce26a801137b2970",
+    "02-waiting.png": "3d817457467fe1e7e051f3a9ce5810a2928d611b7dd66789f174f4b3d78b589c",
+    "03-c03-response.json": "ef0a03a93da50688b6b849d71e24fd6608ed924d465b62d63ed21bd4672fde6f"
+  }
+}

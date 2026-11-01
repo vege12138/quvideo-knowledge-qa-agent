@@ -213,3 +213,40 @@ def test_missing_context_clarification_does_not_require_conflict_citations():
     assert not result.citations
     assert not any(event.event == "validation_error" for event in result.trace)
 
+
+
+@pytest.mark.parametrize("repair", [True, False])
+def test_answered_gap_repair_consumes_existing_budget(repair):
+    service = QAService(settings(max_model_calls=4))
+    invalid = MockModel.answer("5名。另有其他事项待确认。", "answered", evidence(service), ["其他事项待确认"])
+    model = ScriptedModel([
+        MockModel.call("search_documents", {"query": "标准版人数"}, 0),
+        MockModel.call("read_document", {"doc_id": "D03"}, 1),
+        invalid,
+        MockModel.answer("最多5名，包含所有者。", "answered", evidence(service), []) if repair else invalid,
+    ])
+    service.model = model
+    result = ask(service)
+    assert result.metrics["model_calls"] == 4 and result.metrics["tool_calls"] == 2
+    assert "gaps 必须为空" in model.inputs[-1][-1]["content"]
+    assert any(e.event == "validation_error" for e in result.trace)
+    if repair:
+        assert result.status == "answered" and result.gaps == []
+        assert result.answer == "最多5名，包含所有者。"
+    else:
+        assert result.status == "incomplete" and result.reason_code == "model_limit"
+
+
+def test_preserved_c03_failure_is_rejected_without_rewriting_history():
+    from pathlib import Path
+    from knowledge_qa.schemas import Answer
+    from knowledge_qa.tools import ToolRunner
+    from knowledge_qa.validation import validate_answer
+    service = QAService(settings())
+    runner = ToolRunner(service.kb, service.retriever)
+    runner.execute("search_documents", {"query": "AI视频预扣积分"})
+    for doc_id in ("D05", "D06"):
+        runner.execute("read_document", {"doc_id": doc_id})
+    saved = json.loads(Path("examples/evaluation/final-20261101/dev/C03.json").read_text(encoding="utf-8"))
+    fields = {key: saved["result"][key] for key in Answer.model_fields if key in saved["result"]}
+    assert any("gaps 必须为空" in e for e in validate_answer(Answer(**fields), runner))

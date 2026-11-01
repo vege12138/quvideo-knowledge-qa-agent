@@ -4,6 +4,8 @@ from .tools import ToolRunner
 
 def validate_answer(answer: Answer, runner: ToolRunner) -> list[str]:
     errors = []
+    if answer.status == "answered" and answer.gaps:
+        errors.append("answered 表示当前问题已完整回答，gaps 必须为空。请核对原问题：删除不影响当前结论的旁支正文及缺口；若缺口确实阻止当前问题完成，使用相应澄清或资料不足状态。不能只清空 gaps 而保留无关扩展。")
     if answer.status == "answered" and not answer.citations:
         errors.append("answered 必须提供支持结论的原文引用")
     if answer.status == "clarification_required":

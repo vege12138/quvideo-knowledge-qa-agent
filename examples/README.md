@@ -1,3 +1,16 @@
+# 最新查收入口
+
+当前为followup-20261101-r2：57项测试，28/28结构及AI辅助语义复核，实际网页14项检查通过；用户确认pending。
+
+- [评估报告](../docs/03-evaluation.md)
+- [28题复核汇总](followup-20261101-r2/review-summary.json)
+- [CLI C03](followup-20261101-r2/cli-c03.json)
+- [浏览器记录](followup-20261101-r2/browser/browser.json)
+- [范围、CLI、网页及截图复核](followup-20261101-r2/additional-review.json)
+- [验证清单](followup-20261101-r2/verification.json)
+
+以下为历史交付索引，其中“最终”指原final-20261101批次。
+
 # 运行与验收证据索引
 
 正式批次 evaluation/final-20261101：53项测试通过，28/28结构通过，AI辅助语义27通过、C03失败、0待复核。用户确认pending。

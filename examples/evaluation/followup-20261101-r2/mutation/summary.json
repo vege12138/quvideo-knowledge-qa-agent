@@ -1,0 +1,121 @@
+{
+  "split": "mutation",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "count": 4,
+  "dataset_role": "mutation",
+  "structural_pass": 4,
+  "semantic_review": "pending; structure checks are not semantic correctness",
+  "elapsed_seconds": 6.047,
+  "cases": [
+    {
+      "id": "M01",
+      "category": "mutation",
+      "expected_status": "clarification_required",
+      "actual_status": "clarification_required",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "45个自然日",
+        "15个自然日"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.36,
+        "usage": {
+          "prompt_tokens": 7062,
+          "completion_tokens": 377,
+          "total_tokens": 7439
+        }
+      },
+      "artifact": "M01.json",
+      "structural_pass": true
+    },
+    {
+      "id": "M02",
+      "category": "mutation",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "30个自然日"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 2,
+        "elapsed_seconds": 2.782,
+        "usage": {
+          "prompt_tokens": 6553,
+          "completion_tokens": 248,
+          "total_tokens": 6801
+        }
+      },
+      "artifact": "M02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "M03",
+      "category": "mutation",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "8名"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 2.859,
+        "usage": {
+          "prompt_tokens": 8227,
+          "completion_tokens": 221,
+          "total_tokens": 8448
+        }
+      },
+      "artifact": "M03.json",
+      "structural_pass": true
+    },
+    {
+      "id": "M04",
+      "category": "mutation",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "60分钟内"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.219,
+        "usage": {
+          "prompt_tokens": 7545,
+          "completion_tokens": 309,
+          "total_tokens": 7854
+        }
+      },
+      "artifact": "M04.json",
+      "structural_pass": true
+    }
+  ]
+}

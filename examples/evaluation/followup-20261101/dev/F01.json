@@ -1,0 +1,243 @@
+{
+  "question": "团队标准版最多支持几名成员？",
+  "history": [],
+  "result": {
+    "answer": "团队标准版每个工作区最多允许5名活跃成员，工作区所有者包含在内；停用成员不计入活跃人数。",
+    "status": "answered",
+    "clarification_reason": null,
+    "citations": [
+      {
+        "doc_id": "D03",
+        "chunk_id": "D03-C02",
+        "quote": "团队标准版每个工作区最多允许5名活跃成员，包含工作区所有者。停用成员不计入活跃人数。"
+      }
+    ],
+    "gaps": [],
+    "run_id": "b6eecc2315d24151a3fda6c10ae847d1",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "团队标准版 成员 人数上限"
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 1
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "团队标准版 成员数量 上限"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "团队标准版 成员数量 上限",
+              "hits": [
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C02",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "成员数量",
+                  "score": 0.3503,
+                  "snippet": "团队标准版每个工作区最多允许5名活跃成员，包含工作区所有者。停用成员不计入活跃人数。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C02",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "成员数量",
+                  "score": 0.2517,
+                  "snippet": "团队专业版每个工作区最多允许50名活跃成员，包含工作区所有者。上限按工作区计算，而不是按单个成员计算。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C01",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "适用范围",
+                  "score": 0.0891,
+                  "snippet": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+                },
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C01",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "适用范围",
+                  "score": 0.0843,
+                  "snippet": "本FAQ适用于团队标准版与团队专业版工作区使用AI视频生成时出现的失败任务。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C01",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "服务范围",
+                  "score": 0.0416,
+                  "snippet": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+                },
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C04",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "人数上限提示",
+                  "score": 0.137,
+                  "snippet": "达到活跃成员上限时，须停用现有成员或升级套餐后才能继续邀请。"
+                }
+              ],
+              "candidate_count": 16,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D03"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D03",
+              "title": "团队标准版产品与协作规则",
+              "category": "产品文档",
+              "version": "2.1",
+              "version_date": "2026-04-02",
+              "effective_date": "2026-04-10",
+              "owner": "产品部",
+              "scope": "订阅团队标准版的工作区",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D03-C01",
+                  "section": "适用套餐",
+                  "text": "本说明仅适用于当前订阅为团队标准版的工作区；不适用于团队专业版。"
+                },
+                {
+                  "chunk_id": "D03-C02",
+                  "section": "成员数量",
+                  "text": "团队标准版每个工作区最多允许5名活跃成员，包含工作区所有者。停用成员不计入活跃人数。"
+                },
+                {
+                  "chunk_id": "D03-C03",
+                  "section": "导出分辨率",
+                  "text": "团队标准版支持最高1080p的视频导出；可导出MP4文件。"
+                },
+                {
+                  "chunk_id": "D03-C04",
+                  "section": "人数上限提示",
+                  "text": "达到活跃成员上限时，须停用现有成员或升级套餐后才能继续邀请。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 7,
+        "event": "model_action",
+        "data": {
+          "call": 4,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "event": "final_answer",
+        "data": {
+          "answer": "团队标准版每个工作区最多允许5名活跃成员，工作区所有者包含在内；停用成员不计入活跃人数。",
+          "status": "answered",
+          "clarification_reason": null,
+          "citations": [
+            {
+              "doc_id": "D03",
+              "chunk_id": "D03-C02",
+              "quote": "团队标准版每个工作区最多允许5名活跃成员，包含工作区所有者。停用成员不计入活跃人数。"
+            }
+          ],
+          "gaps": []
+        }
+      },
+      {
+        "step": 9,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 4,
+      "tool_calls": 3,
+      "elapsed_seconds": 3.735,
+      "usage": {
+        "prompt_tokens": 7851,
+        "completion_tokens": 226,
+        "total_tokens": 8077
+      }
+    }
+  }
+}
