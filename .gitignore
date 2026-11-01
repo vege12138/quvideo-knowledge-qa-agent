@@ -1,0 +1,14 @@
+.venv/
+.env
+deepseek.txt
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.coverage
+.runtime/
+BCE49A9FE88697E794_8BBE7A5AFE593B8E998B5E8849B%86/
+*.zip
+

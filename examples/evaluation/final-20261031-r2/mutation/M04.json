@@ -1,0 +1,267 @@
+{
+  "question": "AI视频失败后多久返还积分？",
+  "history": [],
+  "result": {
+    "answer": "在团队标准版与团队专业版工作区中，若平台将 AI 视频生成任务标记为生成失败，预扣的 20 积分会在失败发生后 60 分钟内自动返还至原工作区积分余额。",
+    "status": "answered",
+    "clarification_reason": null,
+    "citations": [
+      {
+        "doc_id": "D05",
+        "chunk_id": "D05-C03",
+        "quote": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+      },
+      {
+        "doc_id": "D05",
+        "chunk_id": "D05-C01",
+        "quote": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+      }
+    ],
+    "gaps": [],
+    "run_id": "44fbf0f2027a438388b8988c9b9d1c10",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "AI视频生成失败 积分返还 时间"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "AI视频生成失败 积分返还 时间",
+              "hits": [
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C03",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "任务失败返还",
+                  "score": 0.3525,
+                  "snippet": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.3018,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C01",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "适用范围",
+                  "score": 0.2777,
+                  "snippet": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C04",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "查询方法",
+                  "score": 0.2363,
+                  "snippet": "管理员可以通过工作区设置中的“积分流水”查看预扣、扣除与返还记录。"
+                }
+              ],
+              "candidate_count": 4,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "视频生成失败退款 积分退回规则"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "视频生成失败退款 积分退回规则",
+              "hits": [
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C03",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "任务失败返还",
+                  "score": 0.2698,
+                  "snippet": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.2319,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C01",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "适用范围",
+                  "score": 0.19,
+                  "snippet": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C04",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "查询方法",
+                  "score": 0.1554,
+                  "snippet": "管理员可以通过工作区设置中的“积分流水”查看预扣、扣除与返还记录。"
+                }
+              ],
+              "candidate_count": 4,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D05"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D05",
+              "title": "AI视频生成积分与扣费规则",
+              "category": "产品规则",
+              "version": "1.5",
+              "version_date": "2026-05-08",
+              "effective_date": "2026-05-12",
+              "owner": "AI产品组",
+              "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D05-C01",
+                  "section": "适用范围",
+                  "text": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+                },
+                {
+                  "chunk_id": "D05-C02",
+                  "section": "积分消耗",
+                  "text": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "chunk_id": "D05-C03",
+                  "section": "任务失败返还",
+                  "text": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                },
+                {
+                  "chunk_id": "D05-C04",
+                  "section": "查询方法",
+                  "text": "管理员可以通过工作区设置中的“积分流水”查看预扣、扣除与返还记录。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 6,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 7,
+        "event": "final_answer",
+        "data": {
+          "answer": "在团队标准版与团队专业版工作区中，若平台将 AI 视频生成任务标记为生成失败，预扣的 20 积分会在失败发生后 60 分钟内自动返还至原工作区积分余额。",
+          "status": "answered",
+          "clarification_reason": null,
+          "citations": [
+            {
+              "doc_id": "D05",
+              "chunk_id": "D05-C03",
+              "quote": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+            },
+            {
+              "doc_id": "D05",
+              "chunk_id": "D05-C01",
+              "quote": "本规则适用于团队标准版与团队专业版工作区中发起的AI视频生成任务。"
+            }
+          ],
+          "gaps": []
+        }
+      },
+      {
+        "step": 8,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 3,
+      "elapsed_seconds": 3.078,
+      "usage": {
+        "prompt_tokens": 6332,
+        "completion_tokens": 295,
+        "total_tokens": 6627
+      }
+    }
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "question": "谁可以申请企业API权限？",
+  "history": [],
+  "result": {
+    "answer": "仅企业管理员可以发起申请，且企业须已签约企业API服务。具体为：企业API仅对已签约企业API服务的客户开放，购买团队标准版或团队专业版不会自动获得调用权限；只有企业管理员可在开放平台控制台发起API开通申请，申请时需填写企业名称、使用场景与技术联系人。",
+    "status": "answered",
+    "clarification_reason": null,
+    "citations": [
+      {
+        "doc_id": "D07",
+        "chunk_id": "D07-C01",
+        "quote": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+      },
+      {
+        "doc_id": "D07",
+        "chunk_id": "D07-C02",
+        "quote": "只有企业管理员可以在开放平台控制台发起API开通申请。需填写企业名称、使用场景与技术联系人。"
+      }
+    ],
+    "gaps": [],
+    "run_id": "8617f4c1505a43fc992745e424b72e28",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "企业API权限申请 申请人资格",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "企业API权限申请 申请人资格",
+              "hits": [
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C01",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "服务范围",
+                  "score": 0.3276,
+                  "snippet": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.0732,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C03",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "审批时间",
+                  "score": 0.32,
+                  "snippet": "申请资料齐全后，开放平台组通常在2个工作日内完成审核并通知申请结果。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C02",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "申请权限",
+                  "score": 0.317,
+                  "snippet": "只有企业管理员可以在开放平台控制台发起API开通申请。需填写企业名称、使用场景与技术联系人。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C04",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "密钥安全",
+                  "score": 0.2663,
+                  "snippet": "API密钥仅在开通成功后由控制台展示；不得将密钥提交到公开代码仓库或向无关人员共享。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C03",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "病假申请",
+                  "score": 0.056,
+                  "snippet": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                }
+              ],
+              "candidate_count": 6,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "API 权限 开通 审批流程",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "API 权限 开通 审批流程",
+              "hits": [
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C02",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "申请权限",
+                  "score": 0.1724,
+                  "snippet": "只有企业管理员可以在开放平台控制台发起API开通申请。需填写企业名称、使用场景与技术联系人。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.0359,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C03",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "审批时间",
+                  "score": 0.1587,
+                  "snippet": "申请资料齐全后，开放平台组通常在2个工作日内完成审核并通知申请结果。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C01",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "服务范围",
+                  "score": 0.1256,
+                  "snippet": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C04",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "密钥安全",
+                  "score": 0.1238,
+                  "snippet": "API密钥仅在开通成功后由控制台展示；不得将密钥提交到公开代码仓库或向无关人员共享。"
+                }
+              ],
+              "candidate_count": 5,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D07"
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "tool_exception",
+              "message": "文档服务读取异常，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 1
+        }
+      },
+      {
+        "step": 6,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 7,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D07",
+            "chunk_ids": [
+              "D07-C01",
+              "D07-C02"
+            ]
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D07",
+              "title": "企业API接入与权限申请指南",
+              "category": "开发者支持",
+              "version": "1.1",
+              "version_date": "2026-06-18",
+              "effective_date": "2026-06-25",
+              "owner": "开放平台组",
+              "scope": "已签约企业API服务的企业客户及其企业管理员",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D07-C01",
+                  "section": "服务范围",
+                  "text": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+                },
+                {
+                  "chunk_id": "D07-C02",
+                  "section": "申请权限",
+                  "text": "只有企业管理员可以在开放平台控制台发起API开通申请。需填写企业名称、使用场景与技术联系人。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 8,
+        "event": "model_action",
+        "data": {
+          "call": 4,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 9,
+        "event": "final_answer",
+        "data": {
+          "answer": "仅企业管理员可以发起申请，且企业须已签约企业API服务。具体为：企业API仅对已签约企业API服务的客户开放，购买团队标准版或团队专业版不会自动获得调用权限；只有企业管理员可在开放平台控制台发起API开通申请，申请时需填写企业名称、使用场景与技术联系人。",
+          "status": "answered",
+          "clarification_reason": null,
+          "citations": [
+            {
+              "doc_id": "D07",
+              "chunk_id": "D07-C01",
+              "quote": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+            },
+            {
+              "doc_id": "D07",
+              "chunk_id": "D07-C02",
+              "quote": "只有企业管理员可以在开放平台控制台发起API开通申请。需填写企业名称、使用场景与技术联系人。"
+            }
+          ],
+          "gaps": []
+        }
+      },
+      {
+        "step": 10,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 4,
+      "tool_calls": 4,
+      "elapsed_seconds": 3.547,
+      "usage": {
+        "prompt_tokens": 10111,
+        "completion_tokens": 416,
+        "total_tokens": 10527
+      }
+    }
+  }
+}

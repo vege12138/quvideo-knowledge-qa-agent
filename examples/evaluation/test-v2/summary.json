@@ -1,0 +1,347 @@
+{
+  "split": "test",
+  "mode": "real",
+  "model": "deepseek-flash",
+  "count": 12,
+  "structural_pass": 12,
+  "semantic_review": "pending; structure checks are not semantic correctness",
+  "elapsed_seconds": 18.86,
+  "cases": [
+    {
+      "id": "C02",
+      "category": "clear_answer",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "4K",
+        "3840×2160"
+      ],
+      "must_not": [
+        "仅支持1080p"
+      ],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.203,
+        "usage": {
+          "prompt_tokens": 6772,
+          "completion_tokens": 297,
+          "total_tokens": 7069
+        }
+      },
+      "artifact": "C02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "C04",
+      "category": "clear_answer",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "2个工作日"
+      ],
+      "must_not": [
+        "2个自然日"
+      ],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 2,
+        "elapsed_seconds": 2.594,
+        "usage": {
+          "prompt_tokens": 4332,
+          "completion_tokens": 167,
+          "total_tokens": 4499
+        }
+      },
+      "artifact": "C04.json",
+      "structural_pass": true
+    },
+    {
+      "id": "K02",
+      "category": "conflict",
+      "expected_status": "clarification_required",
+      "actual_status": "clarification_required",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "30个自然日",
+        "15个自然日"
+      ],
+      "must_not": [
+        "确定不超期",
+        "确定超期"
+      ],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 4,
+        "elapsed_seconds": 5.047,
+        "usage": {
+          "prompt_tokens": 7576,
+          "completion_tokens": 657,
+          "total_tokens": 8233
+        }
+      },
+      "artifact": "K02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "K04",
+      "category": "conflict",
+      "expected_status": "clarification_required",
+      "actual_status": "clarification_required",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "60分钟内",
+        "满24小时后"
+      ],
+      "must_not": [
+        "一定是故障",
+        "肯定正常"
+      ],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 4,
+        "elapsed_seconds": 7.062,
+        "usage": {
+          "prompt_tokens": 7726,
+          "completion_tokens": 949,
+          "total_tokens": 8675
+        }
+      },
+      "artifact": "K04.json",
+      "structural_pass": true
+    },
+    {
+      "id": "O02",
+      "category": "out_of_scope",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.953,
+        "usage": {
+          "prompt_tokens": 5050,
+          "completion_tokens": 267,
+          "total_tokens": 5317
+        }
+      },
+      "artifact": "O02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "O04",
+      "category": "out_of_scope",
+      "expected_status": "insufficient_evidence",
+      "actual_status": "insufficient_evidence",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 2,
+        "elapsed_seconds": 3.187,
+        "usage": {
+          "prompt_tokens": 4204,
+          "completion_tokens": 200,
+          "total_tokens": 4404
+        }
+      },
+      "artifact": "O04.json",
+      "structural_pass": true
+    },
+    {
+      "id": "P02",
+      "category": "paraphrase",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "4K"
+      ],
+      "must_not": [
+        "最高1080p"
+      ],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.625,
+        "usage": {
+          "prompt_tokens": 5874,
+          "completion_tokens": 332,
+          "total_tokens": 6206
+        }
+      },
+      "artifact": "P02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "P04",
+      "category": "paraphrase",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "1个工作日内"
+      ],
+      "must_not": [
+        "2个工作日"
+      ],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 3,
+        "elapsed_seconds": 3.375,
+        "usage": {
+          "prompt_tokens": 6203,
+          "completion_tokens": 249,
+          "total_tokens": 6452
+        }
+      },
+      "artifact": "P04.json",
+      "structural_pass": true
+    },
+    {
+      "id": "H02",
+      "category": "follow_up",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "按工作区计算",
+        "不是按单个成员"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 2,
+        "elapsed_seconds": 3.0,
+        "usage": {
+          "prompt_tokens": 5507,
+          "completion_tokens": 226,
+          "total_tokens": 5733
+        }
+      },
+      "artifact": "H02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "H04",
+      "category": "follow_up",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "2个工作日"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 3,
+        "tool_calls": 2,
+        "elapsed_seconds": 2.594,
+        "usage": {
+          "prompt_tokens": 4859,
+          "completion_tokens": 255,
+          "total_tokens": 5114
+        }
+      },
+      "artifact": "H04.json",
+      "structural_pass": true
+    },
+    {
+      "id": "F02",
+      "category": "tool_failure",
+      "expected_status": "answered",
+      "actual_status": "answered",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [
+        "企业管理员"
+      ],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 4,
+        "tool_calls": 4,
+        "elapsed_seconds": 4.5,
+        "usage": {
+          "prompt_tokens": 8540,
+          "completion_tokens": 490,
+          "total_tokens": 9030
+        }
+      },
+      "artifact": "F02.json",
+      "structural_pass": true
+    },
+    {
+      "id": "F04",
+      "category": "tool_failure",
+      "expected_status": "tool_error",
+      "actual_status": "tool_error",
+      "status_match": true,
+      "evidence_coverage": true,
+      "citation_source_valid": true,
+      "behavior_match": true,
+      "semantic_review": "pending",
+      "expected_facts": [],
+      "must_not": [],
+      "metrics": {
+        "model_calls": 5,
+        "tool_calls": 6,
+        "elapsed_seconds": 6.188,
+        "usage": {
+          "prompt_tokens": 12562,
+          "completion_tokens": 592,
+          "total_tokens": 13154
+        }
+      },
+      "artifact": "F04.json",
+      "structural_pass": true
+    }
+  ]
+}

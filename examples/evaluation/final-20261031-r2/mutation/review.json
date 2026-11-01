@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "M01",
+      "run_id": "36ba39e9a9094c5f83871b293ef31b98",
+      "artifact_sha256": "b3ca4515070bd101862b0d9bb839bf04857c9c0350ae8c1e3840dbc13ac1eb41",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "M02",
+      "run_id": "b9e2fa5633424161a00d96bb4f999189",
+      "artifact_sha256": "53fd22930fab23dfa1246cd74685c502e5eb3fb5faf3652b50950faf7b0c17c0",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "M03",
+      "run_id": "ded9efa88db04d318a5392a2eb2f565d",
+      "artifact_sha256": "7101bb0b4e0c1af986a7d1427389bc953c601afe1ebb672fdb4f04a853c1d74d",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "M04",
+      "run_id": "44fbf0f2027a438388b8988c9b9d1c10",
+      "artifact_sha256": "64860031a6c0b5de3fd3621d29c1507871f2464bab6db4b9f0a755cc4dde829f",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    }
+  ]
+}

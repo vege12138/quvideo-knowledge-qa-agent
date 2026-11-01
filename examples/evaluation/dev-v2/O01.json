@@ -1,0 +1,168 @@
+{
+  "question": "星映科技2027年的营收目标是多少？",
+  "history": [],
+  "result": {
+    "answer": "知识库中未检索到任何关于星映科技营收目标或年度经营规划的资料，现有文档仅涉及费用报销、AI视频生成积分等事项，无法回答2027年营收目标。",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "gaps": [
+      "知识库缺少星映科技年度经营目标/营收规划相关文档，无2027年营收目标数据"
+    ],
+    "run_id": "7d9f4eccb63f4be6b8f9a94ae9db16b3",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "星映科技 2027年 营收目标"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "星映科技 2027年 营收目标",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C01",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "适用范围",
+                  "score": 0.1756,
+                  "snippet": "本通知面向星映科技全体正式员工（含试用期员工），覆盖交通、住宿、办公采购等因公费用。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C01",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "适用对象",
+                  "score": 0.1696,
+                  "snippet": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.0449,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                }
+              ],
+              "candidate_count": 3,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "公司年度经营目标 营收 战略规划 2027",
+            "top_k": 12
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "公司年度经营目标 营收 战略规划 2027",
+              "hits": [
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.1188,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C03",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "任务失败返还",
+                  "score": 0.0643,
+                  "snippet": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                }
+              ],
+              "candidate_count": 2,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "final_answer",
+        "data": {
+          "answer": "知识库中未检索到任何关于星映科技营收目标或年度经营规划的资料，现有文档仅涉及费用报销、AI视频生成积分等事项，无法回答2027年营收目标。",
+          "status": "insufficient_evidence",
+          "citations": [],
+          "gaps": [
+            "知识库缺少星映科技年度经营目标/营收规划相关文档，无2027年营收目标数据"
+          ]
+        }
+      },
+      {
+        "step": 7,
+        "event": "run_finished",
+        "data": {
+          "status": "insufficient_evidence",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.906,
+      "usage": {
+        "prompt_tokens": 4401,
+        "completion_tokens": 198,
+        "total_tokens": 4599
+      }
+    }
+  }
+}

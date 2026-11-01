@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C01",
+      "run_id": "eca2b71a19c74a6d9df410e5a2ff1ccb",
+      "artifact_sha256": "7417bf526db7fc3a0320f201327fa857a2fec90d2d14f4bdf937a985f152797c",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "C03",
+      "run_id": "7d82dee6cbc44ac8b54239cb56655ccd",
+      "artifact_sha256": "be359aef0c0ff8a87fc989788bbbd8715ea7fba985f9325c0f58d5c5d6ca8645",
+      "verdict": "fail",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "问题所问的预扣金额回答为20积分，并正确区分发起预扣与成功后正式扣除。",
+          "evidence": [
+            "D05-C02：发起一条AI视频生成任务时预扣20积分，成功后正式扣除。",
+            "answer首句明确预扣20积分。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "金额、失败返还60分钟与24小时三条事实均有对应原文，引用均在本轮成功读取；此项不代表扩展返还话题或最终澄清状态合理。",
+          "evidence": [
+            "Trace step 5成功读取D05，包括D05-C02与D05-C03。",
+            "Trace step 6成功读取D06，包括D06-C03；三个quote与data/documents.json逐字一致。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "fail",
+          "reason": "用户仅问预扣金额，20积分已有明确规则；回答扩展到未询问的失败返还时限并据此要求澄清，错误地让另一事项的冲突阻止当前问题完成。",
+          "evidence": [
+            "question：生成一条AI视频会预扣多少积分？",
+            "evaluation/dev.json C03 expected_behavior：不要把失败返还时限冲突扩展成扣费额冲突。",
+            "gaps仅要求确认D05/D06的返还时限，而不是预扣金额。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有输出禁止的40积分，也没有捏造金额冲突；跨事项扩大冲突的问题已在scope_conflict判失败。",
+          "evidence": [
+            "evaluation/dev.json C03 must_not=[40积分]。",
+            "answer预扣金额始终为20积分。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "fail",
+          "reason": "两次搜索和两次原文读取均成功，当前所问金额可确定，应为answered；实际为clarification_required/conflict，任务状态不准确。",
+          "evidence": [
+            "Trace steps 2、3、5、6 observation.ok均为true。",
+            "expected_status=answered；result.status=clarification_required，clarification_reason=conflict。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K01",
+      "run_id": "e95685bdf8354564a62581bcdd48542a",
+      "artifact_sha256": "4f608dc37e7441d79558fdc53bd4fc214b334b5da2ba5d6e8a3ffd1814bcaa84",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "K03",
+      "run_id": "ce4ba85610ae4d2cbafd058f8df85574",
+      "artifact_sha256": "0e45cf027ca7834c8f01e23c21ebb5098373dd22183e351f066f4354342cb29e",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "O01",
+      "run_id": "beaf2c74cf364531a71c007f49a4c5a3",
+      "artifact_sha256": "669fd413a5ce88f4cc5f32c1d9ff4fa23094fe86c02a3e3faeeacd9f1d25d830",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "O03",
+      "run_id": "6a232a0066004c90bad17e39ca25a7b2",
+      "artifact_sha256": "fae0f6522e593c0405019d7c3e7856d125d8a91275cf3b1d9e1b500ac0b4c540",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "P01",
+      "run_id": "eafaba7ff5874ed29c8f7608a154c965",
+      "artifact_sha256": "15db9ca5eb4ae95583c1267d2c02e39058a357613cf9e431e2ac9ad73835a8f6",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "P03",
+      "run_id": "f39a185355bb4e189d4bd99a549d6dcd",
+      "artifact_sha256": "b0ec477aacbdd2f3fefdd06ab74964463c931f8b413e614988a3b949b6b46e5f",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "H01",
+      "run_id": "6cf36e94e2854cd3a86ba28a258558bb",
+      "artifact_sha256": "cfa0b03ab8089255b2da329a714020f92e3d006eb76332027d9d3a7867512238",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "H03",
+      "run_id": "8b90f2d99e3c43cf81fbe83095aecace",
+      "artifact_sha256": "cf172fd3d9b87ad1cd7bc16c4d934527476e0ff6e1b7f0f1483e2071bd2e2e4b",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "F01",
+      "run_id": "874c671fab5c43b79d17974c513d9666",
+      "artifact_sha256": "84e598d9f09e19cac5d1e92d561f85ca4f5377550dd3b9054f904d6831558205",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    },
+    {
+      "case_id": "F03",
+      "run_id": "7ecd0648e227430b86aaba9708cac72d",
+      "artifact_sha256": "2fa2e22732e4906181b7c791c018d887ac1e1f92c974b13847f8746e648217c3",
+      "verdict": "pending",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "citation_support": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "scope_conflict": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "must_not": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        },
+        "failure_status": {
+          "verdict": "pending",
+          "reason": "",
+          "evidence": []
+        }
+      }
+    }
+  ]
+}

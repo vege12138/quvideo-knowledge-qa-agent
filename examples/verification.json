@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-01T08:13:32.546504+00:00",
+  "batch": "final-20261101",
+  "status": "local_delivery_ready_with_known_limitations",
+  "user_confirmation": "pending",
+  "environment": {
+    "python": "3.10.15",
+    "executable": ".runtime\\delivery-venv\\Scripts\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "model": "deepseek-flash",
+    "mode": "real",
+    "dependencies": {
+      "langgraph": "1.2.18",
+      "pydantic": "2.14.2",
+      "scikit-learn": "1.7.2",
+      "httpx": "0.28.1",
+      "fastapi": "0.162.0",
+      "uvicorn": "0.54.0",
+      "pytest": "9.2.0"
+    },
+    "clean_environment_note": "A new .runtime/delivery-venv was created and installed on 2026-10-31. Final source is installed editable; final tests and real CLI were run in this isolated environment."
+  },
+  "commands": [
+    {
+      "command": ".\\.venv\\Scripts\\python.exe -m venv .runtime\\delivery-venv",
+      "started": {
+        "current_time": "2026-10-31 11:36:54 UTC"
+      },
+      "exit_code": 0,
+      "output": "",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe -m pip install -r requirements.txt",
+      "started": {
+        "current_time": "2026-10-31 11:37:50 UTC"
+      },
+      "exit_code": 0,
+      "output": "hl (506 kB)\r\n     ------------------------------------- 506.1/506.1 kB 10.6 MB/s eta 0:00:00\r\nInstalling collected packages: zstandard, xxhash, websockets, uuid_utils, urllib3, typing_extensions, truststore, tomli, threadpoolctl, tenacity, sniffio, PyYAML, python-dotenv, Pygments, pluggy, packaging, ormsgpack, orjson, numpy, jsonpointer, iniconfig, idna, h11, distro, colorama, cloudpickle, click, charset-normalizer, certifi, annotated-types, annotated-doc, uvicorn, typing-inspection, scipy, requests, pydantic_core, opentelemetry-api, langchain-protocol, jsonpatch, joblib, httpcore2, httpcore, exceptiongroup, scikit-learn, requests-toolbelt, pytest, pydantic, anyio, starlette, httpx2, httpx, langsmith, fastapi, langchain-core, langgraph-sdk, langgraph-checkpoint, langgraph-prebuilt, langgraph\r\n\nSuccessfully installed PyYAML-6.0.3 Pygments-2.21.0 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 certifi-2026.10.23 charset-normalizer-3.5.2 click-8.5.0 cloudpickle-3.1.2 colorama-0.4.6 distro-1.9.0 exceptiongroup-1.3.1 fastapi-0.162.0 h11-0.16.0 httpcore-1.0.9 httpcore2-2.14.0 httpx-0.28.1 httpx2-2.14.0 idna-3.20 iniconfig-2.3.1 joblib-1.6.0 jsonpatch-1.38 jsonpointer-3.6 langchain-core-1.7.3 langchain-protocol-0.0.20 langgraph-1.2.18 langgraph-checkpoint-4.3.1 langgraph-prebuilt-1.1.1 langgraph-sdk-0.4.10 langsmith-0.14.16 numpy-2.2.6 opentelemetry-api-1.45.2 orjson-3.13.0 ormsgpack-1.12.2 packaging-26.3 pluggy-1.7.0 pydantic-2.14.2 pydantic_core-2.50.2 pytest-9.2.0 python-dotenv-1.2.4 requests-2.34.2 requests-toolbelt-1.0.0 scikit-learn-1.7.2 scipy-1.15.3 sniffio-1.3.1 starlette-1.7.0 tenacity-9.2.1 threadpoolctl-3.7.0 tomli-2.5.0 truststore-0.10.5 typing-inspection-0.4.4 typing_extensions-4.16.0 urllib3-2.8.0 uuid_utils-0.19.0 uvicorn-0.54.0 websockets-16.1.1 xxhash-4.0.2 zstandard-0.25.0\r\n\r\n[notice] A new release of pip is available: 23.0.1 -> 26.2.2\r\n[notice] To update, run: E:\\CS\\job\\ying\\.runtime\\delivery-venv\\Scripts\\python.exe -m pip install --upgrade pip\r\n",
+      "output_tail_only": true
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe -m pip install -e . --no-deps",
+      "started": {
+        "current_time": "2026-10-31 11:39:57 UTC"
+      },
+      "exit_code": 0,
+      "output": "Looking in indexes: https://mirrors.ustc.edu.cn/pypi/web/simple\r\nObtaining file:///E:/CS/job/ying\r\n  Installing build dependencies: started\r\n  Installing build dependencies: finished with status 'done'\r\n  Checking if build backend supports build_editable: started\r\n  Checking if build backend supports build_editable: finished with status 'done'\r\n  Getting requirements to build editable: started\r\n  Getting requirements to build editable: finished with status 'done'\r\n  Preparing editable metadata (pyproject.toml): started\r\n  Preparing editable metadata (pyproject.toml): finished with status 'done'\r\nBuilding wheels for collected packages: xingying-knowledge-qa\r\n  Building editable for xingying-knowledge-qa (pyproject.toml): started\r\n  Building editable for xingying-knowledge-qa (pyproject.toml): finished with status 'done'\r\n  Created wheel for xingying-knowledge-qa: filename=xingying_knowledge_qa-0.1.0-0.editable-py3-none-any.whl size=1806 sha256=05bcf442a2adac52cbeaba5dfc65090660dcd3946595bfe6009b88cfd6f8eee6\r\n  Stored in directory: C:\\Users\\Administrator\\AppData\\Local\\Temp\\pip-ephem-wheel-cache-dk3ag2of\\wheels\\8a\\5e\\16\\90cd897d1b434820cc06a19f86cf5556787bce18623aa0d8f5\r\nSuccessfully built xingying-knowledge-qa\r\nInstalling collected packages: xingying-knowledge-qa\r\nSuccessfully installed xingying-knowledge-qa-0.1.0\r\n\r\n[notice] A new release of pip is available: 23.0.1 -> 26.2.2\r\n[notice] To update, run: E:\\CS\\job\\ying\\.runtime\\delivery-venv\\Scripts\\python.exe -m pip install --upgrade pip\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe -m pytest -q --junitxml=examples/final-20261031/tests.xml",
+      "started": {
+        "current_time": "2026-10-31 11:40:36 UTC"
+      },
+      "exit_code": 0,
+      "output": "\n.....................................................                    [100%]\r\n53 passed in 16.69s\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe -m pip check",
+      "started": {
+        "current_time": "2026-10-31 11:40:36 UTC"
+      },
+      "exit_code": 0,
+      "output": "No broken requirements found.\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/validate_dataset.py",
+      "started": {
+        "current_time": "2026-10-31 11:40:36 UTC"
+      },
+      "exit_code": 0,
+      "output": "OK: 8 documents / 32 chunks / 24 evaluation cases\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split dev --mode real --output examples/evaluation/final-20261031/dev",
+      "started": {
+        "current_time": "2026-10-31 11:44:45 UTC"
+      },
+      "exit_code": 0,
+      "output": "C01: answered, structural=True, tools=3\r\nK01: clarification_required, structural=True, tools=4\r\nC03: clarification_required, structural=False, tools=4\r\nO01: insufficient_evidence, structural=True, tools=2\r\nO03: insufficient_evidence, structural=True, tools=2\r\nK03: clarification_required, structural=True, tools=4\r\n\nP01: answered, structural=True, tools=3\r\nH01: answered, structural=True, tools=2\r\nP03: answered, structural=True, tools=3\r\nF03: tool_error, structural=True, tools=3\r\nH03: clarification_required, structural=True, tools=4\r\nF01: answered, structural=True, tools=3\r\nSaved examples\\evaluation\\final-20261031\\dev\\summary.json\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe -m pytest -q --junitxml=examples/final-20261031-r2/tests.xml",
+      "started": {
+        "current_time": "2026-11-01 02:26:13 UTC"
+      },
+      "exit_code": 0,
+      "output": "\n..\n...................................................                    [100%]\r\n53 passed in 21.21s\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split dev --mode real --output examples/evaluation/final-20261031-r2/dev",
+      "started": {
+        "current_time": "2026-11-01 02:28:04 UTC"
+      },
+      "exit_code": 0,
+      "output": "C01: answered, structural=True, tools=3\r\nC03: answered, structural=True, tools=4\r\nK01: clarification_required, structural=True, tools=3\r\nO01: insufficient_evidence, structural=True, tools=1\r\nO03: insufficient_evidence, structural=True, tools=1\r\n\nK03: clarification_required, structural=True, tools=4\r\nP01: answered, structural=True, tools=3\r\nP03: answered, structural=True, tools=3\r\nH01: answered, structural=True, tools=2\r\nF01: answered, structural=True, tools=3\r\nF03: tool_error, structural=True, tools=3\r\nH03: clarification_required, structural=True, tools=4\r\nSaved examples\\evaluation\\final-20261031-r2\\dev\\summary.json\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split test --mode real --output examples/evaluation/final-20261031-r2/regression",
+      "started": {
+        "current_time": "2026-11-01 02:29:42 UTC"
+      },
+      "exit_code": 0,
+      "output": "C04: answered, structural=True, tools=2\r\nC02: answered, structural=True, tools=2\r\nK02: clarification_required, structural=True, tools=4\r\nO02: insufficient_evidence, structural=True, tools=4\r\nK04: clarification_required, structural=True, tools=4\r\nO04: insufficient_evidence, structural=True, tools=2\r\n\nP02: answered, structural=True, tools=3\r\nP04: answered, structural=True, tools=3\r\nH02: answered, structural=True, tools=3\r\nH04: answered, structural=True, tools=3\r\nF02: answered, structural=True, tools=4\r\nF04: tool_error, structural=True, tools=6\r\nSaved examples\\evaluation\\final-20261031-r2\\regression\\summary.json\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split mutation --mode real --output examples/evaluation/final-20261031-r2/mutation",
+      "started": {
+        "current_time": "2026-11-01 02:30:51 UTC"
+      },
+      "exit_code": 0,
+      "output": "M03: answered, structural=True, tools=2\r\nM02: answered, structural=True, tools=3\r\nM01: clarification_required, structural=True, tools=4\r\nM04: answered, structural=True, tools=3\r\nSaved examples\\evaluation\\final-20261031-r2\\mutation\\summary.json\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe -m pytest -q --junitxml=examples/final-20261101/tests.xml\nif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }\n.\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split dev --mode real --output examples/evaluation/final-20261101/dev\nif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }\n.\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split test --mode real --output examples/evaluation/final-20261101/regression\nif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }\n.\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/evaluate.py --split mutation --mode real --output examples/evaluation/final-20261101/mutation",
+      "started": {
+        "current_time": "2026-11-01 07:53:45 UTC"
+      },
+      "exit_code": 0,
+      "output": "\n.....................................................                    [100%]\r\n53 passed in 20.75s\r\nC01: answered, structural=True, tools=3\r\nK01: clarification_required, structural=True, tools=3\r\nC03: answered, structural=True, tools=4\r\nO01: insufficient_evidence, structural=True, tools=2\r\nK03: clarification_required, structural=True, tools=4\r\nO03: insufficient_evidence, structural=True, tools=4\r\nP01: answered, structural=True, tools=3\r\nP03: answered, structural=True, tools=3\r\nH01: answered, structural=True, tools=2\r\nH03: clarification_required, structural=True, tools=4\r\nF03: tool_error, structural=True, tools=3\r\nF01: answered, structural=True, tools=3\r\nSaved examples\\evaluation\\final-20261101\\dev\\summary.json\r\nC04: answered, structural=True, tools=2\r\nC02: answered, structural=True, tools=3\r\nK02: clarification_required, structural=True, tools=3\r\nO02: insufficient_evidence, structural=True, tools=4\r\nO04: insufficient_evidence, structural=True, tools=4\r\nK04: clarification_required, structural=True, tools=4\r\nP02: answered, structural=True, tools=3\r\n\nH02: answered, structural=True, tools=3\r\nP04: answered, structural=True, tools=3\r\nH04: answered, structural=True, tools=3\r\nF02: answered, structural=True, tools=4\r\nF04: tool_error, structural=True, tools=6\r\nSaved examples\\evaluation\\final-20261101\\regression\\summary.json\r\nM02: answered, structural=True, tools=2\r\nM03: answered, structural=True, tools=2\r\nM01: clarification_required, structural=True, tools=4\r\nM04: answered, structural=True, tools=3\r\nSaved examples\\evaluation\\final-20261101\\mutation\\summary.json\r\n",
+      "output_tail_only": false
+    },
+    {
+      "command": ".\\.runtime\\delivery-venv\\Scripts\\python.exe scripts/smoke_interfaces.py --output examples/final-20261101/interfaces",
+      "started": {
+        "current_time": "2026-11-01 07:57:49 UTC"
+      },
+      "exit_code": 0,
+      "output": "\n{\"cli\": [\"answered\", \"clarification_required\", \"insufficient_evidence\", \"chat\"], \"http_statuses\": [200, 200, 200, 200, 200, 200, 204, 404], \"evidence\": \"examples\\\\final-20261101\\\\interfaces\"}\r\n",
+      "output_tail_only": false
+    }
+  ],
+  "tests": {
+    "artifact": "examples/final-20261101/tests.xml",
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "53",
+    "time": "20.750",
+    "timestamp": "2026-11-01T15:54:01.584939+08:00",
+    "hostname": "DESKTOP-A77MFDS"
+  },
+  "evaluation": [
+    {
+      "directory": "examples\\evaluation\\final-20261101\\dev",
+      "count": 12,
+      "mode": "real",
+      "dataset_role": "dev",
+      "structural": {
+        "pass": 12,
+        "fail": 0
+      },
+      "semantic": {
+        "pending": 0,
+        "pass": 11,
+        "fail": 1
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    },
+    {
+      "directory": "examples\\evaluation\\final-20261101\\regression",
+      "count": 12,
+      "mode": "real",
+      "dataset_role": "regression",
+      "structural": {
+        "pass": 12,
+        "fail": 0
+      },
+      "semantic": {
+        "pending": 0,
+        "pass": 12,
+        "fail": 0
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    },
+    {
+      "directory": "examples\\evaluation\\final-20261101\\mutation",
+      "count": 4,
+      "mode": "real",
+      "dataset_role": "mutation",
+      "structural": {
+        "pass": 4,
+        "fail": 0
+      },
+      "semantic": {
+        "pending": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    }
+  ],
+  "mutations": [
+    {
+      "case_id": "M01",
+      "operation": {
+        "id": "M01",
+        "base": "data/documents.json",
+        "operation": "replace_text",
+        "doc_id": "D01",
+        "chunk_id": "D01-C02",
+        "old": "30个自然日",
+        "new": "45个自然日",
+        "question": "员工报销最晚多少天内提交？",
+        "expected_status": "clarification_required",
+        "expected_facts": [
+          "45个自然日",
+          "15个自然日"
+        ],
+        "required_doc_ids": [
+          "D01",
+          "D02"
+        ]
+      },
+      "reconstructed_input_sha256": "b4dc3b39c5ae39e2b8ed02c5f26c5b6537d1bf48bb34db8f6a3eae3059b854b5",
+      "document_count": 8,
+      "read_chunks_matched": 8,
+      "note": "Reconstructed after execution from the unchanged source and fixed operation; compared to actual read observations. Temporary execution copy was not retained."
+    },
+    {
+      "case_id": "M02",
+      "operation": {
+        "id": "M02",
+        "base": "data/documents.json",
+        "operation": "remove_document",
+        "doc_id": "D02",
+        "question": "员工报销最晚多少天内提交？",
+        "expected_status": "answered",
+        "expected_facts": [
+          "30个自然日"
+        ],
+        "required_doc_ids": [
+          "D01"
+        ]
+      },
+      "reconstructed_input_sha256": "84b484fba9985a6d6a343f362ac229980a291801b2d30017eae2da0054abc925",
+      "document_count": 7,
+      "read_chunks_matched": 4,
+      "note": "Reconstructed after execution from the unchanged source and fixed operation; compared to actual read observations. Temporary execution copy was not retained."
+    },
+    {
+      "case_id": "M03",
+      "operation": {
+        "id": "M03",
+        "base": "data/documents.json",
+        "operation": "replace_text",
+        "doc_id": "D03",
+        "chunk_id": "D03-C02",
+        "old": "5名活跃成员",
+        "new": "8名活跃成员",
+        "question": "标准版一个工作区最多有多少名活跃成员？",
+        "expected_status": "answered",
+        "expected_facts": [
+          "8名"
+        ],
+        "required_doc_ids": [
+          "D03"
+        ]
+      },
+      "reconstructed_input_sha256": "643a251f6ca243a98af92e35ca48073fe8de1903cf9f9d5265c6167dde41ad42",
+      "document_count": 8,
+      "read_chunks_matched": 4,
+      "note": "Reconstructed after execution from the unchanged source and fixed operation; compared to actual read observations. Temporary execution copy was not retained."
+    },
+    {
+      "case_id": "M04",
+      "operation": {
+        "id": "M04",
+        "base": "data/documents.json",
+        "operation": "remove_document",
+        "doc_id": "D06",
+        "question": "AI视频失败后多久返还积分？",
+        "expected_status": "answered",
+        "expected_facts": [
+          "60分钟内"
+        ],
+        "required_doc_ids": [
+          "D05"
+        ]
+      },
+      "reconstructed_input_sha256": "6e22df2c2079b25ad93fec803c001bb05ad1c34a203a5f8107ebbbb827ce9876",
+      "document_count": 7,
+      "read_chunks_matched": 4,
+      "note": "Reconstructed after execution from the unchanged source and fixed operation; compared to actual read observations. Temporary execution copy was not retained."
+    }
+  ],
+  "interfaces": {
+    "artifact": "examples/final-20261101/interfaces/interfaces.json",
+    "http_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      204,
+      404
+    ],
+    "cli_exit_codes": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "observed_semantics": "CLI 5 members; 30/15 conflict; no revenue target. Chat 5 then 50 and clear. HTTP missing_context then standard 5; independent session 4K. Answers and quotations were reviewed by Codex, not independently by the user.",
+    "started_at": "2026-11-01T07:57:54.442729+00:00",
+    "completed_at": "2026-11-01T07:58:28.774436+00:00"
+  },
+  "checks": {
+    "missing_config": {
+      "passed": true,
+      "message": "缺少 DEEPSEEK_API_KEY；请设置环境变量或 .env，离线演示可使用 --mode mock。",
+      "method": "DeepSeekModel(Settings(api_key=\"\"))"
+    },
+    "ignored_sensitive_paths": {
+      ".env": true,
+      "deepseek.txt": true,
+      ".venv/": true,
+      ".runtime/": true
+    },
+    "candidate_file_count": 225,
+    "secret_scan": "pass; exact configured key and token-pattern scan; no secret values printed",
+    "local_markdown_links": "pass"
+  },
+  "source_sha256": {
+    ".env.example": "84096a03c782f9b5bae5750dbed9873cbe839e1b31473b365570040a17891e96",
+    ".gitattributes": "b94e82c2df9e12d4c6cda668741bc854a09160a4234499c63b67361a1b87239e",
+    ".gitignore": "ab3d555c4795d341755faafaf9a9009dbd6377e20afbc2fb7df281e1b2f99204",
+    "README.md": "5b08aac4874d672452846eb19b0200362acf05b2a755b8f84a0f2649a82b0818",
+    "data/docs/D01_员工费用报销管理制度.md": "975427c96e4a256248d98cadff1cfff5a5d7d309824ce0ad59015a2899d0c7cf",
+    "data/docs/D02_费用报销操作补充通知.md": "054a25cab6f19caea428fc7df75239082befecce0e68eb4df1808097b8759eed",
+    "data/docs/D03_团队标准版产品与协作规则.md": "0c632a95d00b56625ff2aacdb05874a7cde255676edfd32c26cd42ceb5f6f86b",
+    "data/docs/D04_团队专业版产品与协作规则.md": "cde37cbd93317ec1e0ba41d1890bcbeccd63586d15d3d6d56f5a1b77a74eb6cf",
+    "data/docs/D05_AI视频生成积分与扣费规则.md": "5f1a837867d85d94c44c7e92dde62db761f0e19cd7114be8b54551c0779bfb7e",
+    "data/docs/D06_AI视频生成失败排障FAQ.md": "fc089f7cd12509180ae5927ec15f75b1a3613f0b3a31ed8df1a181a9c44bcd5c",
+    "data/docs/D07_企业API接入与权限申请指南.md": "747a097a3cec1f4f8e5350de78895cebb47ee3857756bdd7c95896e42dcad9d0",
+    "data/docs/D08_员工请假与审批制度.md": "b786d0e5693d6296a3358430a7c8f47c79ad63dab30a038dcdbd8daa1c316b52",
+    "data/documents.json": "4c12597f9431cf20dc70661b29c27eb55a3c4a206a06537568e6b57008771f9a",
+    "docs/01-requirements.md": "72408c9825abf875ceed65a8e242f8509102367cf05a3ed84d38650f5e8dbe36",
+    "docs/02-solution.md": "b950004ea83788292ee4c4a4e9d6a82cca3debafdf008059dd5c8c6c386318ef",
+    "docs/03-evaluation.md": "5fc75338da363c3a40c0e3673bc060dd89241050104da86bbf39929375269dea",
+    "docs/04-ai-usage.md": "a645f90b1b704b88eff902d4270df1920ddacbf83dd1b94c7c659fa2ac7bfc15",
+    "docs/05-retrospective.md": "22f36eaf6e287f0999c4f62f107cd96f37ab132ce412b984fa9733e7b856e27c",
+    "docs/assignment.md": "10d6be86a078b110cb2b22b4dc12ad40ec510b172c1237d367dd7711f2bbf2ac",
+    "docs/dataset-readme.md": "9a8dc5e7cc52f402e5879b2a69ff80f85369e339df15d24a64c6b0abdb07e8af",
+    "docs/implementation-plan.md": "0f67a69eed9f261a59a8f7a6e0b01246be4ce9bb11a49ff3ea9a357378ecf235",
+    "docs/knowledge-design.md": "dd48240f6b2b9db8ece7f6ef8911d294616a39fd89beceddb4350a8349c8dfb7",
+    "docs/phases/01-specification.md": "0d349840d7a1bf11c73ea2288f43fbc000158e7c5034f101469bbb4d8052de89",
+    "docs/phases/02-knowledge-tools.md": "32f5a13cdf139daa5dc6524e131cd446fb71f7deaf075e00b8dd75f36fcccac7",
+    "docs/phases/03-agent-core.md": "b1f264dda8c2a0462139795b40947f419c3ac46047fef682856aa3a2b0536d4e",
+    "docs/phases/04-cli-mvp.md": "4f46069564edd7c09ac644052fcce9a112af57ec0f78ba6fce4d1b4bc834646f",
+    "docs/phases/05-complete-behavior.md": "efa9ccdc2cfcfd372c448760f4a995180e2a8a28692c51eec59c34774402a7ad",
+    "docs/phases/06-evaluation-delivery.md": "a2ad3df38ea32ff276ca4c1f10b8926c9b779b5a567bc9637fef83be7f4b8c62",
+    "docs/phases/07-web-product.md": "a11b834cf610af706c40f5a447749ce5c1ef7c06c8408ee0fcbb57c430b3a54c",
+    "evaluation/all_cases.json": "147ffd892880516e1419c8540e450ac9b25b2f30c51f2b85da12bb37ecf0c866",
+    "evaluation/dev.json": "284ba72d99638c634cff9645d89d510c4b1d0166e26ca3a5b3c22be41bc8f628",
+    "evaluation/document_relations.json": "d34a54a610f128d4b1ce18f6f4b921ba0c671e7cf39895b1fa3c44b752b4aad8",
+    "evaluation/mutation_cases.json": "cc162f3b6ec507a4b7d5ce2e03a756e0eb9630b9245b15d2fa5bb869dd7f054e",
+    "evaluation/test.json": "eeac1c2e7e9b02cac28a3bd38fad2e39cf56d896dc7ac48c2ff0a06d06e42105",
+    "pyproject.toml": "11b6e6deed92763d396e5dbb69e306bb81aea863c733ce59625360581c30a483",
+    "requirements.txt": "b7694ce5f10cb21e8f43df57f30a041bbb534c99136484f7765ffb3e309f610a",
+    "scripts/evaluate.py": "872e66d3e87f922548434d39b6bac7a769963e15ab969d14a3ff5bb51b8af7e0",
+    "scripts/smoke_interfaces.py": "5ed699a34267f0a4f3e9d7b9f6d7a6f6cb67fc5b99dd905511da034a96bbafb1",
+    "scripts/validate_dataset.py": "4b4275c74d3dbff593b513ac7971a3f67c3543e5a434cf766a584958bf2dd9bf",
+    "scripts/verify_reviews.py": "e35865253b26452b0b1dd8f0b92efe117152b2644b066be96fca35f1aac79fe7",
+    "src/knowledge_qa/__init__.py": "dcc9bd1735be74f79454998aa05b6faac58acdbb9ccabed82033bce6bf04e839",
+    "src/knowledge_qa/__main__.py": "19f07de3d1765a6803d4332ab1e67346381236f7769f47640e73849922394790",
+    "src/knowledge_qa/agent.py": "63268a607f26b78dbc4dfae6c6f34a04d29e502f5b596d070db2453da116932a",
+    "src/knowledge_qa/cli.py": "e3b57aa360318f217c8215d6d05ac234319870075e46a8b674fcbdd36b9d99f9",
+    "src/knowledge_qa/config.py": "21ad9fef0539d91767964e463a72ffd23a79f33385bdc488b024be1ef1b0e6c3",
+    "src/knowledge_qa/knowledge.py": "8efd46991c7bd156793e94a69cbd02d6bb6499e6041588670858e1ff7d11de1a",
+    "src/knowledge_qa/model.py": "10570809ce56405adb18b24f2696a76bb360e4c91004009f10105ff6c3a7c4bd",
+    "src/knowledge_qa/retrieval.py": "8ad96552cc06aab80abbe412ba4455ef1456fdd65024073e7bad484ecb211c81",
+    "src/knowledge_qa/schemas.py": "4ad11077b523ec14522b53dee8170a6736ba794b9be1ef695a9562b8ea7b5726",
+    "src/knowledge_qa/service.py": "4ca3ed4b0be8317af449a193c40543991810a16b50c4931aed3d03fdfc505076",
+    "src/knowledge_qa/tools.py": "1489285562f081c86ba164fb84045a820aa81f45f8ac00411b2cac905c2ce088",
+    "src/knowledge_qa/trace.py": "e8c869609ae2634e75496651000afd8d8ee1148acdffa1542e0d9917b259e074",
+    "src/knowledge_qa/validation.py": "986edeeb79e73acea29131f65d3d7d9cb77c26b20edbf6ea0ec2c74e6583bb21",
+    "src/knowledge_qa/web/__init__.py": "8599ef2bcadcfee09057b429ebd383c1f6732f9db9858cdb38753914c725f0e1",
+    "src/knowledge_qa/web/app.py": "51e61f02592ea68414c85d3a8ee384f664588ff5c4cc0653a2412f6f0846b3af",
+    "src/knowledge_qa/web/static/app.js": "7ee0589a9cdfb4df28bdadbc4f2b886928b6980f11d00233a8dc19016b4e683e",
+    "src/knowledge_qa/web/static/index.html": "16fc5eceec6ba7fbbf53c621b4b8fa1e39e9e34b4eae36aa3f05a7297fdbeec8",
+    "src/knowledge_qa/web/static/style.css": "a02051b3b7c63dbde77580a3f0ec1dd723d66c8c675db04a069efb17918c2324",
+    "tests/acceptance/test_interfaces.py": "a40055a3dfac403af5037ef03b06dc3539ab7463d00187a0e54744fff2f01b14",
+    "tests/integration/test_agent.py": "cbe949fadd202cf880a01354200b8fc4e05f5344e3418dea00f52d6150aced70",
+    "tests/unit/test_clarification_validation.py": "97d24ccce0f7dfd7f5c7ebefd73dfe371931265ab4015b4ed3a9633183aafab4",
+    "tests/unit/test_evaluation.py": "b96079110c79f430da58f88dcc02454ba50953b374f32e08bbe09f10442770eb",
+    "tests/unit/test_failure_limits.py": "04206e1485b7fb53b85f91122ba6f4c7f650e6243297215fcf5ec03712090ef0",
+    "tests/unit/test_knowledge.py": "3c99b65aa2772d05fd1666088dc92721a76542c9c3cd298b257a8fed475f434f"
+  },
+  "artifact_sha256": {
+    "examples/evaluation/final-20261101/dev/C01.json": "5161d66cdc82a4b9776eb8d09fd8958ba4fae30b4b93879de9aa196a3e7c97f4",
+    "examples/evaluation/final-20261101/dev/C03.json": "547d415ea45b325983cca5ded19154080b272726ea134cb966cb0223ad4d06b1",
+    "examples/evaluation/final-20261101/dev/F01.json": "972e1c732eb54f9dd703fbaac6e5a017633f085bc6ae9964e200af137d447b3a",
+    "examples/evaluation/final-20261101/dev/F03.json": "1abba85297f454cb3fcfd624e0ce25cd350f09047487965f06e2435f5bad582e",
+    "examples/evaluation/final-20261101/dev/H01.json": "d99aa64ef43048209318e30d95758daace4f947fa8c048cab57474ce6ce61b39",
+    "examples/evaluation/final-20261101/dev/H03.json": "3bf0315b1e5483b9319ffd6cb617f4ed77e14ef3228e2f7aa50b9ed7a3434358",
+    "examples/evaluation/final-20261101/dev/K01.json": "def4a69bbf20436e8cc04bafe1c274c52c12fb24b649ec3a2c451603615505ea",
+    "examples/evaluation/final-20261101/dev/K03.json": "40305864ba562468e4f042ccacfc5cffdf5e21874d8b13724143d4eb7cbcc4db",
+    "examples/evaluation/final-20261101/dev/O01.json": "1eb8502493e8dfbbd2d6f7160228eebe8b2cf2f0377e41434b603c894e74b60a",
+    "examples/evaluation/final-20261101/dev/O03.json": "73886d607d1da52fb0798150bd6e4f69853cddf848fe3e909bc4ba6b4065d211",
+    "examples/evaluation/final-20261101/dev/P01.json": "08fa995c3812aac938d27117c91725a13bca05252151e584c78c532bd4267f3f",
+    "examples/evaluation/final-20261101/dev/P03.json": "b1b4b6666bd1677f7eb823f4655f3f12d2ea6289f25fafaa7fb444b2b9b428e2",
+    "examples/evaluation/final-20261101/dev/review.json": "cdd5636c05135a1d9dbaaff418ba61da5d4584aa5e6c4424d69ce629e78ba341",
+    "examples/evaluation/final-20261101/dev/summary.json": "2002511ee67aae6f00c919406742231d8165e73ec79ee556d315135eed182cb9",
+    "examples/evaluation/final-20261101/mutation/M01.json": "a879b7c174a539e8a8699fa68a5ae8c4ef366865b537b3db4b42b925a22f8a08",
+    "examples/evaluation/final-20261101/mutation/M02.json": "a9c053de7b5ad481deadcc917ad97800772b32f17e2851fec32c57d19fcc666b",
+    "examples/evaluation/final-20261101/mutation/M03.json": "81fefc376347835cebc817d2a26fc9e4c821e606d513df43779da793f5e86370",
+    "examples/evaluation/final-20261101/mutation/M04.json": "9d155bc025171816686a2db678a83865e22d32fbf21902f5ff10983a040d6e50",
+    "examples/evaluation/final-20261101/mutation/review.json": "5a33c29703b784660dfa862db811f0331017830b4ef99693151b7712721c369b",
+    "examples/evaluation/final-20261101/mutation/summary.json": "23751225dff5843afea116e42a10807a3618d4c4ffeadbf46be3afea5551f0aa",
+    "examples/evaluation/final-20261101/regression/C02.json": "8be17bbc9fc4fabcb53716f1a2d0f50825f8d147be9f55247d00bac9ecc4d59b",
+    "examples/evaluation/final-20261101/regression/C04.json": "6acfd6ea9c93ac62153f395c83636e8364293ad6f91d6a869fb9758537cd807e",
+    "examples/evaluation/final-20261101/regression/F02.json": "d66331c0cafe32cd0d34b4d9c5fe186261493d7dca4b8dc4edd67a3293c27f4f",
+    "examples/evaluation/final-20261101/regression/F04.json": "6aae8e6100df94a78fe0ef11eb91f5d0f3594dd9d0d162462fdd5b9d4558bf97",
+    "examples/evaluation/final-20261101/regression/H02.json": "a47b10b6d0ac6b9903d8403bc04b6b07d75b4b33715580e7714987283a8b78b2",
+    "examples/evaluation/final-20261101/regression/H04.json": "6ce7e1e7b68db099b27c584fddb0d77346be1cf8269034fdbbd7c022bf9785d3",
+    "examples/evaluation/final-20261101/regression/K02.json": "e215ff219ff89dd5c45171b9f47c5fb64021ddf7af9b84c5e118403781b12b14",
+    "examples/evaluation/final-20261101/regression/K04.json": "de71b715ee5a98ace2a577a9707e7aff285b056558007ed6b972eb2ee8d1013b",
+    "examples/evaluation/final-20261101/regression/O02.json": "ebb0efef6982a31f76846a377048f545ad691561eb09bea5e1892591dc448f38",
+    "examples/evaluation/final-20261101/regression/O04.json": "483085d580978f5e08a5cb0aca5673f805df25507fa9c689b0c61e33758c507d",
+    "examples/evaluation/final-20261101/regression/P02.json": "2f7cad6fc5257c0f4a8f0687aef33861061287bf8d439a7aa16e77d2f00b4113",
+    "examples/evaluation/final-20261101/regression/P04.json": "7d01d143853e50499c620145e6d5222623b82e89b7d9a92150b98866b694fd8d",
+    "examples/evaluation/final-20261101/regression/review.json": "0c605da7debb1bc5d756bdc271f88f419b2d0688c43ac8790be2e6e7a67e3a43",
+    "examples/evaluation/final-20261101/regression/summary.json": "bfd893f93e060d13e8af05f50caaf108e3b12c5541b843db19c280685d8ef4ec",
+    "examples/final-20261101/interfaces/chat/5bc63d4a2a6e40d09ff235968d5e13c2.json": "c57365944e52dc2a14bb6f1b20de7e7dc1090358c9d7f4bc9fdaed8fb6867302",
+    "examples/final-20261101/interfaces/chat/7c90b6fb46874275a546871e9c80f550.json": "276d353656603c23292423c6243ee3cbb4e06a9560f1b54bec067f7b3a2242ff",
+    "examples/final-20261101/interfaces/cli-conflict.json": "e91e98f759158af6913d079acc700e5e447e46d82d8c117077df35b0186d488f",
+    "examples/final-20261101/interfaces/cli-missing.json": "a709c25cf9cec9862f2fc6ca48a824c3f0797e835ca5fec2f901aa6b536f7557",
+    "examples/final-20261101/interfaces/cli-normal.json": "9ff5ed2fda93c4ff62390fcd47777352d54910197ab07603fbbefdf64c3e1724",
+    "examples/final-20261101/interfaces/interfaces.json": "f18b8f04aaae275a1c4a3457a08186f8fe691d92e2e66135134d1a7d8682d3ce",
+    "examples/final-20261101/review-summary.json": "6c6f6f94a1900e92d19fa0942d90069fa2631e38919aceb6fdf0c1ec876ce598",
+    "examples/final-20261101/tests.xml": "e8d1b4a746932ca3a981a767ed1a3c56feaf527dc08d4b8daae29a5857affcf2"
+  },
+  "known_limitations": [
+    {
+      "id": "C03",
+      "state": "open",
+      "severity": "noncritical_scope_and_citation_completeness",
+      "detail": "Precharge amount20 and answered status are correct; extra unasked refund discussion/gaps remains and corresponding extra quote entries are missing. Semantic verdict fail, not hidden by structural pass."
+    },
+    {
+      "id": "browser_visual",
+      "state": "not_executed",
+      "detail": "CUA trusted Node/sandbox helper initialization failed on repeated attempts; API checks do not prove browser visual flow."
+    },
+    {
+      "id": "independent_holdout",
+      "state": "not_available",
+      "detail": "Original test split participated in development; results are regression."
+    },
+    {
+      "id": "user_acceptance",
+      "state": "pending",
+      "detail": "Only one earlier normal CLI run was personally confirmed by user."
+    },
+    {
+      "id": "remote_publish",
+      "state": "not_requested_in_this_delivery",
+      "detail": "No GitHub push or remote deployment; local commit SHA supplied in handoff."
+    }
+  ],
+  "timing_note": "Command/test/model timestamps and elapsed durations are execution evidence, not personal development hours. Quota interruptions and pauses are not continuous work.",
+  "git_note": "Use git rev-parse HEAD for the commit containing this manifest. Its own commit SHA is not embedded to avoid self-reference."
+}

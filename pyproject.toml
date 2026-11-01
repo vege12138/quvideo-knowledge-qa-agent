@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xingying-knowledge-qa"
+version = "0.1.0"
+description = "Evidence-grounded enterprise knowledge QA with LangGraph and DeepSeek"
+requires-python = ">=3.10"
+dependencies = [
+  "langgraph>=1.0,<2", "pydantic>=2.10,<3", "scikit-learn>=1.6,<2",
+  "httpx>=0.28,<1", "python-dotenv>=1,<2", "fastapi>=0.115,<1", "uvicorn>=0.34,<1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+knowledge-qa = "knowledge_qa.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+knowledge_qa = ["web/static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

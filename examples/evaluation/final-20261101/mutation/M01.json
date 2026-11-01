@@ -1,0 +1,401 @@
+{
+  "question": "员工报销最晚多少天内提交？",
+  "history": [],
+  "result": {
+    "answer": "所读资料中，两份同适用范围（星映科技全体正式员工，含试用期员工）、同事项（报销提交时限）的在行文件规定了不同期限，无法调和：\n\n- 《员工费用报销管理制度》（D01，版本1.2，2026-01-10，2026-02-01生效）：明确规定为“费用实际发生后的45个自然日内”，超期申请“进入财务人工复核，不保证受理”。\n- 《费用报销操作补充通知》（D02，版本1.0，2026-03-15，2026-03-20生效）：明确规定为“费用实际发生后的15个自然日内”，并注明“此通知未载明与其他在行制度的废止关系或优先级规则”。\n\n日期更新本身不足以证明后者覆盖前者，因此需要权威确认以哪份为准。",
+    "status": "clarification_required",
+    "clarification_reason": "conflict",
+    "citations": [
+      {
+        "doc_id": "D01",
+        "chunk_id": "D01-C02",
+        "quote": "员工应在费用实际发生后的45个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+      },
+      {
+        "doc_id": "D02",
+        "chunk_id": "D02-C02",
+        "quote": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+      },
+      {
+        "doc_id": "D02",
+        "chunk_id": "D02-C04",
+        "quote": "此通知未载明与其他在行制度的废止关系或优先级规则。"
+      }
+    ],
+    "gaps": [
+      "需财务部或制度发布方确认：45个自然日（D01）与15个自然日（D02）两个提交时限的适用优先级或废止关系。"
+    ],
+    "run_id": "285fd87324ba4fbd874c20ffb08b3db2",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "员工报销最晚提交时间 多少天内提交",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "员工报销最晚提交时间 多少天内提交",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C02",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "提交时限",
+                  "score": 0.1337,
+                  "snippet": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C02",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "报销提交时限",
+                  "score": 0.1284,
+                  "snippet": "员工应在费用实际发生后的45个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C03",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "审批时间",
+                  "score": 0.0894,
+                  "snippet": "申请资料齐全后，开放平台组通常在2个工作日内完成审核并通知申请结果。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.0468,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C04",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "工单信息",
+                  "score": 0.0428,
+                  "snippet": "提交故障工单时需提供工作区ID、失败任务ID、失败时间以及错误提示截图。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C03",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "材料完整性",
+                  "score": 0.0917,
+                  "snippet": "提交时需上传发票或合规收据，并填写费用用途；差旅申请需关联对应的出差审批单。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C03",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "提交材料",
+                  "score": 0.0659,
+                  "snippet": "报销申请应附对应发票或合规收据、费用用途说明；差旅报销还应提供审批记录。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C04",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "超期处理",
+                  "score": 0.0557,
+                  "snippet": "超过规定提交期限的申请进入财务人工复核，不保证受理。"
+                }
+              ],
+              "candidate_count": 11,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "报销单提交时限 逾期 财务制度",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "报销单提交时限 逾期 财务制度",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C02",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "提交时限",
+                  "score": 0.2351,
+                  "snippet": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C02",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "报销提交时限",
+                  "score": 0.219,
+                  "snippet": "员工应在费用实际发生后的45个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C04",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "超期处理",
+                  "score": 0.0599,
+                  "snippet": "超过规定提交期限的申请进入财务人工复核，不保证受理。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C03",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "材料完整性",
+                  "score": 0.0589,
+                  "snippet": "提交时需上传发票或合规收据，并填写费用用途；差旅申请需关联对应的出差审批单。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C04",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "流程说明",
+                  "score": 0.0494,
+                  "snippet": "提交成功后由直属主管审核，再流转至财务部。此通知未载明与其他在行制度的废止关系或优先级规则。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C03",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "提交材料",
+                  "score": 0.0431,
+                  "snippet": "报销申请应附对应发票或合规收据、费用用途说明；差旅报销还应提供审批记录。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C01",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "适用对象",
+                  "score": 0.0279,
+                  "snippet": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                }
+              ],
+              "candidate_count": 7,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document",
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D01"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D01",
+              "title": "员工费用报销管理制度",
+              "category": "人事财务",
+              "version": "1.2",
+              "version_date": "2026-01-10",
+              "effective_date": "2026-02-01",
+              "owner": "财务部",
+              "scope": "全体正式员工（含试用期员工）",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D01-C01",
+                  "section": "适用对象",
+                  "text": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                },
+                {
+                  "chunk_id": "D01-C02",
+                  "section": "报销提交时限",
+                  "text": "员工应在费用实际发生后的45个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+                },
+                {
+                  "chunk_id": "D01-C03",
+                  "section": "提交材料",
+                  "text": "报销申请应附对应发票或合规收据、费用用途说明；差旅报销还应提供审批记录。"
+                },
+                {
+                  "chunk_id": "D01-C04",
+                  "section": "超期处理",
+                  "text": "超过规定提交期限的申请进入财务人工复核，不保证受理。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 6,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D02"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D02",
+              "title": "费用报销操作补充通知",
+              "category": "人事财务",
+              "version": "1.0",
+              "version_date": "2026-03-15",
+              "effective_date": "2026-03-20",
+              "owner": "财务运营组",
+              "scope": "全体正式员工（含试用期员工）",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D02-C01",
+                  "section": "适用范围",
+                  "text": "本通知面向星映科技全体正式员工（含试用期员工），覆盖交通、住宿、办公采购等因公费用。"
+                },
+                {
+                  "chunk_id": "D02-C02",
+                  "section": "提交时限",
+                  "text": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+                },
+                {
+                  "chunk_id": "D02-C03",
+                  "section": "材料完整性",
+                  "text": "提交时需上传发票或合规收据，并填写费用用途；差旅申请需关联对应的出差审批单。"
+                },
+                {
+                  "chunk_id": "D02-C04",
+                  "section": "流程说明",
+                  "text": "提交成功后由直属主管审核，再流转至财务部。此通知未载明与其他在行制度的废止关系或优先级规则。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 7,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "event": "final_answer",
+        "data": {
+          "answer": "所读资料中，两份同适用范围（星映科技全体正式员工，含试用期员工）、同事项（报销提交时限）的在行文件规定了不同期限，无法调和：\n\n- 《员工费用报销管理制度》（D01，版本1.2，2026-01-10，2026-02-01生效）：明确规定为“费用实际发生后的45个自然日内”，超期申请“进入财务人工复核，不保证受理”。\n- 《费用报销操作补充通知》（D02，版本1.0，2026-03-15，2026-03-20生效）：明确规定为“费用实际发生后的15个自然日内”，并注明“此通知未载明与其他在行制度的废止关系或优先级规则”。\n\n日期更新本身不足以证明后者覆盖前者，因此需要权威确认以哪份为准。",
+          "status": "clarification_required",
+          "clarification_reason": "conflict",
+          "citations": [
+            {
+              "doc_id": "D01",
+              "chunk_id": "D01-C02",
+              "quote": "员工应在费用实际发生后的45个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+            },
+            {
+              "doc_id": "D02",
+              "chunk_id": "D02-C02",
+              "quote": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+            },
+            {
+              "doc_id": "D02",
+              "chunk_id": "D02-C04",
+              "quote": "此通知未载明与其他在行制度的废止关系或优先级规则。"
+            }
+          ],
+          "gaps": [
+            "需财务部或制度发布方确认：45个自然日（D01）与15个自然日（D02）两个提交时限的适用优先级或废止关系。"
+          ]
+        }
+      },
+      {
+        "step": 9,
+        "event": "run_finished",
+        "data": {
+          "status": "clarification_required",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 4,
+      "elapsed_seconds": 4.328,
+      "usage": {
+        "prompt_tokens": 8317,
+        "completion_tokens": 560,
+        "total_tokens": 8877
+      }
+    }
+  }
+}

@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C02",
+      "run_id": "fab142c3d8d54e01b432f00babc0cbf2",
+      "artifact_sha256": "8ba9173109b9d0e2ee12c0495c42e2415924fe2ccdfda400320e2fcee1b73721",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "回答最高4K（3840×2160），并正确说明MP4格式，符合专业版导出规则。",
+          "evidence": [
+            "C02.json result.answer：最高支持4K（3840×2160）视频导出",
+            "data/documents.json D04-C03"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "唯一引用逐字来自本轮成功读取的D04-C03，直接支持分辨率和格式。",
+          "evidence": [
+            "C02.json trace step 4：read_document(D04)成功并返回D04-C03",
+            "C02.json result.citations[0]与D04-C03原文一致"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "限定团队专业版；检索虽同时命中标准版，但未把套餐差异当冲突或借用标准版上限。",
+          "evidence": [
+            "C02.json trace step 2同时命中D04-C03和D03-C03",
+            "trace step 4 D04-C01仅适用于团队专业版"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未声称专业版仅支持1080p，也未添加无依据的更高分辨率。",
+          "evidence": [
+            "C02.json result.answer：团队专业版最高支持4K",
+            "evaluation/test.json C02 must_not：仅支持1080p"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "检索与原文读取均成功后返回answered，无故障或未完成被掩盖。",
+          "evidence": [
+            "C02.json trace steps 2、4 observation.ok=true",
+            "trace step 7 status=answered；metrics.tool_calls=2"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "C04",
+      "run_id": "0926ac5171004b66a02de10b611483f7",
+      "artifact_sha256": "3856ac6eb9ba4e7bab2b0f0e4eca7d887fd7a7b3d25027f75af9d69ac25bddc6",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "明确年假至少提前2个工作日通过OA提交，保留工作日单位与最少提前的含义。",
+          "evidence": [
+            "C04.json result.answer：至少提前2个工作日，并通过OA提交申请",
+            "D08-C01：员工申请年假应至少提前2个工作日通过OA提交申请"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "期限引用来自本轮读取的D08-C01；补充的正式员工及试用期范围与同次读取的文档元信息一致。",
+          "evidence": [
+            "C04.json trace step 4返回D08-C01与scope=全体正式员工（含试用期员工）",
+            "C04.json result.citations[0]=D08/D08-C01"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "使用年假申请规则，没有将突发病假返岗补交时间混入年假提前申请要求。",
+          "evidence": [
+            "C04.json result.answer仅回答年假提前申请",
+            "trace step 4同时读取D08-C01和D08-C03后选择C01"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "回答保留2个工作日，没有改为2个自然日。",
+          "evidence": [
+            "C04.json result.answer：2个工作日",
+            "evaluation/test.json C04 must_not：2个自然日"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "本轮成功搜索并读取原文，answered与完成状态相符。",
+          "evidence": [
+            "C04.json trace steps 2、4 observation.ok=true",
+            "trace step 7 status=answered"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K02",
+      "run_id": "539ad215a852416ba291848458f05d67",
+      "artifact_sha256": "6552fcc8c9af71b4b0637e72674596810b99c744008d1c64132baa1de8e7551a",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "分别说明30自然日规则下第20天未超期、15自然日规则下已超期；未给出统一裁决。",
+          "evidence": [
+            "K02.json result.answer中的两项条件分析",
+            "D01-C02规定30个自然日；D02-C02规定15个自然日"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "核心期限及缺少优先级依据均有精确引用。附带的超期人工复核来自本轮D01-C04，但未单列该片段引用，引用覆盖仍可改进。",
+          "evidence": [
+            "K02.json result.citations引用D01-C02、D02-C02、D02-C04",
+            "trace steps 5、6成功读取D02、D01；D01-C04含人工复核且不保证受理"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "核对两份在行文件相同适用范围，并明确较新日期不能代替废止或优先级依据；未擅选更严格规则。",
+          "evidence": [
+            "K02.json trace steps 5、6：两份scope均为全体正式员工（含试用期员工）且status=active",
+            "D02-C04：未载明与其他在行制度的废止关系或优先级规则"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有断言第20天确定超期或确定不超期；各结论均限定为按某一份文件，最终请求财务确认。",
+          "evidence": [
+            "K02.json answer开头：无法判断第20天是否算超期",
+            "answer结尾：请向财务部确认应以哪份规定为准"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两份原文均已成功读取，因规则本身冲突返回clarification_required/conflict，与工具故障区分正确。",
+          "evidence": [
+            "K02.json trace steps 5、6 observation.ok=true",
+            "result.status=clarification_required；clarification_reason=conflict；trace step 9同状态"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K04",
+      "run_id": "d890536382954966944adabb37d15055",
+      "artifact_sha256": "66b75f25703d606e725565b1eb36e097ee1dae36202de5b56848ce77abba22a3",
+      "verdict": "fail",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "正确列出失败后60分钟内返还与满24小时后返还两种规定，并明确1小时未退不能直接确定是故障。",
+          "evidence": [
+            "K04.json result.answer：暂不能确定“一定是故障”",
+            "D05-C03：60分钟内自动返还；D06-C03：满24小时后才会返还"
+          ]
+        },
+        "citation_support": {
+          "verdict": "fail",
+          "reason": "两条冲突引用本身真实且已读取，但gaps第3项把“积分流水查看返还记录”和“检查任务状态”拼接为在积分流水页确认失败标记。原文未提供该页面可确认任务失败状态的依据，附加操作建议不完全受证据支持。",
+          "evidence": [
+            "K04.json result.gaps[2]：可先在“工作区设置-积分流水”确认任务是否已被平台标记为生成失败及返还记录",
+            "trace step 5 / D05-C04只说明管理员通过积分流水查看预扣、扣除与返还记录",
+            "trace step 6 / D06-C02仅要求检查工作区积分余额与任务状态，未指定任务状态位于积分流水页"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "识别双方对同类AI视频失败任务、同一工作区范围的返还时间冲突，没有按日期选新FAQ；额外确认用户是否指该功能属于适用范围澄清。",
+          "evidence": [
+            "K04.json trace steps 5、6读取D05-C01与D06-C01及相同scope",
+            "result.answer说明均未明示优先级或废止关系；clarification_reason=conflict"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有武断说一定故障或肯定正常；核心结论保留无法裁决的状态。",
+          "evidence": [
+            "K04.json answer：暂不能确定“一定是故障”",
+            "answer：1小时未退是否属故障需权威确认"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "工具调用均成功，最终因实际规则冲突澄清；未将业务冲突误标为工具错误。",
+          "evidence": [
+            "K04.json trace steps 2、3、5、6 observation.ok=true",
+            "trace step 9 status=clarification_required；reason_code为空"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O02",
+      "run_id": "91e61a82f8364dcdbead9ad74680a34b",
+      "artifact_sha256": "d799eefb6a3f4f4398370312d9a517dfca66e0abdc23d1a033edc39c7ac289f6",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "明确知识库没有婚假天数规则，不给出确定天数，符合未覆盖事项原文。",
+          "evidence": [
+            "O02.json result.answer：无法据此给出婚假天数",
+            "D08-C04明确不规定婚假、产假或陪产假的天数"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "拒答依据引用D08-C04，本轮已成功读取且逐字一致；版本和适用范围也来自同次读取的元信息。",
+          "evidence": [
+            "O02.json trace step 6成功读取D08及C04",
+            "result.citations[0]为D08-C04未覆盖事项原文"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "区分年假/病假流程和婚假天数；没有将已知其他假别的申请时间挪作婚假天数。",
+          "evidence": [
+            "O02.json result.answer说明文件只规定年假与病假申请流程",
+            "trace steps 2、3、5补充检索仍未发现婚假天数制度"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未借用外部法定或通用婚假天数，也未声称公司不存在婚假，仅请求补充制度或向人资确认。",
+          "evidence": [
+            "O02.json answer未给出婚假天数",
+            "result.gaps要求确认是否存在相关制度并核实现行天数"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "多次检索和原文读取均成功后判定资料不足，未把工具故障伪装为缺资料。",
+          "evidence": [
+            "O02.json trace steps 2、3、5、6 observation.ok=true",
+            "trace step 9 status=insufficient_evidence"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O04",
+      "run_id": "bb0cde47c9a0454385e47bbd32c9043c",
+      "artifact_sha256": "bbfebdb6ab93be9fcdd5b8490c9b00d7160b212e9f91c83aea625f706f28f0fa",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "未编造北京办公室街道地址，明确说明未检索到地址信息并要求补充行政资料。",
+          "evidence": [
+            "O04.json result.answer：未检索到星映科技北京办公室的街道地址相关信息",
+            "data/documents.json八份资料均无办公地址字段或相关正文"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "没有伪造地址引用；两轮实际检索仅返回报销类候选，支持本轮没有地址证据。回答中“现有资料仅为费用报销管理制度”应理解为本轮检索结果，表述若改成“本轮候选”会更准确。",
+          "evidence": [
+            "O04.json trace steps 2、3仅命中D02-C01与D01-C01，内容均为报销适用范围",
+            "O04.json result.citations=[]；未给出街道地址结论"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "没有把公司名称和“办公采购”的弱相关命中误认为办公地点资料，也没有因报销制度差异转入无关冲突。",
+          "evidence": [
+            "O04.json两次查询分别包含北京办公室地址、办公地点街道",
+            "result.status=insufficient_evidence且gaps指向办公地点清单或行政资料"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未补造街道、楼宇、门牌或外部搜索所得地址。",
+          "evidence": [
+            "O04.json result.answer仅说明缺少地址资料",
+            "trace只有两次search_documents，没有外部来源"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两次成功检索后判定资料不足；无须为不存在的地址编造读取或引用。",
+          "evidence": [
+            "O04.json trace steps 2、3 observation.ok=true",
+            "trace step 6 status=insufficient_evidence；metrics.tool_calls=2"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P02",
+      "run_id": "901125493cf74c11a6cb6a816ef8731f",
+      "artifact_sha256": "e21920d9b02abb6a0b8e9bd4c76438082931ae84b4828ef1b28e0ae70732ed94",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "将“专业套餐”“出4K的片子”正确理解为团队专业版视频导出，答复可以导出4K。",
+          "evidence": [
+            "P02.json result.answer：团队专业版支持最高4K（3840×2160）的视频导出",
+            "D04-C03支持4K与MP4"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "套餐适用范围与导出能力分别引用D04-C01、C03，均来自本轮实际读取的原文。",
+          "evidence": [
+            "P02.json trace step 5成功读取D04-C01至C04",
+            "result.citations列出D04-C01、D04-C03完整原文"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "明确前提为当前工作区订阅团队专业版；未将标准版1080p与专业版4K误判为冲突。",
+          "evidence": [
+            "P02.json trace steps 2、3同时检索到D03与D04",
+            "result.answer：前提是你的工作区当前订阅的是团队专业版"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未声称专业版最高1080p，未据标准版规则否定4K能力。",
+          "evidence": [
+            "P02.json result.answer开头：可以",
+            "evaluation/test.json P02 must_not：最高1080p"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两轮查询和原文读取成功后返回answered，口语改写问题完成。",
+          "evidence": [
+            "P02.json trace steps 2、3、5 observation.ok=true",
+            "trace step 8 status=answered"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P04",
+      "run_id": "e62d33fe5ad24174ac84c164418108a0",
+      "artifact_sha256": "7a591122b343e6a1f1cb949ac4e2399fd0045db29b7a4e057701546a28a93562",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "正确识别突发病假，答复返岗后1个工作日内补交OA请假申请及有效诊断证明。",
+          "evidence": [
+            "P04.json result.answer保留返岗后1个工作日内",
+            "D08-C03规定突发病假补交流程"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "期限、材料与先通知主管均由本轮D08-C03原文支持；适用范围来自同次读取的文档元信息。",
+          "evidence": [
+            "P04.json trace step 5成功读取D08-C03及scope",
+            "result.citations[0]与D08-C03一致"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "区分突发病假补交与年假提前申请，未把同文档不同假别的规则当作冲突。",
+          "evidence": [
+            "P04.json trace step 5返回D08-C01与D08-C03",
+            "result.answer明确突发病假、返岗后补交"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有将补交期限改为2个工作日，也未遗漏有效诊断证明这一原文条件。",
+          "evidence": [
+            "P04.json result.answer：返岗后1个工作日内",
+            "result.answer：补交OA请假申请及有效诊断证明"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "改写查询后成功读取相关原文并正常回答，未因弱相关其他候选误判失败。",
+          "evidence": [
+            "P04.json trace steps 2、3、5 observation.ok=true",
+            "trace step 8 status=answered"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H02",
+      "run_id": "6595e64893104112b4ab86c9dd8931ca",
+      "artifact_sha256": "a8d74d1c74be89016fe168f2786f8b0ee2503df4da97acdce8280309fbd9cea7",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "承接历史中的专业版50人上限，明确按工作区计算而非按每个账号或单个成员计算，并包含所有者。",
+          "evidence": [
+            "H02.json history提问团队专业版人数",
+            "result.answer：每个工作区最多允许50名活跃成员，包含工作区所有者"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "计数单位及上限来自本轮D04-C02；额外的套餐不可叠加说明也有本轮D04-C04引用支持。",
+          "evidence": [
+            "H02.json trace step 5成功读取D04",
+            "result.citations包含D04-C02与D04-C04，文本均与原文一致"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "历史只用于识别当前指代为专业版人数；本轮重新检索读取，没有借用标准版5人规则或叠加套餐上限。",
+          "evidence": [
+            "H02.json trace step 2查询团队专业版成员上限并在step 5读取D04",
+            "result.answer明确两个套餐的成员上限不可叠加"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未将50人上限解释为每个账号各有50个名额，也未把历史回答直接当作无需核验的证据。",
+          "evidence": [
+            "H02.json answer开头：不是按每个账号计算",
+            "trace step 5包含D04-C02当前原文"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "本轮工具均成功，跟进问题得到有原文支持的answered结果。",
+          "evidence": [
+            "H02.json trace steps 2、3、5 observation.ok=true",
+            "trace step 8 status=answered"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H04",
+      "run_id": "760bcc59642d4895a7bda801ba3e604d",
+      "artifact_sha256": "a106f51212ee66af8b723d10df9675c55663a2c0eab67858d416bc8ab805afce",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "通过历史识别用户追问年假流程，正确回答至少提前2个工作日通过OA提交。",
+          "evidence": [
+            "H04.json history用户询问员工年假怎么申请",
+            "result.answer：年假应至少提前2个工作日通过OA提交申请"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "期限和附带审批流程均引用本轮读取的D08-C01、C02；未凭历史补造具体时限。",
+          "evidence": [
+            "H04.json trace step 5成功读取D08-C01、D08-C02",
+            "result.citations分别支持提前2个工作日与3个工作日审批分界"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "将缺少显式假别的追问承接为年假，未用病假返岗后补交时限或API审核时限回答。",
+          "evidence": [
+            "H04.json trace step 2 query=年假 提前 申请 流程 天",
+            "result.answer限定年假，未引用D08-C03或D07-C03"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有把工作日改为自然日，没有将病假规则混入当前年假回答。",
+          "evidence": [
+            "H04.json result.answer：至少提前2个工作日",
+            "result.citations仅D08-C01、D08-C02"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "检索与读取成功后返回answered，多轮指代没有导致资料不足或不必要澄清。",
+          "evidence": [
+            "H04.json trace steps 2、3、5 observation.ok=true",
+            "trace step 8 status=answered"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F02",
+      "run_id": "8bae8eba19184b66b147595954d0da4f",
+      "artifact_sha256": "9afff6bec1a275955aa0020203cfa3ee44006e278acb60128b0d84e5dbbb5f4c",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "正确说明只有企业管理员可发起API开通申请，同时保留已签约企业API服务的主体范围。",
+          "evidence": [
+            "F02.json result.answer：发起申请人只能是该企业的企业管理员",
+            "D07-C01限定已签约服务，D07-C02限定企业管理员"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "最终引用来自重试成功后的D07-C01、C02；首次失败时未把搜索摘要伪装为已读证据。",
+          "evidence": [
+            "F02.json trace step 5首次read_document(D07)返回tool_exception",
+            "trace step 7成功返回D07-C01、D07-C02；result.citations仅引用这两个片段"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "区分购买标准版/专业版与企业API签约权限，未声称套餐购买者自动获API调用权。",
+          "evidence": [
+            "F02.json answer明确购买团队标准版或专业版不会自动获得调用权限",
+            "trace step 7 D07-C01保留API签约范围"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未把普通成员或任意套餐用户描述为可申请主体，也没有在关键原文读取失败时直接给确定答案。",
+          "evidence": [
+            "F02.json trace先失败、再重试成功、最后在step 9生成回答",
+            "result.answer保留只有企业管理员与已签约条件"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "实际发生一次读取异常，随后新一轮模型选择重试并成功恢复，故最终answered合理；这是一条真实动态工具决策证据。",
+          "evidence": [
+            "F02.json trace step 5：read_document(D07) ok=false，tool_exception，failure_streak=1",
+            "trace step 6：model_action call=3再次选择read_document",
+            "trace step 7：读取D07-C01、D07-C02成功，failure_streak=0；step 10 status=answered"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F04",
+      "run_id": "286ab44d63d34e06a12868ff1e75e371",
+      "artifact_sha256": "0553f81101afbd550c6aa46209ba41d9b743d2df38809b26985e8093edfb72fb",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "关键报销制度无法核实，因此只报告读取D01连续失败3次与查证未完成，没有给出确定天数。",
+          "evidence": [
+            "F04.json result.answer：读取文档D01连续失败3次，无法完成查证",
+            "result.citations=[]，未输出15天或30天业务结论"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "故障说明由Trace支持，未伪造未成功读取的D01引用，也未将搜索摘要当最终原文证据。",
+          "evidence": [
+            "F04.json trace steps 6、8、10读取D01均ok=false",
+            "result.citations为空，answer仅陈述实际故障与执行上限"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "检索已发现D01和D02可能给出不同期限；即使D02读取成功，仍查证D01并在其持续失败时保守结束。",
+          "evidence": [
+            "F04.json trace steps 2、3同时命中D01-C02与D02-C02",
+            "trace step 5读取D02成功；steps 6、8、10持续尝试D01"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有遗漏潜在冲突直接回答15天，没有将未查明的制度冲突或读取故障说成资料不存在。",
+          "evidence": [
+            "F04.json answer与gaps均仅说明工具故障上限和无法完成查证",
+            "result.status=tool_error，不是answered或insufficient_evidence"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "三次D01执行异常分别计为1、2、3，第三次后直接结束，无第四次读取；状态、原因码和调用数均与Trace一致。",
+          "evidence": [
+            "F04.json trace steps 6、8、10：failure_streak分别1、2、3",
+            "trace step 11 status=tool_error，reason_code=tool_failure_limit",
+            "metrics.tool_calls=6：两次搜索、一次D02成功读取、三次D01失败读取"
+          ]
+        }
+      }
+    }
+  ]
+}

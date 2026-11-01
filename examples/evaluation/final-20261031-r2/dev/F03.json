@@ -1,0 +1,111 @@
+{
+  "question": "标准版的视频导出上限是多少？",
+  "history": [],
+  "result": {
+    "answer": "知识库检索连续失败 3 次，已达到工具故障上限，无法完成查证。",
+    "status": "tool_error",
+    "clarification_reason": null,
+    "citations": [],
+    "gaps": [
+      "知识库检索连续失败 3 次，已达到工具故障上限，无法完成查证。"
+    ],
+    "run_id": "27ca9b88900244149f7f95c78fb2a93b",
+    "mode": "real",
+    "reason_code": "tool_failure_limit",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "标准版 视频导出上限"
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 1
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "视频导出 数量限制 套餐"
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 2
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "标准版 视频导出上限"
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          },
+          "failure_streak": 3
+        }
+      },
+      {
+        "step": 6,
+        "event": "run_finished",
+        "data": {
+          "status": "tool_error",
+          "reason_code": "tool_failure_limit"
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 2,
+      "tool_calls": 3,
+      "elapsed_seconds": 1.797,
+      "usage": {
+        "prompt_tokens": 2726,
+        "completion_tokens": 121,
+        "total_tokens": 2847
+      }
+    }
+  }
+}

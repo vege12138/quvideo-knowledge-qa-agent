@@ -1,0 +1,152 @@
+{
+  "question": "星映科技北京办公室的街道地址是什么？",
+  "history": [],
+  "result": {
+    "answer": "知识库中未检索到星映科技北京办公室的街道地址相关信息。现有资料仅为费用报销管理制度，不涉及办公地点地址。",
+    "status": "insufficient_evidence",
+    "clarification_reason": null,
+    "citations": [],
+    "gaps": [
+      "知识库中缺少星映科技办公地点/北京办公室地址类文档；需补充公司办公地点清单或行政信息资料"
+    ],
+    "run_id": "bb0cde47c9a0454385e47bbd32c9043c",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "星映科技 北京办公室 地址"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "星映科技 北京办公室 地址",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C01",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "适用范围",
+                  "score": 0.2049,
+                  "snippet": "本通知面向星映科技全体正式员工（含试用期员工），覆盖交通、住宿、办公采购等因公费用。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C01",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "适用对象",
+                  "score": 0.1979,
+                  "snippet": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                }
+              ],
+              "candidate_count": 2,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "星映科技 北京 办公地点 街道"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "星映科技 北京 办公地点 街道",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C01",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "适用范围",
+                  "score": 0.2049,
+                  "snippet": "本通知面向星映科技全体正式员工（含试用期员工），覆盖交通、住宿、办公采购等因公费用。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C01",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "适用对象",
+                  "score": 0.1979,
+                  "snippet": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                }
+              ],
+              "candidate_count": 2,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "final_answer",
+        "data": {
+          "answer": "知识库中未检索到星映科技北京办公室的街道地址相关信息。现有资料仅为费用报销管理制度，不涉及办公地点地址。",
+          "status": "insufficient_evidence",
+          "clarification_reason": null,
+          "citations": [],
+          "gaps": [
+            "知识库中缺少星映科技办公地点/北京办公室地址类文档；需补充公司办公地点清单或行政信息资料"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "run_finished",
+        "data": {
+          "status": "insufficient_evidence",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 2,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.36,
+      "usage": {
+        "prompt_tokens": 3203,
+        "completion_tokens": 167,
+        "total_tokens": 3370
+      }
+    }
+  }
+}

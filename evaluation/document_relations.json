@@ -1,0 +1,64 @@
+{
+  "warning": "仅供数据集设计和离线评测使用。Agent不得读取此文件作为推理或检索证据。必须检索并读取文档原文。",
+  "relations": [
+    {
+      "relation_id": "R01",
+      "type": "intentional_conflict",
+      "documents": [
+        "D01",
+        "D02"
+      ],
+      "subject": "员工费用报销提交期限",
+      "scope_overlap": true,
+      "facts": {
+        "D01": "30个自然日",
+        "D02": "15个自然日"
+      },
+      "precedence": "未提供有效的废止或优先级依据。不能因D02日期较新自动认定其覆盖D01。"
+    },
+    {
+      "relation_id": "R02",
+      "type": "intentional_conflict",
+      "documents": [
+        "D05",
+        "D06"
+      ],
+      "subject": "AI视频生成失败后的积分返还时间",
+      "scope_overlap": true,
+      "facts": {
+        "D05": "失败后60分钟内返还",
+        "D06": "满24小时后才能返还"
+      },
+      "precedence": "未提供有效的废止或优先级依据。"
+    },
+    {
+      "relation_id": "R03",
+      "type": "scope_difference_not_conflict",
+      "documents": [
+        "D03",
+        "D04"
+      ],
+      "subject": "工作区成员上限与导出分辨率",
+      "scope_overlap": false,
+      "facts": {
+        "D03": "标准版5人，1080p",
+        "D04": "专业版50人，4K"
+      },
+      "precedence": "依用户实际订阅套餐确定，不应判为冲突；套餐未知时追问。"
+    },
+    {
+      "relation_id": "R04",
+      "type": "different_leave_categories_not_conflict",
+      "documents": [
+        "D08"
+      ],
+      "subject": "年假与病假流程",
+      "scope_overlap": false,
+      "facts": {
+        "年假": "至少提前2工作日",
+        "突发病假": "返岗后1工作日内补交"
+      },
+      "precedence": "按假别选择。"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "question": "公司2027年的营收目标是多少？",
+  "history": [],
+  "result": {
+    "answer": "知识库中未检索到关于公司2027年营收目标的任何资料，现有候选文档（AI视频生成积分规则、员工请假制度）均与此无关，无法回答。",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "gaps": [
+      "知识库中缺少公司战略规划、年度经营目标或财务预算类文档，无法确认2027年营收目标"
+    ],
+    "run_id": "19d4bd63f0334546b1a8d2c309485598",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "2027年 营收目标"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "2027年 营收目标",
+              "hits": [
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.1188,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C03",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "任务失败返还",
+                  "score": 0.0643,
+                  "snippet": "若平台将任务标记为生成失败，预扣的20积分应在失败发生后60分钟内自动返还至原工作区积分余额。"
+                }
+              ],
+              "candidate_count": 2,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "公司营收目标 年度经营目标"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "公司营收目标 年度经营目标",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.0877,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C02",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假审批",
+                  "score": 0.0677,
+                  "snippet": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                }
+              ],
+              "candidate_count": 2,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "final_answer",
+        "data": {
+          "answer": "知识库中未检索到关于公司2027年营收目标的任何资料，现有候选文档（AI视频生成积分规则、员工请假制度）均与此无关，无法回答。",
+          "status": "insufficient_evidence",
+          "citations": [],
+          "gaps": [
+            "知识库中缺少公司战略规划、年度经营目标或财务预算类文档，无法确认2027年营收目标"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "run_finished",
+        "data": {
+          "status": "insufficient_evidence",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 2,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.282,
+      "usage": {
+        "prompt_tokens": 2584,
+        "completion_tokens": 161,
+        "total_tokens": 2745
+      }
+    }
+  }
+}

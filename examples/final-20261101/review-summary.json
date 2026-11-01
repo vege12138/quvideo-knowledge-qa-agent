@@ -1,0 +1,63 @@
+{
+  "reports": [
+    {
+      "directory": "examples\\evaluation\\final-20261101\\dev",
+      "count": 12,
+      "mode": "real",
+      "dataset_role": "dev",
+      "structural": {
+        "pass": 12,
+        "fail": 0
+      },
+      "semantic": {
+        "pending": 0,
+        "pass": 11,
+        "fail": 1
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    },
+    {
+      "directory": "examples\\evaluation\\final-20261101\\regression",
+      "count": 12,
+      "mode": "real",
+      "dataset_role": "regression",
+      "structural": {
+        "pass": 12,
+        "fail": 0
+      },
+      "semantic": {
+        "pending": 0,
+        "pass": 12,
+        "fail": 0
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    },
+    {
+      "directory": "examples\\evaluation\\final-20261101\\mutation",
+      "count": 4,
+      "mode": "real",
+      "dataset_role": "mutation",
+      "structural": {
+        "pass": 4,
+        "fail": 0
+      },
+      "semantic": {
+        "pending": 0,
+        "pass": 4,
+        "fail": 0
+      },
+      "reviewer_type": "ai_assisted",
+      "human_confirmation": "pending",
+      "note": "哈希和记录格式校验不等于独立语义判断；语义结论来自所附 AI 辅助逐题复核。"
+    }
+  ],
+  "structural_pass": 28,
+  "semantic_pass": 27,
+  "semantic_fail": 1,
+  "semantic_pending": 0,
+  "human_confirmation": "pending"
+}

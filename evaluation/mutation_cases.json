@@ -1,0 +1,66 @@
+[
+  {
+    "id": "M01",
+    "base": "data/documents.json",
+    "operation": "replace_text",
+    "doc_id": "D01",
+    "chunk_id": "D01-C02",
+    "old": "30个自然日",
+    "new": "45个自然日",
+    "question": "员工报销最晚多少天内提交？",
+    "expected_status": "clarification_required",
+    "expected_facts": [
+      "45个自然日",
+      "15个自然日"
+    ],
+    "required_doc_ids": [
+      "D01",
+      "D02"
+    ]
+  },
+  {
+    "id": "M02",
+    "base": "data/documents.json",
+    "operation": "remove_document",
+    "doc_id": "D02",
+    "question": "员工报销最晚多少天内提交？",
+    "expected_status": "answered",
+    "expected_facts": [
+      "30个自然日"
+    ],
+    "required_doc_ids": [
+      "D01"
+    ]
+  },
+  {
+    "id": "M03",
+    "base": "data/documents.json",
+    "operation": "replace_text",
+    "doc_id": "D03",
+    "chunk_id": "D03-C02",
+    "old": "5名活跃成员",
+    "new": "8名活跃成员",
+    "question": "标准版一个工作区最多有多少名活跃成员？",
+    "expected_status": "answered",
+    "expected_facts": [
+      "8名"
+    ],
+    "required_doc_ids": [
+      "D03"
+    ]
+  },
+  {
+    "id": "M04",
+    "base": "data/documents.json",
+    "operation": "remove_document",
+    "doc_id": "D06",
+    "question": "AI视频失败后多久返还积分？",
+    "expected_status": "answered",
+    "expected_facts": [
+      "60分钟内"
+    ],
+    "required_doc_ids": [
+      "D05"
+    ]
+  }
+]

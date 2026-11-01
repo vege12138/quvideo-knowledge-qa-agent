@@ -1,0 +1,289 @@
+{
+  "question": "临时生病没来得及走流程，返岗后啥时补请假单？",
+  "history": [],
+  "result": {
+    "answer": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。该制度适用于全体正式员工（含试用期员工）。",
+    "status": "answered",
+    "clarification_reason": null,
+    "citations": [
+      {
+        "doc_id": "D08",
+        "chunk_id": "D08-C03",
+        "quote": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+      }
+    ],
+    "gaps": [],
+    "run_id": "f3fbeca65ac642069063188e19658e80",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "临时生病未走流程 返岗后补请假单 时限",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "临时生病未走流程 返岗后补请假单 时限",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C03",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "病假申请",
+                  "score": 0.1417,
+                  "snippet": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C02",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "提交时限",
+                  "score": 0.0316,
+                  "snippet": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C02",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "报销提交时限",
+                  "score": 0.0273,
+                  "snippet": "员工应在费用实际发生后的30个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.051,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C02",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假审批",
+                  "score": 0.0325,
+                  "snippet": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C04",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "流程说明",
+                  "score": 0.0269,
+                  "snippet": "提交成功后由直属主管审核，再流转至财务部。此通知未载明与其他在行制度的废止关系或优先级规则。"
+                }
+              ],
+              "candidate_count": 6,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "病假 补办请假手续 规定",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "病假 补办请假手续 规定",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.156,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C04",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "超期处理",
+                  "score": 0.0503,
+                  "snippet": "超过规定提交期限的申请进入财务人工复核，不保证受理。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C03",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "病假申请",
+                  "score": 0.128,
+                  "snippet": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C02",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假审批",
+                  "score": 0.0502,
+                  "snippet": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.0384,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                }
+              ],
+              "candidate_count": 5,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D08"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D08",
+              "title": "员工请假与审批制度",
+              "category": "人事行政",
+              "version": "2.2",
+              "version_date": "2026-07-01",
+              "effective_date": "2026-07-10",
+              "owner": "人力资源部",
+              "scope": "全体正式员工（含试用期员工）",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D08-C01",
+                  "section": "年假申请",
+                  "text": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "chunk_id": "D08-C02",
+                  "section": "年假审批",
+                  "text": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "chunk_id": "D08-C03",
+                  "section": "病假申请",
+                  "text": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "chunk_id": "D08-C04",
+                  "section": "未覆盖事项",
+                  "text": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                }
+              ]
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 6,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 7,
+        "event": "final_answer",
+        "data": {
+          "answer": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。该制度适用于全体正式员工（含试用期员工）。",
+          "status": "answered",
+          "clarification_reason": null,
+          "citations": [
+            {
+              "doc_id": "D08",
+              "chunk_id": "D08-C03",
+              "quote": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+            }
+          ],
+          "gaps": []
+        }
+      },
+      {
+        "step": 8,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 3,
+      "elapsed_seconds": 3.578,
+      "usage": {
+        "prompt_tokens": 7260,
+        "completion_tokens": 275,
+        "total_tokens": 7535
+      }
+    }
+  }
+}

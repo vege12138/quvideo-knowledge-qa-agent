@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "M01",
+      "run_id": "285fd87324ba4fbd874c20ffb08b3db2",
+      "artifact_sha256": "a879b7c174a539e8a8699fa68a5ae8c4ef366865b537b3db4b42b925a22f8a08",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "将D01改45后实际回答45与15冲突，未沿用30。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "M01.json Trace step 2: search_documents {'query': '员工报销最晚提交时间 多少天内提交', 'top_k': 8} ok=True",
+            "M01.json Trace step 3: search_documents {'query': '报销单提交时限 逾期 财务制度', 'top_k': 8} ok=True",
+            "M01.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "M01.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D01-C02改后原文和D02-C02/C04支持主结论；超期复核仅归D01，已读D01-C04支持。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "M01.json Trace step 2: search_documents {'query': '员工报销最晚提交时间 多少天内提交', 'top_k': 8} ok=True",
+            "M01.json Trace step 3: search_documents {'query': '报销单提交时限 逾期 财务制度', 'top_k': 8} ok=True",
+            "M01.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "M01.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "同范围仍冲突，日期更新未覆盖旧制度。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "M01.json Trace step 2: search_documents {'query': '员工报销最晚提交时间 多少天内提交', 'top_k': 8} ok=True",
+            "M01.json Trace step 3: search_documents {'query': '报销单提交时限 逾期 财务制度', 'top_k': 8} ok=True",
+            "M01.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "M01.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有选较严15天，也未把逾期复核说成双方共同规则。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "M01.json Trace step 2: search_documents {'query': '员工报销最晚提交时间 多少天内提交', 'top_k': 8} ok=True",
+            "M01.json Trace step 3: search_documents {'query': '报销单提交时限 逾期 财务制度', 'top_k': 8} ok=True",
+            "M01.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "M01.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "独立副本搜索并读取D01/D02，conflict有两处引用。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "M01.json Trace step 2: search_documents {'query': '员工报销最晚提交时间 多少天内提交', 'top_k': 8} ok=True",
+            "M01.json Trace step 3: search_documents {'query': '报销单提交时限 逾期 财务制度', 'top_k': 8} ok=True",
+            "M01.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "M01.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "M01.json#/result/answer",
+            "M01.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "M02",
+      "run_id": "ad5bd259ac8a4fffbb984c0a95f79109",
+      "artifact_sha256": "a9c053de7b5ad481deadcc917ad97800772b32f17e2851fec32c57d19fcc666b",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "删除D02后按D01回答30自然日，逾期人工复核不保证受理。",
+          "evidence": [
+            "D01/D01-C02",
+            "D01/D01-C01",
+            "D01/D01-C04",
+            "M02.json Trace step 2: search_documents {'query': '员工报销提交时限 多少天内提交', 'top_k': 8} ok=True",
+            "M02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D01-C01/C02/C04分别支持范围、时限和超期处理。",
+          "evidence": [
+            "D01/D01-C02",
+            "D01/D01-C01",
+            "D01/D01-C04",
+            "M02.json Trace step 2: search_documents {'query': '员工报销提交时限 多少天内提交', 'top_k': 8} ok=True",
+            "M02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "不再沿用已删除D02的15日冲突。",
+          "evidence": [
+            "D01/D01-C02",
+            "D01/D01-C01",
+            "D01/D01-C04",
+            "M02.json Trace step 2: search_documents {'query': '员工报销提交时限 多少天内提交', 'top_k': 8} ok=True",
+            "M02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未回答45或15日，未无依据继续澄清。",
+          "evidence": [
+            "D01/D01-C02",
+            "D01/D01-C01",
+            "D01/D01-C04",
+            "M02.json Trace step 2: search_documents {'query': '员工报销提交时限 多少天内提交', 'top_k': 8} ok=True",
+            "M02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "新索引中搜索后读D01，answered随删除变化。",
+          "evidence": [
+            "D01/D01-C02",
+            "D01/D01-C01",
+            "D01/D01-C04",
+            "M02.json Trace step 2: search_documents {'query': '员工报销提交时限 多少天内提交', 'top_k': 8} ok=True",
+            "M02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "M02.json#/result/answer",
+            "M02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "M03",
+      "run_id": "a7187b2e15104e3f87bba6c4e49dc716",
+      "artifact_sha256": "81fefc376347835cebc817d2a26fc9e4c821e606d513df43779da793f5e86370",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版变更后为8名，含所有者且停用不计。",
+          "evidence": [
+            "D03/D03-C02",
+            "M03.json Trace step 2: search_documents {'query': '标准版 工作区 活跃成员 数量上限', 'top_k': 8} ok=True",
+            "M03.json Trace step 4: read_document {'doc_id': 'D03'} ok=True",
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "引用D03-C02实际包含8名，非引用新文却回答旧数。",
+          "evidence": [
+            "D03/D03-C02",
+            "M03.json Trace step 2: search_documents {'query': '标准版 工作区 活跃成员 数量上限', 'top_k': 8} ok=True",
+            "M03.json Trace step 4: read_document {'doc_id': 'D03'} ok=True",
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仍为标准版每工作区，不混专业版。",
+          "evidence": [
+            "D03/D03-C02",
+            "M03.json Trace step 2: search_documents {'query': '标准版 工作区 活跃成员 数量上限', 'top_k': 8} ok=True",
+            "M03.json Trace step 4: read_document {'doc_id': 'D03'} ok=True",
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有沿用旧5人或专业版50人。",
+          "evidence": [
+            "D03/D03-C02",
+            "M03.json Trace step 2: search_documents {'query': '标准版 工作区 活跃成员 数量上限', 'top_k': 8} ok=True",
+            "M03.json Trace step 4: read_document {'doc_id': 'D03'} ok=True",
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "独立副本重建索引、读取D03后answered。",
+          "evidence": [
+            "D03/D03-C02",
+            "M03.json Trace step 2: search_documents {'query': '标准版 工作区 活跃成员 数量上限', 'top_k': 8} ok=True",
+            "M03.json Trace step 4: read_document {'doc_id': 'D03'} ok=True",
+            "M03.json#/result/answer",
+            "M03.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "M04",
+      "run_id": "adb153ca00aa40e0bc1d3431d13364cf",
+      "artifact_sha256": "9d155bc025171816686a2db678a83865e22d32fbf21902f5ff10983a040d6e50",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "删除D06后按60分钟内返还20积分至原工作区。",
+          "evidence": [
+            "D05/D05-C03",
+            "D05/D05-C01",
+            "M04.json Trace step 2: search_documents {'query': 'AI视频生成失败 积分返还 时间', 'top_k': 10} ok=True",
+            "M04.json Trace step 3: search_documents {'query': '视频生成失败退积分规则', 'top_k': 10} ok=True",
+            "M04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C03支持条件/时限/金额/目的余额，C01支持两套餐范围。",
+          "evidence": [
+            "D05/D05-C03",
+            "D05/D05-C01",
+            "M04.json Trace step 2: search_documents {'query': 'AI视频生成失败 积分返还 时间', 'top_k': 10} ok=True",
+            "M04.json Trace step 3: search_documents {'query': '视频生成失败退积分规则', 'top_k': 10} ok=True",
+            "M04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "不存在已删除D06造成的冲突，按现存文档回答。",
+          "evidence": [
+            "D05/D05-C03",
+            "D05/D05-C01",
+            "M04.json Trace step 2: search_documents {'query': 'AI视频生成失败 积分返还 时间', 'top_k': 10} ok=True",
+            "M04.json Trace step 3: search_documents {'query': '视频生成失败退积分规则', 'top_k': 10} ok=True",
+            "M04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未沿用24小时或继续作无依据冲突澄清。",
+          "evidence": [
+            "D05/D05-C03",
+            "D05/D05-C01",
+            "M04.json Trace step 2: search_documents {'query': 'AI视频生成失败 积分返还 时间', 'top_k': 10} ok=True",
+            "M04.json Trace step 3: search_documents {'query': '视频生成失败退积分规则', 'top_k': 10} ok=True",
+            "M04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两搜索后读D05；独立索引与空历史避免旧冲突污染。",
+          "evidence": [
+            "D05/D05-C03",
+            "D05/D05-C01",
+            "M04.json Trace step 2: search_documents {'query': 'AI视频生成失败 积分返还 时间', 'top_k': 10} ok=True",
+            "M04.json Trace step 3: search_documents {'query': '视频生成失败退积分规则', 'top_k': 10} ok=True",
+            "M04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "M04.json#/result/answer",
+            "M04.json#/result/gaps"
+          ]
+        }
+      }
+    }
+  ],
+  "reviewed_at": "2026-11-01T07:59:54.053444+00:00",
+  "review_note": "Codex逐题阅读实际回答、引用、缺口与Trace后记录；非独立人工评审，非自动字符串判分。C03事实/状态正确但范围和额外引用完整性仍不通过。"
+}

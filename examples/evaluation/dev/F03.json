@@ -1,0 +1,141 @@
+{
+  "question": "标准版的视频导出上限是多少？",
+  "history": [],
+  "result": {
+    "answer": "检索工具连续三次超时，未能获取知识库内容，无法确认标准版视频导出上限。",
+    "status": "tool_error",
+    "citations": [],
+    "gaps": [
+      "search_documents 连续 3 次超时，未取得任何候选文档，无法进行原文核对"
+    ],
+    "run_id": "b58a60988a084f62bc6c5a3fc79ab057",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "标准版 视频导出 上限",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          }
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "标准版 视频导出 数量限制",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          }
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "视频导出上限 套餐",
+            "top_k": 6
+          },
+          "observation": {
+            "ok": false,
+            "error": {
+              "code": "timeout",
+              "message": "工具请求超时，可在执行预算内重试。"
+            }
+          }
+        }
+      },
+      {
+        "step": 7,
+        "event": "model_action",
+        "data": {
+          "call": 4,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "event": "final_answer",
+        "data": {
+          "answer": "检索工具连续三次超时，未能获取知识库内容，无法确认标准版视频导出上限。",
+          "status": "tool_error",
+          "citations": [],
+          "gaps": [
+            "search_documents 连续 3 次超时，未取得任何候选文档，无法进行原文核对"
+          ]
+        }
+      },
+      {
+        "step": 9,
+        "event": "run_finished",
+        "data": {
+          "status": "tool_error",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 4,
+      "tool_calls": 3,
+      "elapsed_seconds": 3.953,
+      "usage": {
+        "prompt_tokens": 4544,
+        "completion_tokens": 245,
+        "total_tokens": 4789
+      }
+    }
+  }
+}

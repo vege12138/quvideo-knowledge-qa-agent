@@ -1,0 +1,221 @@
+{
+  "question": "要提前几天走流程？",
+  "history": [
+    {
+      "role": "user",
+      "content": "员工年假怎么申请？"
+    },
+    {
+      "role": "assistant",
+      "content": "需要在OA提交年假申请，具体时限见年假制度。"
+    }
+  ],
+  "result": {
+    "answer": "按《员工请假与审批制度》（适用于全体正式员工，含试用期员工），员工申请年假应至少提前2个工作日通过OA提交申请。另外，连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。",
+    "status": "answered",
+    "citations": [
+      {
+        "doc_id": "D08",
+        "chunk_id": "D08-C01",
+        "quote": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+      },
+      {
+        "doc_id": "D08",
+        "chunk_id": "D08-C02",
+        "quote": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+      }
+    ],
+    "gaps": [],
+    "run_id": "102e213a484a470d8523aea105644629",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "年假申请 提前 天数 流程",
+            "top_k": 8
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "年假申请 提前 天数 流程",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.2407,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C04",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "流程说明",
+                  "score": 0.0729,
+                  "snippet": "提交成功后由直属主管审核，再流转至财务部。此通知未载明与其他在行制度的废止关系或优先级规则。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C03",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "病假申请",
+                  "score": 0.1302,
+                  "snippet": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.0668,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C02",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假审批",
+                  "score": 0.0307,
+                  "snippet": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                }
+              ],
+              "candidate_count": 5,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D08"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D08",
+              "title": "员工请假与审批制度",
+              "category": "人事行政",
+              "version": "2.2",
+              "version_date": "2026-07-01",
+              "effective_date": "2026-07-10",
+              "owner": "人力资源部",
+              "scope": "全体正式员工（含试用期员工）",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D08-C01",
+                  "section": "年假申请",
+                  "text": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "chunk_id": "D08-C02",
+                  "section": "年假审批",
+                  "text": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "chunk_id": "D08-C03",
+                  "section": "病假申请",
+                  "text": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "chunk_id": "D08-C04",
+                  "section": "未覆盖事项",
+                  "text": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "final_answer",
+        "data": {
+          "answer": "按《员工请假与审批制度》（适用于全体正式员工，含试用期员工），员工申请年假应至少提前2个工作日通过OA提交申请。另外，连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。",
+          "status": "answered",
+          "citations": [
+            {
+              "doc_id": "D08",
+              "chunk_id": "D08-C01",
+              "quote": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+            },
+            {
+              "doc_id": "D08",
+              "chunk_id": "D08-C02",
+              "quote": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+            }
+          ],
+          "gaps": []
+        }
+      },
+      {
+        "step": 7,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.594,
+      "usage": {
+        "prompt_tokens": 4859,
+        "completion_tokens": 255,
+        "total_tokens": 5114
+      }
+    }
+  }
+}

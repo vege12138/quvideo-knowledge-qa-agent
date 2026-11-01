@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C01",
+      "run_id": "e41935fe2f944eaa81d3348685857f99",
+      "artifact_sha256": "b4bb8a23b738d9ada3ca2c8ebf372230334e8c4d8605c53cb7bf87fd8e7f46de",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "标准版每工作区5名活跃成员、包含所有者且停用者不计入，达到上限的处理也准确。",
+          "evidence": [
+            "D03-C02：最多5名活跃成员，包含所有者；停用不计。",
+            "D03-C04：停用现有成员或升级后继续邀请。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "回答的人数、范围与邀请限制分别由本轮读取的三个原文片段支持。",
+          "evidence": [
+            "Trace step 5 read_document D03成功；引用D03-C01/C02/C04均与原文一致。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "仅适用标准版，未把检索到的专业版50名当成同范围冲突。",
+          "evidence": [
+            "D03-C01明确不适用专业版；answer只回答标准版。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有把标准版人数回答为禁止的50名。",
+          "evidence": [
+            "answer：最多允许5名活跃成员。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两次搜索、一次原文读取均成功，有明确证据，answered与空gaps合理。",
+          "evidence": [
+            "Trace steps 2、3、5 observation.ok=true；step 8 answered。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "C03",
+      "run_id": "38e1f118ed104c48a261549bfaef9cb5",
+      "artifact_sha256": "c9d00d15b657367b5662f902d7ceeaf076f630343a2dac78b3f106b3634282e8",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "正确回答发起时预扣20积分、成功后正式扣除。",
+          "evidence": [
+            "D05-C02；answer两项金额均为20积分。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "范围与金额分别由D05-C01、D05-C02支持，均在本轮读取。",
+          "evidence": [
+            "Trace step 5读取D05；两条quote与原文一致。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "虽然读取了D06，最终仅回答当前预扣金额，没有让另一个事项的退款时限冲突阻止回答。",
+          "evidence": [
+            "Trace step 6读取D06；answer无退款时限扩展，clarification_reason=null。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有错误的40积分，也没有宣称金额存在冲突。",
+          "evidence": [
+            "evaluation/dev.json C03禁止40积分；answer为20积分。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "四次工具调用均成功；金额有充分证据，最终answered并无无关澄清。",
+          "evidence": [
+            "Trace steps 2、3、5、6均成功；step 9 answered。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K01",
+      "run_id": "a8fc4a7492984573b09a9452055cbe09",
+      "artifact_sha256": "965fd6b53280e22820ad23800ef652a6bae48a78bc88ce6cbcdc5fbb71641fe8",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "准确列出30和15个自然日，日期和文件归属均正确。",
+          "evidence": [
+            "D01-C02=30自然日，effective_date=2026-02-01。",
+            "D02-C02=15自然日，effective_date=2026-03-20。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "时限原文分别来自两文档，未声明优先级的依据来自D02-C04，未错误归于两份共同条款。",
+          "evidence": [
+            "Trace steps 4、5完整读取D01/D02；D01-C02、D02-C02/C04为本轮原文。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "核对相同正式员工范围后判定同一提交时限冲突；介绍日期但没有用新旧直接裁决。",
+          "evidence": [
+            "D01-C01与D02-C01同范围；answer请求财务确认。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有直接认定15天或30天为唯一期限，也未建议按更严格制度替代确认。",
+          "evidence": [
+            "answer两种期限并列，结尾请财务确认以哪份为准。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "成功读取双方仍缺优先关系，clarification_required/conflict和具体gaps合适。",
+          "evidence": [
+            "Trace steps 2、4、5成功；result.gaps指出两期限与确认事项。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K03",
+      "run_id": "81776f2d5ddd4a46a2730ad61fb312eb",
+      "artifact_sha256": "720cae8a9eec321219c61c5888d1b7e99ba0ba4fc00ee8c69d2d067d0b0f9ac9",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "60分钟内和满24小时后不可提前到账均准确，20积分、来源版本日期及生效日也与原文元数据一致。",
+          "evidence": [
+            "D05-C03=60分钟内；D06-C03=满24小时后。",
+            "D05版本1.5/生效2026-05-12；D06版本1.3/生效2026-06-05。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "两个返还时限均有本轮原文引用；关于未提供优先级是对完整阅读内容的观察，没有声称存在明示条款。",
+          "evidence": [
+            "Trace step 5读取D05、step 6读取D06；citations分别为D05-C03和D06-C03。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "两规则针对相同套餐工作区失败任务，60分钟内与24小时后不可同时履行，确认冲突合理。",
+          "evidence": [
+            "D05-C01、D06-C01同范围；answer需要权威确认。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未承诺一定60分钟内到账或一定等24小时，两个时间均按各自文档表述。",
+          "evidence": [
+            "answer：单凭文件本身无法判断应以哪条为准。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "四个工具调用成功，问题确有未决冲突，状态conflict澄清与gaps一致。",
+          "evidence": [
+            "Trace steps 2、3、5、6均成功；result.status=clarification_required。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O01",
+      "run_id": "c91ed2ce431c41199d77f829e77d7347",
+      "artifact_sha256": "d02c77b6c2e81582aa352e6ea0cd790167799d2c5a2c82d18ccfc6190b3790a2",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "未捏造2027营收数字，指出缺少经营目标资料，符合当前八份文档的实际覆盖。",
+          "evidence": [
+            "data/documents.json覆盖报销、套餐、积分、API和请假，无营收目标文档。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "没有业务数字或伪造原文引用；检索候选的描述与实际结果一致。",
+          "evidence": [
+            "Trace step 2候选D02-C01、D01-C01、D05-C02；citations为空。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "把财务目标识别为资料外事项，未将报销制度误用为经营目标。",
+          "evidence": [
+            "question问2027营收；gaps要求补充经营目标/战略规划资料。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "本题没有特定禁止词；仍核查未猜测营收额或预测目标。",
+          "evidence": [
+            "answer无营收金额，明确无法确认。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "搜索成功但内容无关，应为insufficient_evidence，未把资料缺口说成工具故障。",
+          "evidence": [
+            "Trace step 2 observation.ok=true；最终insufficient_evidence。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O03",
+      "run_id": "fbb683cfdef046e8a0a3df5fb6f19c0e",
+      "artifact_sha256": "5366f5134de28785ceeab64ecb6d3510c18603edc37c14373cca99ba403402f9",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "当前知识库无安卓最低系统版本规则，答案说明无法给出版本号而非凭常识补齐。",
+          "evidence": [
+            "八份知识文档不含移动端系统要求；gaps指出缺少系统兼容文档。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "没有伪造版本引用；回答关于无关候选的说明与搜索结果一致。",
+          "evidence": [
+            "Trace step 2候选为D01/D02报销、D07企业API；citations为空。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "没有将企业API权限条款混同安卓客户端兼容性。",
+          "evidence": [
+            "question问最低系统版本；answer明确对应资料缺口。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "本题无特定禁止项；未提供未经支持的Android版本数字。",
+          "evidence": [
+            "answer和gaps都不包含确定最低版本号。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "成功搜索后无证据，insufficient_evidence与实际工具结果一致。",
+          "evidence": [
+            "Trace step 2成功；step 5以insufficient_evidence结束。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P01",
+      "run_id": "d367a1787dd24d03b096d8a08124e10a",
+      "artifact_sha256": "1d7d3acf17ac392e16ec6a196a9b5162de2548c6d16596ef263c6a53b7c16ae4",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "正确将口语标准档/团队空间映射为标准版工作区，5名包含所有者，停用者不计。",
+          "evidence": [
+            "D03-C02；answer明确5名含所有者，而非额外邀请5名。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "人数和达到上限的处理有本轮原文支持，引用范围片段也有效。",
+          "evidence": [
+            "Trace step 5读取D03；引用C01/C02/C04。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "未因搜索出现专业版规则而误判冲突，仅处理标准档。",
+          "evidence": [
+            "D03-C01排除专业版；answer以标准档（团队标准版）限定。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有误用禁止的专业版50名人数。",
+          "evidence": [
+            "answer最多5名活跃成员。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "口语查询两次搜索后读取正确文档，answered有充分依据。",
+          "evidence": [
+            "Trace steps 2、3搜索成功，step 5读取成功，step 8 answered。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P03",
+      "run_id": "b4a84b50d7474031a182b2c3bf820354",
+      "artifact_sha256": "3c0b192aaa8d672a28092254bc358d6d1bd42f5da7579d2461833885e73a1cd1",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "申请人必须是企业管理员，并准确补充签约前提、资料要求与套餐不自动授予API权限。",
+          "evidence": [
+            "D07-C02企业管理员及企业名称/使用场景/技术联系人；D07-C01签约前提。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "当前答案所有申请权限结论均由本轮D07-C01/C02支持。",
+          "evidence": [
+            "Trace step 5完整读取D07；两条quote逐字一致。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "识别口语中的程序接口为企业API申请，限定到签约客户，不外推为所有工作区均可开通。",
+          "evidence": [
+            "answer：企业API仅对已签约客户开放。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未声称普通成员可以直接开通，反而明确仅企业管理员申请。",
+          "evidence": [
+            "evaluation/dev.json P03禁止普通成员直接开通；answer首句限定管理员。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "搜索和原文读取成功，规则明确，answered及空gaps合理。",
+          "evidence": [
+            "Trace steps 2、3、5均成功，step 8 answered。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H01",
+      "run_id": "dc6a1aba838a443782697b0964e25b39",
+      "artifact_sha256": "53b04d73772c99d64e436aa25f4fe803eb83c0594439e6d13561402bc6a37f4f",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "承接历史成员人数主题并切换至专业版，50名含所有者，按工作区且不可叠加均准确。",
+          "evidence": [
+            "D04-C02=50名/含所有者/按工作区；D04-C04两个套餐人数不叠加。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "没有把历史标准版答案当证据，本轮重新读取专业版原文，两条引用支持全部结论。",
+          "evidence": [
+            "Trace step 4 read_document D04；引用D04-C02/C04。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "用户那专业版呢改变套餐，模型沿用人数主题而不是沿用标准版人数。",
+          "evidence": [
+            "history标准版人数，Trace step 2查询专业版活跃成员数量上限。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未回答禁止的5名上限，也未把标准版和专业版人数相加。",
+          "evidence": [
+            "answer：最多50名，两个套餐成员上限不可叠加。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "一次搜索和一次原文读取成功，明确专业版规则支持answered。",
+          "evidence": [
+            "Trace steps 2、4成功；step 7 answered。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H03",
+      "run_id": "01770e139c8246e7b07229d1c1059c8e",
+      "artifact_sha256": "5c01c0b811b1fec289a90e26ba65e3a795e50f6e9b306509a1889903431b1be0",
+      "verdict": "fail",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "根据历史正确识别失败退回积分，列出的60分钟内与满24小时后两个时限、适用套餐及生效日期均准确。",
+          "evidence": [
+            "D05-C03与D06-C03；history提到AI视频任务预扣20积分。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "fail",
+          "reason": "主时限引用真实，但回答把阅读后未发现优先级误写为原文明示未说明；D05/D06不存在这样的明示条款，来源归属不完全支持。",
+          "evidence": [
+            "answer原句：原文明示没有说明优先级或废止关系。",
+            "Trace steps 5、6完整D05/D06四个片段中均无明示缺少优先级的条款；只能表述为未发现依据。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "退款是本轮明确所问，两个相同套餐范围的互斥时限构成真实冲突，没有把冲突扩大到预扣金额。",
+          "evidence": [
+            "question：那如果失败了，多久退回来？；D05-C01/D06-C01同范围。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "本题无独立禁止项；答案未选定某一时限为唯一正确规则。",
+          "evidence": [
+            "answer需要权威确认后再答复具体时长。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "工具均成功，证据显示未决时限冲突，clarification_required/conflict本身正确；措辞来源问题另在citation_support判失败。",
+          "evidence": [
+            "Trace steps 2、3、5、6均成功；gaps明确需确认D05/D06。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F01",
+      "run_id": "233d6464805d49ec9240fcca75c480a9",
+      "artifact_sha256": "6db33a42e8a113564f32eea649bdd021d55a9b8fcbc258c3880fa99a85210ca9",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "故障恢复后回答标准版5名活跃成员含所有者、停用不计，事实正确。",
+          "evidence": [
+            "D03-C02；answer与原文含义一致。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "本轮成功读取D03后才引用人数原文，没有用错误结果或摘要冒充原文。",
+          "evidence": [
+            "Trace step 5读取D03成功；citation D03-C02逐字一致。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "围绕标准版成员上限回答，未混用专业版。",
+          "evidence": [
+            "Trace两次query均明确标准版；D03-C01为标准版适用范围。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "本题无特定禁止项；未凭记忆跳过原文，也未用工具故障否定已有恢复证据。",
+          "evidence": [
+            "Trace step 5实际原文读取；answer有D03-C02引用。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "同一模型批次预先安排两次搜索，第一次超时、第二次成功，后续模型根据成功结果读取并回答。证明真实失败后恢复，但不能单凭此Trace声称观察错误后才决定重试。",
+          "evidence": [
+            "Trace step 1一次发出两次search；step 2 timeout/streak1；step 3成功/streak0；step 4模型选择read。"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F03",
+      "run_id": "27ca9b88900244149f7f95c78fb2a93b",
+      "artifact_sha256": "d9440bbbdfa2c908b13d312179e1381b60e020a10cafbb2d660c6a5db8907615",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "没有从模型记忆给导出分辨率，准确报告知识库连续失败3次。",
+          "evidence": [
+            "Trace steps 2、3、5均timeout；answer无1080p或4K结论。"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "没有可用原文，因此citations为空；失败次数由本轮Trace支持而非虚构引用。",
+          "evidence": [
+            "result.citations=[]；metrics.tool_calls=3。"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "将任务未完成归因于检索工具故障，没有误判为知识库不存在规则。",
+          "evidence": [
+            "answer：达到工具故障上限，无法完成查证。"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "虽然本题没有枚举禁止词，已核查没有凭记忆补出标准版上限或假装查证成功。",
+          "evidence": [
+            "answer与gaps只说明故障；无业务数字。"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两次模型调用共执行恰好3次搜索失败；第三次后直接hardstop，无第四次工具或模型生成结束语，tool_error与reason_code一致。",
+          "evidence": [
+            "Trace steps 2/3/5 failure_streak=1/2/3，step 6 run_finished tool_failure_limit。",
+            "metrics.model_calls=2，tool_calls=3；result.reason_code=tool_failure_limit。"
+          ]
+        }
+      }
+    }
+  ]
+}

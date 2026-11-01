@@ -1,0 +1,181 @@
+{
+  "question": "员工申请年假最少需要提前多久？",
+  "history": [],
+  "result": {
+    "answer": "根据《员工请假与审批制度》（适用全体正式员工，含试用期员工），员工申请年假应至少提前2个工作日通过OA提交申请。",
+    "status": "answered",
+    "citations": [
+      {
+        "doc_id": "D08",
+        "chunk_id": "D08-C01",
+        "quote": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+      }
+    ],
+    "gaps": [],
+    "run_id": "f1bf71399d6d40dc87c956c3bf63abe8",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "员工申请年假提前多久"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "员工申请年假提前多久",
+              "hits": [
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.3591,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C02",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假审批",
+                  "score": 0.0444,
+                  "snippet": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C04",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "未覆盖事项",
+                  "score": 0.0379,
+                  "snippet": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                }
+              ],
+              "candidate_count": 3,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 3,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D08"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D08",
+              "title": "员工请假与审批制度",
+              "category": "人事行政",
+              "version": "2.2",
+              "version_date": "2026-07-01",
+              "effective_date": "2026-07-10",
+              "owner": "人力资源部",
+              "scope": "全体正式员工（含试用期员工）",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D08-C01",
+                  "section": "年假申请",
+                  "text": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "chunk_id": "D08-C02",
+                  "section": "年假审批",
+                  "text": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                },
+                {
+                  "chunk_id": "D08-C03",
+                  "section": "病假申请",
+                  "text": "突发病假可先通知直属主管，并在返岗后1个工作日内补交OA请假申请及有效诊断证明。"
+                },
+                {
+                  "chunk_id": "D08-C04",
+                  "section": "未覆盖事项",
+                  "text": "本文件仅规定年假与病假的申请流程，不规定婚假、产假或陪产假的天数。"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "step": 5,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "final_answer",
+        "data": {
+          "answer": "根据《员工请假与审批制度》（适用全体正式员工，含试用期员工），员工申请年假应至少提前2个工作日通过OA提交申请。",
+          "status": "answered",
+          "citations": [
+            {
+              "doc_id": "D08",
+              "chunk_id": "D08-C01",
+              "quote": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+            }
+          ],
+          "gaps": []
+        }
+      },
+      {
+        "step": 7,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.594,
+      "usage": {
+        "prompt_tokens": 4332,
+        "completion_tokens": 167,
+        "total_tokens": 4499
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "question": "安卓客户端要求的最低系统版本是多少？",
+  "history": [],
+  "result": {
+    "answer": "知识库中未检索到关于安卓客户端最低系统版本要求的资料。已检索“安卓客户端最低系统版本”“Android客户端系统版本要求”等关键词，候选结果均为费用报销、企业API、产品导出分辨率、排障FAQ等无关文档，没有涉及客户端系统版本要求的内容。",
+    "status": "insufficient_evidence",
+    "clarification_reason": null,
+    "citations": [],
+    "gaps": [
+      "知识库中缺少安卓客户端（Android 客户端）最低支持系统版本的相关文档或条款",
+      "如需精确回答，需补充产品客户端系统要求说明、应用商店上架信息或客户端发版说明等资料"
+    ],
+    "run_id": "6a232a0066004c90bad17e39ca25a7b2",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "安卓客户端 最低系统版本 要求"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "安卓客户端 最低系统版本 要求",
+              "hits": [
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C02",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "报销提交时限",
+                  "score": 0.0897,
+                  "snippet": "员工应在费用实际发生后的30个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C02",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "提交时限",
+                  "score": 0.0613,
+                  "snippet": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C01",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "服务范围",
+                  "score": 0.0579,
+                  "snippet": "企业API仅对已签约企业API服务的客户开放，不因购买团队标准版或团队专业版而自动获得调用权限。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C03",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "审批时间",
+                  "score": 0.0373,
+                  "snippet": "申请资料齐全后，开放平台组通常在2个工作日内完成审核并通知申请结果。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C04",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "密钥安全",
+                  "score": 0.0343,
+                  "snippet": "API密钥仅在开通成功后由控制台展示；不得将密钥提交到公开代码仓库或向无关人员共享。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C02",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "申请权限",
+                  "score": 0.0338,
+                  "snippet": "只有企业管理员可以在开放平台控制台发起API开通申请。需填写企业名称、使用场景与技术联系人。"
+                }
+              ],
+              "candidate_count": 6,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "Android 客户端 支持 系统版本 Android 版本要求"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "Android 客户端 支持 系统版本 Android 版本要求",
+              "hits": [
+                {
+                  "doc_id": "D06",
+                  "chunk_id": "D06-C04",
+                  "title": "AI视频生成失败排障FAQ",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-06-02",
+                  "section": "工单信息",
+                  "score": 0.0766,
+                  "snippet": "提交故障工单时需提供工作区ID、失败任务ID、失败时间以及错误提示截图。"
+                },
+                {
+                  "doc_id": "D07",
+                  "chunk_id": "D07-C04",
+                  "title": "企业API接入与权限申请指南",
+                  "scope": "已签约企业API服务的企业客户及其企业管理员",
+                  "version_date": "2026-06-18",
+                  "section": "密钥安全",
+                  "score": 0.0477,
+                  "snippet": "API密钥仅在开通成功后由控制台展示；不得将密钥提交到公开代码仓库或向无关人员共享。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C02",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "报销提交时限",
+                  "score": 0.0456,
+                  "snippet": "员工应在费用实际发生后的30个自然日内，通过内部报销系统提交报销申请。提交日期以系统记录为准。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C03",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "导出分辨率",
+                  "score": 0.0425,
+                  "snippet": "团队专业版支持最高4K（3840×2160）的视频导出；支持MP4格式。"
+                },
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C02",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "提交时限",
+                  "score": 0.0311,
+                  "snippet": "员工应在费用实际发生后的15个自然日内，在内部报销系统完成报销提交。"
+                },
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C03",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "导出分辨率",
+                  "score": 0.0274,
+                  "snippet": "团队标准版支持最高1080p的视频导出；可导出MP4文件。"
+                }
+              ],
+              "candidate_count": 8,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "final_answer",
+        "data": {
+          "answer": "知识库中未检索到关于安卓客户端最低系统版本要求的资料。已检索“安卓客户端最低系统版本”“Android客户端系统版本要求”等关键词，候选结果均为费用报销、企业API、产品导出分辨率、排障FAQ等无关文档，没有涉及客户端系统版本要求的内容。",
+          "status": "insufficient_evidence",
+          "clarification_reason": null,
+          "citations": [],
+          "gaps": [
+            "知识库中缺少安卓客户端（Android 客户端）最低支持系统版本的相关文档或条款",
+            "如需精确回答，需补充产品客户端系统要求说明、应用商店上架信息或客户端发版说明等资料"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "run_finished",
+        "data": {
+          "status": "insufficient_evidence",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 2,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.516,
+      "usage": {
+        "prompt_tokens": 3786,
+        "completion_tokens": 227,
+        "total_tokens": 4013
+      }
+    }
+  }
+}

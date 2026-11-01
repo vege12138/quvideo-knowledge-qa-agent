@@ -1,0 +1,286 @@
+{
+  "question": "开了专业套餐，能不能出4K的片子？",
+  "history": [],
+  "result": {
+    "answer": "可以。若你的工作区当前订阅的是团队专业版，即适用专业版规则：支持最高 4K（3840×2160）的视频导出，格式支持 MP4。（注意：上述“专业版”指“团队专业版”；若你所说的“专业套餐”是其他产品线，请告知具体套餐名称，我再查证。）",
+    "status": "answered",
+    "citations": [
+      {
+        "doc_id": "D04",
+        "chunk_id": "D04-C01",
+        "quote": "本说明仅适用于当前订阅为团队专业版的工作区；不适用于团队标准版。"
+      },
+      {
+        "doc_id": "D04",
+        "chunk_id": "D04-C03",
+        "quote": "团队专业版支持最高4K（3840×2160）的视频导出；支持MP4格式。"
+      }
+    ],
+    "gaps": [
+      "已按“团队专业版”作答；若用户所指“专业套餐”属其他产品线，需确认套餐名称后另行查证"
+    ],
+    "run_id": "d7c67d4ba7474fe6a01e2defa9bc9c96",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "专业套餐 4K 输出"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "专业套餐 4K 输出",
+              "hits": [
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C01",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "适用套餐",
+                  "score": 0.1457,
+                  "snippet": "本说明仅适用于当前订阅为团队专业版的工作区；不适用于团队标准版。"
+                },
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C01",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "适用套餐",
+                  "score": 0.1319,
+                  "snippet": "本说明仅适用于当前订阅为团队标准版的工作区；不适用于团队专业版。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C03",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "导出分辨率",
+                  "score": 0.0689,
+                  "snippet": "团队专业版支持最高4K（3840×2160）的视频导出；支持MP4格式。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C04",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "套餐切换",
+                  "score": 0.0674,
+                  "snippet": "工作区升级为团队专业版后，成员上限按专业版规则执行；两个套餐的成员上限不可叠加。"
+                },
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C04",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "人数上限提示",
+                  "score": 0.0274,
+                  "snippet": "达到活跃成员上限时，须停用现有成员或升级套餐后才能继续邀请。"
+                }
+              ],
+              "candidate_count": 5,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "套餐 分辨率 导出 限制"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "套餐 分辨率 导出 限制",
+              "hits": [
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C03",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "导出分辨率",
+                  "score": 0.2495,
+                  "snippet": "团队标准版支持最高1080p的视频导出；可导出MP4文件。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C03",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "导出分辨率",
+                  "score": 0.2193,
+                  "snippet": "团队专业版支持最高4K（3840×2160）的视频导出；支持MP4格式。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C01",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "适用套餐",
+                  "score": 0.0723,
+                  "snippet": "本说明仅适用于当前订阅为团队专业版的工作区；不适用于团队标准版。"
+                },
+                {
+                  "doc_id": "D03",
+                  "chunk_id": "D03-C01",
+                  "title": "团队标准版产品与协作规则",
+                  "scope": "订阅团队标准版的工作区",
+                  "version_date": "2026-04-02",
+                  "section": "适用套餐",
+                  "score": 0.0721,
+                  "snippet": "本说明仅适用于当前订阅为团队标准版的工作区；不适用于团队专业版。"
+                },
+                {
+                  "doc_id": "D04",
+                  "chunk_id": "D04-C04",
+                  "title": "团队专业版产品与协作规则",
+                  "scope": "订阅团队专业版的工作区",
+                  "version_date": "2026-04-06",
+                  "section": "套餐切换",
+                  "score": 0.0264,
+                  "snippet": "工作区升级为团队专业版后，成员上限按专业版规则执行；两个套餐的成员上限不可叠加。"
+                }
+              ],
+              "candidate_count": 5,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          }
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "read_document"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "tool_result",
+        "data": {
+          "tool": "read_document",
+          "arguments": {
+            "doc_id": "D04"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "doc_id": "D04",
+              "title": "团队专业版产品与协作规则",
+              "category": "产品文档",
+              "version": "3.0",
+              "version_date": "2026-04-06",
+              "effective_date": "2026-04-15",
+              "owner": "产品部",
+              "scope": "订阅团队专业版的工作区",
+              "status": "active",
+              "chunks": [
+                {
+                  "chunk_id": "D04-C01",
+                  "section": "适用套餐",
+                  "text": "本说明仅适用于当前订阅为团队专业版的工作区；不适用于团队标准版。"
+                },
+                {
+                  "chunk_id": "D04-C02",
+                  "section": "成员数量",
+                  "text": "团队专业版每个工作区最多允许50名活跃成员，包含工作区所有者。上限按工作区计算，而不是按单个成员计算。"
+                },
+                {
+                  "chunk_id": "D04-C03",
+                  "section": "导出分辨率",
+                  "text": "团队专业版支持最高4K（3840×2160）的视频导出；支持MP4格式。"
+                },
+                {
+                  "chunk_id": "D04-C04",
+                  "section": "套餐切换",
+                  "text": "工作区升级为团队专业版后，成员上限按专业版规则执行；两个套餐的成员上限不可叠加。"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "step": 6,
+        "event": "model_action",
+        "data": {
+          "call": 3,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 7,
+        "event": "final_answer",
+        "data": {
+          "answer": "可以。若你的工作区当前订阅的是团队专业版，即适用专业版规则：支持最高 4K（3840×2160）的视频导出，格式支持 MP4。（注意：上述“专业版”指“团队专业版”；若你所说的“专业套餐”是其他产品线，请告知具体套餐名称，我再查证。）",
+          "status": "answered",
+          "citations": [
+            {
+              "doc_id": "D04",
+              "chunk_id": "D04-C01",
+              "quote": "本说明仅适用于当前订阅为团队专业版的工作区；不适用于团队标准版。"
+            },
+            {
+              "doc_id": "D04",
+              "chunk_id": "D04-C03",
+              "quote": "团队专业版支持最高4K（3840×2160）的视频导出；支持MP4格式。"
+            }
+          ],
+          "gaps": [
+            "已按“团队专业版”作答；若用户所指“专业套餐”属其他产品线，需确认套餐名称后另行查证"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "event": "run_finished",
+        "data": {
+          "status": "answered",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 3,
+      "tool_calls": 3,
+      "elapsed_seconds": 3.625,
+      "usage": {
+        "prompt_tokens": 5874,
+        "completion_tokens": 332,
+        "total_tokens": 6206
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "question": "星映科技2027年的营收目标是多少？",
+  "history": [],
+  "result": {
+    "answer": "所检索到的知识库资料未提供星映科技2027年营收目标的相关内容（候选文档均为费用报销、请假、AI视频积分等制度，与营收目标无关）。",
+    "status": "insufficient_evidence",
+    "clarification_reason": null,
+    "citations": [],
+    "gaps": [
+      "知识库中未检索到星映科技2027年营收目标/年度经营目标类文档，缺少可支持的原文依据"
+    ],
+    "run_id": "4187d44a322f49789114b86b6799b65a",
+    "mode": "real",
+    "reason_code": "",
+    "trace": [
+      {
+        "step": 1,
+        "event": "model_action",
+        "data": {
+          "call": 1,
+          "actions": [
+            "search_documents",
+            "search_documents"
+          ]
+        }
+      },
+      {
+        "step": 2,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "星映科技 2027年 营收目标"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "星映科技 2027年 营收目标",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C01",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "适用范围",
+                  "score": 0.1756,
+                  "snippet": "本通知面向星映科技全体正式员工（含试用期员工），覆盖交通、住宿、办公采购等因公费用。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C01",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "适用对象",
+                  "score": 0.1696,
+                  "snippet": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                },
+                {
+                  "doc_id": "D05",
+                  "chunk_id": "D05-C02",
+                  "title": "AI视频生成积分与扣费规则",
+                  "scope": "团队标准版与团队专业版使用AI视频生成功能的工作区",
+                  "version_date": "2026-05-08",
+                  "section": "积分消耗",
+                  "score": 0.0449,
+                  "snippet": "发起一条AI视频生成任务时预扣20积分。任务成功完成后该20积分正式扣除。"
+                }
+              ],
+              "candidate_count": 3,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 3,
+        "event": "tool_result",
+        "data": {
+          "tool": "search_documents",
+          "arguments": {
+            "query": "星映科技 年度经营目标 营业收入"
+          },
+          "observation": {
+            "ok": true,
+            "result": {
+              "query": "星映科技 年度经营目标 营业收入",
+              "hits": [
+                {
+                  "doc_id": "D02",
+                  "chunk_id": "D02-C01",
+                  "title": "费用报销操作补充通知",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-03-15",
+                  "section": "适用范围",
+                  "score": 0.1756,
+                  "snippet": "本通知面向星映科技全体正式员工（含试用期员工），覆盖交通、住宿、办公采购等因公费用。"
+                },
+                {
+                  "doc_id": "D01",
+                  "chunk_id": "D01-C01",
+                  "title": "员工费用报销管理制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-01-10",
+                  "section": "适用对象",
+                  "score": 0.1696,
+                  "snippet": "本制度适用于星映科技全体正式员工（含试用期员工）因公发生的交通、住宿、办公采购等合理费用。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C01",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假申请",
+                  "score": 0.0332,
+                  "snippet": "员工申请年假应至少提前2个工作日通过OA提交申请。"
+                },
+                {
+                  "doc_id": "D08",
+                  "chunk_id": "D08-C02",
+                  "title": "员工请假与审批制度",
+                  "scope": "全体正式员工（含试用期员工）",
+                  "version_date": "2026-07-01",
+                  "section": "年假审批",
+                  "score": 0.0256,
+                  "snippet": "连续请假不超过3个工作日的年假由直属主管审批；超过3个工作日的年假还需人力资源部复核。"
+                }
+              ],
+              "candidate_count": 4,
+              "note": "检索摘要不是最终引用。请读取相关原文，核对适用范围及其他相关规则。"
+            }
+          },
+          "failure_streak": 0
+        }
+      },
+      {
+        "step": 4,
+        "event": "model_action",
+        "data": {
+          "call": 2,
+          "actions": [
+            "final_answer"
+          ]
+        }
+      },
+      {
+        "step": 5,
+        "event": "final_answer",
+        "data": {
+          "answer": "所检索到的知识库资料未提供星映科技2027年营收目标的相关内容（候选文档均为费用报销、请假、AI视频积分等制度，与营收目标无关）。",
+          "status": "insufficient_evidence",
+          "clarification_reason": null,
+          "citations": [],
+          "gaps": [
+            "知识库中未检索到星映科技2027年营收目标/年度经营目标类文档，缺少可支持的原文依据"
+          ]
+        }
+      },
+      {
+        "step": 6,
+        "event": "run_finished",
+        "data": {
+          "status": "insufficient_evidence",
+          "reason_code": ""
+        }
+      }
+    ],
+    "metrics": {
+      "model_calls": 2,
+      "tool_calls": 2,
+      "elapsed_seconds": 2.75,
+      "usage": {
+        "prompt_tokens": 3715,
+        "completion_tokens": 191,
+        "total_tokens": 3906
+      }
+    }
+  }
+}

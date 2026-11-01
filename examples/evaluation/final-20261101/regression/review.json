@@ -1,0 +1,870 @@
+{
+  "schema_version": 1,
+  "reviewer_type": "ai_assisted",
+  "human_confirmation": "pending",
+  "cases": [
+    {
+      "case_id": "C02",
+      "run_id": "f6e9dfc3a1ba4283bdaf376ca9a98e75",
+      "artifact_sha256": "8be17bbc9fc4fabcb53716f1a2d0f50825f8d147be9f55247d00bac9ecc4d59b",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "专业版最高4K即3840×2160，支持MP4。",
+          "evidence": [
+            "D04/D04-C03",
+            "C02.json Trace step 2: search_documents {'query': '团队专业版 导出 分辨率'} ok=True",
+            "C02.json Trace step 3: search_documents {'query': '套餐 导出分辨率 上限'} ok=True",
+            "C02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C03原文完整支持三个事实。",
+          "evidence": [
+            "D04/D04-C03",
+            "C02.json Trace step 2: search_documents {'query': '团队专业版 导出 分辨率'} ok=True",
+            "C02.json Trace step 3: search_documents {'query': '套餐 导出分辨率 上限'} ok=True",
+            "C02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "范围为专业版，没有套用标准版。",
+          "evidence": [
+            "D04/D04-C03",
+            "C02.json Trace step 2: search_documents {'query': '团队专业版 导出 分辨率'} ok=True",
+            "C02.json Trace step 3: search_documents {'query': '套餐 导出分辨率 上限'} ok=True",
+            "C02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未回答仅支持1080p。",
+          "evidence": [
+            "D04/D04-C03",
+            "C02.json Trace step 2: search_documents {'query': '团队专业版 导出 分辨率'} ok=True",
+            "C02.json Trace step 3: search_documents {'query': '套餐 导出分辨率 上限'} ok=True",
+            "C02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两次搜索后读D04并answered。",
+          "evidence": [
+            "D04/D04-C03",
+            "C02.json Trace step 2: search_documents {'query': '团队专业版 导出 分辨率'} ok=True",
+            "C02.json Trace step 3: search_documents {'query': '套餐 导出分辨率 上限'} ok=True",
+            "C02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "C02.json#/result/answer",
+            "C02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "C04",
+      "run_id": "5f06d3e1f8fc4a99aec166838e6839a5",
+      "artifact_sha256": "6acfd6ea9c93ac62153f395c83636e8364293ad6f91d6a869fb9758537cd807e",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "年假至少提前2个工作日经OA申请，范围正确。",
+          "evidence": [
+            "D08/D08-C01",
+            "C04.json Trace step 2: search_documents {'query': '年假申请 提前多久 提交'} ok=True",
+            "C04.json Trace step 4: read_document {'doc_id': 'D08'} ok=True",
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C01支持时限/渠道，员工范围见已读文档元信息。",
+          "evidence": [
+            "D08/D08-C01",
+            "C04.json Trace step 2: search_documents {'query': '年假申请 提前多久 提交'} ok=True",
+            "C04.json Trace step 4: read_document {'doc_id': 'D08'} ok=True",
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "年假规则没有混入突发病假补交时限。",
+          "evidence": [
+            "D08/D08-C01",
+            "C04.json Trace step 2: search_documents {'query': '年假申请 提前多久 提交'} ok=True",
+            "C04.json Trace step 4: read_document {'doc_id': 'D08'} ok=True",
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未把工作日替换为自然日。",
+          "evidence": [
+            "D08/D08-C01",
+            "C04.json Trace step 2: search_documents {'query': '年假申请 提前多久 提交'} ok=True",
+            "C04.json Trace step 4: read_document {'doc_id': 'D08'} ok=True",
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "成功检索和读取D08，当前轮取证。",
+          "evidence": [
+            "D08/D08-C01",
+            "C04.json Trace step 2: search_documents {'query': '年假申请 提前多久 提交'} ok=True",
+            "C04.json Trace step 4: read_document {'doc_id': 'D08'} ok=True",
+            "C04.json#/result/answer",
+            "C04.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K02",
+      "run_id": "389755b6ad4b4339b9aed7ef55ad4e85",
+      "artifact_sha256": "e215ff219ff89dd5c45171b9f47c5fb64021ddf7af9b84c5e118403781b12b14",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "第20天按30日未超期，按15日超期，只作条件判断。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "K02.json Trace step 2: search_documents {'query': '费用报销时限 超期 天数规定'} ok=True",
+            "K02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "K02.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D01-C02/D02-C02支持两种推导，D02-C04支持补充通知未载明优先级。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "K02.json Trace step 2: search_documents {'query': '费用报销时限 超期 天数规定'} ok=True",
+            "K02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "K02.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "相同费用范围冲突，未以日期更晚擅自裁决。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "K02.json Trace step 2: search_documents {'query': '费用报销时限 超期 天数规定'} ok=True",
+            "K02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "K02.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未确定认定第20天超期或不超期。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "K02.json Trace step 2: search_documents {'query': '费用报销时限 超期 天数规定'} ok=True",
+            "K02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "K02.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "搜索后读双方原文，clarification_required并要求确认。",
+          "evidence": [
+            "D01/D01-C02",
+            "D02/D02-C02",
+            "D02/D02-C04",
+            "K02.json Trace step 2: search_documents {'query': '费用报销时限 超期 天数规定'} ok=True",
+            "K02.json Trace step 4: read_document {'doc_id': 'D01'} ok=True",
+            "K02.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "K02.json#/result/answer",
+            "K02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "K04",
+      "run_id": "0a7ec5f7998142738f3d3498c2480d26",
+      "artifact_sha256": "de71b715ee5a98ace2a577a9707e7aff285b056558007ed6b972eb2ee8d1013b",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "未认定一小时未退一定故障；按两种规则分别解释时限。",
+          "evidence": [
+            "D05/D05-C03",
+            "D06/D06-C03",
+            "K04.json Trace step 2: search_documents {'query': 'AI生成失败 积分退还 规则', 'top_k': 8} ok=True",
+            "K04.json Trace step 3: search_documents {'query': '生成失败 是否属于故障 判定标准', 'top_k': 8} ok=True",
+            "K04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "K04.json Trace step 6: read_document {'doc_id': 'D06'} ok=True",
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D05-C03/D06-C03支持条件分析；不再声称任务状态应在积分流水查看。",
+          "evidence": [
+            "D05/D05-C03",
+            "D06/D06-C03",
+            "K04.json Trace step 2: search_documents {'query': 'AI生成失败 积分退还 规则', 'top_k': 8} ok=True",
+            "K04.json Trace step 3: search_documents {'query': '生成失败 是否属于故障 判定标准', 'top_k': 8} ok=True",
+            "K04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "K04.json Trace step 6: read_document {'doc_id': 'D06'} ok=True",
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "退款时限冲突与缺乏独立故障标准分开表达，需确认适用规则。",
+          "evidence": [
+            "D05/D05-C03",
+            "D06/D06-C03",
+            "K04.json Trace step 2: search_documents {'query': 'AI生成失败 积分退还 规则', 'top_k': 8} ok=True",
+            "K04.json Trace step 3: search_documents {'query': '生成失败 是否属于故障 判定标准', 'top_k': 8} ok=True",
+            "K04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "K04.json Trace step 6: read_document {'doc_id': 'D06'} ok=True",
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未无条件说一定故障或肯定正常；正常仅限定在D06时限下。",
+          "evidence": [
+            "D05/D05-C03",
+            "D06/D06-C03",
+            "K04.json Trace step 2: search_documents {'query': 'AI生成失败 积分退还 规则', 'top_k': 8} ok=True",
+            "K04.json Trace step 3: search_documents {'query': '生成失败 是否属于故障 判定标准', 'top_k': 8} ok=True",
+            "K04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "K04.json Trace step 6: read_document {'doc_id': 'D06'} ok=True",
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两次搜索后读双方，冲突澄清有本轮证据。",
+          "evidence": [
+            "D05/D05-C03",
+            "D06/D06-C03",
+            "K04.json Trace step 2: search_documents {'query': 'AI生成失败 积分退还 规则', 'top_k': 8} ok=True",
+            "K04.json Trace step 3: search_documents {'query': '生成失败 是否属于故障 判定标准', 'top_k': 8} ok=True",
+            "K04.json Trace step 5: read_document {'doc_id': 'D05'} ok=True",
+            "K04.json Trace step 6: read_document {'doc_id': 'D06'} ok=True",
+            "K04.json#/result/answer",
+            "K04.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O02",
+      "run_id": "6adb6dff00d6443981d1744bf1283266",
+      "artifact_sha256": "ebb0efef6982a31f76846a377048f545ad691561eb09bea5e1892591dc448f38",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "没有给婚假天数，明确现有制度不规定。",
+          "evidence": [
+            "D08/D08-C04",
+            "O02.json Trace step 2: search_documents {'query': '婚假天数'} ok=True",
+            "O02.json Trace step 3: search_documents {'query': '员工婚假规定'} ok=True",
+            "O02.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "O02.json Trace step 6: search_documents {'query': '婚假 结婚 假期天数 假期福利', 'top_k': 12} ok=True",
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C04直接支持未覆盖婚假，引用准确。",
+          "evidence": [
+            "D08/D08-C04",
+            "O02.json Trace step 2: search_documents {'query': '婚假天数'} ok=True",
+            "O02.json Trace step 3: search_documents {'query': '员工婚假规定'} ok=True",
+            "O02.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "O02.json Trace step 6: search_documents {'query': '婚假 结婚 假期天数 假期福利', 'top_k': 12} ok=True",
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "年假/病假流程没有冒充婚假天数。",
+          "evidence": [
+            "D08/D08-C04",
+            "O02.json Trace step 2: search_documents {'query': '婚假天数'} ok=True",
+            "O02.json Trace step 3: search_documents {'query': '员工婚假规定'} ok=True",
+            "O02.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "O02.json Trace step 6: search_documents {'query': '婚假 结婚 假期天数 假期福利', 'top_k': 12} ok=True",
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未借外部法律或通用政策补天数。",
+          "evidence": [
+            "D08/D08-C04",
+            "O02.json Trace step 2: search_documents {'query': '婚假天数'} ok=True",
+            "O02.json Trace step 3: search_documents {'query': '员工婚假规定'} ok=True",
+            "O02.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "O02.json Trace step 6: search_documents {'query': '婚假 结婚 假期天数 假期福利', 'top_k': 12} ok=True",
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "搜索、读D08、补搜索后资料不足。",
+          "evidence": [
+            "D08/D08-C04",
+            "O02.json Trace step 2: search_documents {'query': '婚假天数'} ok=True",
+            "O02.json Trace step 3: search_documents {'query': '员工婚假规定'} ok=True",
+            "O02.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "O02.json Trace step 6: search_documents {'query': '婚假 结婚 假期天数 假期福利', 'top_k': 12} ok=True",
+            "O02.json#/result/answer",
+            "O02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "O04",
+      "run_id": "67a8826ca670486aab58127f11e54fa2",
+      "artifact_sha256": "483085d580978f5e08a5cb0aca5673f805df25507fa9c689b0c61e33758c507d",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "未编造北京办公室街道地址。",
+          "evidence": [
+            "O04.json Trace step 2: search_documents {'query': '星映科技 北京办公室 地址'} ok=True",
+            "O04.json Trace step 3: search_documents {'query': '星映科技 北京 办公地点 街道'} ok=True",
+            "O04.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "O04.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "实际读D01/D02只有报销规则，没有伪造地址引用。",
+          "evidence": [
+            "O04.json Trace step 2: search_documents {'query': '星映科技 北京办公室 地址'} ok=True",
+            "O04.json Trace step 3: search_documents {'query': '星映科技 北京 办公地点 街道'} ok=True",
+            "O04.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "O04.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "不相关报销命中未被作为办公地点证据。",
+          "evidence": [
+            "O04.json Trace step 2: search_documents {'query': '星映科技 北京办公室 地址'} ok=True",
+            "O04.json Trace step 3: search_documents {'query': '星映科技 北京 办公地点 街道'} ok=True",
+            "O04.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "O04.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未利用公司名猜地址。",
+          "evidence": [
+            "O04.json Trace step 2: search_documents {'query': '星映科技 北京办公室 地址'} ok=True",
+            "O04.json Trace step 3: search_documents {'query': '星映科技 北京 办公地点 街道'} ok=True",
+            "O04.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "O04.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两搜索两读取均成功，资料不足与工具故障区分。",
+          "evidence": [
+            "O04.json Trace step 2: search_documents {'query': '星映科技 北京办公室 地址'} ok=True",
+            "O04.json Trace step 3: search_documents {'query': '星映科技 北京 办公地点 街道'} ok=True",
+            "O04.json Trace step 5: read_document {'doc_id': 'D01'} ok=True",
+            "O04.json Trace step 6: read_document {'doc_id': 'D02'} ok=True",
+            "O04.json#/result/answer",
+            "O04.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P02",
+      "run_id": "8080803c0370453da258842828ac0cc2",
+      "artifact_sha256": "2f7cad6fc5257c0f4a8f0687aef33861061287bf8d439a7aa16e77d2f00b4113",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "专业套餐可导出4K（3840×2160）MP4。",
+          "evidence": [
+            "D04/D04-C03",
+            "D04/D04-C01",
+            "P02.json Trace step 2: search_documents {'query': '专业套餐 4K 视频导出'} ok=True",
+            "P02.json Trace step 3: search_documents {'query': '套餐 分辨率 支持 4K 输出'} ok=True",
+            "P02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C03支持能力，D04-C01支持套餐范围。",
+          "evidence": [
+            "D04/D04-C03",
+            "D04/D04-C01",
+            "P02.json Trace step 2: search_documents {'query': '专业套餐 4K 视频导出'} ok=True",
+            "P02.json Trace step 3: search_documents {'query': '套餐 分辨率 支持 4K 输出'} ok=True",
+            "P02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "片子被解释为视频导出，附条件限定团队专业版。",
+          "evidence": [
+            "D04/D04-C03",
+            "D04/D04-C01",
+            "P02.json Trace step 2: search_documents {'query': '专业套餐 4K 视频导出'} ok=True",
+            "P02.json Trace step 3: search_documents {'query': '套餐 分辨率 支持 4K 输出'} ok=True",
+            "P02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未说最高1080p。",
+          "evidence": [
+            "D04/D04-C03",
+            "D04/D04-C01",
+            "P02.json Trace step 2: search_documents {'query': '专业套餐 4K 视频导出'} ok=True",
+            "P02.json Trace step 3: search_documents {'query': '套餐 分辨率 支持 4K 输出'} ok=True",
+            "P02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "双查询后读D04再作有依据回答。",
+          "evidence": [
+            "D04/D04-C03",
+            "D04/D04-C01",
+            "P02.json Trace step 2: search_documents {'query': '专业套餐 4K 视频导出'} ok=True",
+            "P02.json Trace step 3: search_documents {'query': '套餐 分辨率 支持 4K 输出'} ok=True",
+            "P02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "P02.json#/result/answer",
+            "P02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "P04",
+      "run_id": "f3fbeca65ac642069063188e19658e80",
+      "artifact_sha256": "7d01d143853e50499c620145e6d5222623b82e89b7d9a92150b98866b694fd8d",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "返岗后1个工作日内补交OA及诊断证明，可先告知主管。",
+          "evidence": [
+            "D08/D08-C03",
+            "P04.json Trace step 2: search_documents {'query': '临时生病未走流程 返岗后补请假单 时限', 'top_k': 8} ok=True",
+            "P04.json Trace step 3: search_documents {'query': '病假 补办请假手续 规定', 'top_k': 8} ok=True",
+            "P04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C03支持完整流程；员工范围来自已读元信息。",
+          "evidence": [
+            "D08/D08-C03",
+            "P04.json Trace step 2: search_documents {'query': '临时生病未走流程 返岗后补请假单 时限', 'top_k': 8} ok=True",
+            "P04.json Trace step 3: search_documents {'query': '病假 补办请假手续 规定', 'top_k': 8} ok=True",
+            "P04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "临时生病正确匹配突发病假，不用年假提前要求。",
+          "evidence": [
+            "D08/D08-C03",
+            "P04.json Trace step 2: search_documents {'query': '临时生病未走流程 返岗后补请假单 时限', 'top_k': 8} ok=True",
+            "P04.json Trace step 3: search_documents {'query': '病假 补办请假手续 规定', 'top_k': 8} ok=True",
+            "P04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未错误套用2个工作日。",
+          "evidence": [
+            "D08/D08-C03",
+            "P04.json Trace step 2: search_documents {'query': '临时生病未走流程 返岗后补请假单 时限', 'top_k': 8} ok=True",
+            "P04.json Trace step 3: search_documents {'query': '病假 补办请假手续 规定', 'top_k': 8} ok=True",
+            "P04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两搜索后读D08并回答。",
+          "evidence": [
+            "D08/D08-C03",
+            "P04.json Trace step 2: search_documents {'query': '临时生病未走流程 返岗后补请假单 时限', 'top_k': 8} ok=True",
+            "P04.json Trace step 3: search_documents {'query': '病假 补办请假手续 规定', 'top_k': 8} ok=True",
+            "P04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "P04.json#/result/answer",
+            "P04.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H02",
+      "run_id": "d10d7a43a32748209e273a13e618d9cf",
+      "artifact_sha256": "a47b10b6d0ac6b9903d8403bc04b6b07d75b4b33715580e7714987283a8b78b2",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "承接专业版人数，50名含所有者按工作区而非账号。",
+          "evidence": [
+            "D04/D04-C02",
+            "H02.json Trace step 2: search_documents {'query': '团队专业版 成员上限 50 活跃成员 工作区'} ok=True",
+            "H02.json Trace step 3: search_documents {'query': '成员数上限 按账号 计算方式 计费'} ok=True",
+            "H02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D04-C02直接支持计数单位和人数。",
+          "evidence": [
+            "D04/D04-C02",
+            "H02.json Trace step 2: search_documents {'query': '团队专业版 成员上限 50 活跃成员 工作区'} ok=True",
+            "H02.json Trace step 3: search_documents {'query': '成员数上限 按账号 计算方式 计费'} ok=True",
+            "H02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "使用历史定位专业版，再检索本轮证据。",
+          "evidence": [
+            "D04/D04-C02",
+            "H02.json Trace step 2: search_documents {'query': '团队专业版 成员上限 50 活跃成员 工作区'} ok=True",
+            "H02.json Trace step 3: search_documents {'query': '成员数上限 按账号 计算方式 计费'} ok=True",
+            "H02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "没有把上限解释为每账号50名。",
+          "evidence": [
+            "D04/D04-C02",
+            "H02.json Trace step 2: search_documents {'query': '团队专业版 成员上限 50 活跃成员 工作区'} ok=True",
+            "H02.json Trace step 3: search_documents {'query': '成员数上限 按账号 计算方式 计费'} ok=True",
+            "H02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两搜索后读D04，回答不只依赖历史。",
+          "evidence": [
+            "D04/D04-C02",
+            "H02.json Trace step 2: search_documents {'query': '团队专业版 成员上限 50 活跃成员 工作区'} ok=True",
+            "H02.json Trace step 3: search_documents {'query': '成员数上限 按账号 计算方式 计费'} ok=True",
+            "H02.json Trace step 5: read_document {'doc_id': 'D04'} ok=True",
+            "H02.json#/result/answer",
+            "H02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "H04",
+      "run_id": "21d185731ae14ffa83887f5e0523899a",
+      "artifact_sha256": "6ce7e1e7b68db099b27c584fddb0d77346be1cf8269034fdbbd7c022bf9785d3",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "承接年假，至少提前2个工作日通过OA。",
+          "evidence": [
+            "D08/D08-C01",
+            "H04.json Trace step 2: search_documents {'query': '年假申请 提前几天 提交', 'top_k': 8} ok=True",
+            "H04.json Trace step 3: search_documents {'query': '年假 请假流程 提前申请 时限', 'top_k': 8} ok=True",
+            "H04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "D08-C01支持时限/渠道，版本和生效日期与已读元信息一致。",
+          "evidence": [
+            "D08/D08-C01",
+            "H04.json Trace step 2: search_documents {'query': '年假申请 提前几天 提交', 'top_k': 8} ok=True",
+            "H04.json Trace step 3: search_documents {'query': '年假 请假流程 提前申请 时限', 'top_k': 8} ok=True",
+            "H04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "历史指代年假，不混病假返岗后的要求。",
+          "evidence": [
+            "D08/D08-C01",
+            "H04.json Trace step 2: search_documents {'query': '年假申请 提前几天 提交', 'top_k': 8} ok=True",
+            "H04.json Trace step 3: search_documents {'query': '年假 请假流程 提前申请 时限', 'top_k': 8} ok=True",
+            "H04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未凭空补更多天数或自然日。",
+          "evidence": [
+            "D08/D08-C01",
+            "H04.json Trace step 2: search_documents {'query': '年假申请 提前几天 提交', 'top_k': 8} ok=True",
+            "H04.json Trace step 3: search_documents {'query': '年假 请假流程 提前申请 时限', 'top_k': 8} ok=True",
+            "H04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "两搜索后读D08，answered有本轮证据。",
+          "evidence": [
+            "D08/D08-C01",
+            "H04.json Trace step 2: search_documents {'query': '年假申请 提前几天 提交', 'top_k': 8} ok=True",
+            "H04.json Trace step 3: search_documents {'query': '年假 请假流程 提前申请 时限', 'top_k': 8} ok=True",
+            "H04.json Trace step 5: read_document {'doc_id': 'D08'} ok=True",
+            "H04.json#/result/answer",
+            "H04.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F02",
+      "run_id": "8617f4c1505a43fc992745e424b72e28",
+      "artifact_sha256": "d66331c0cafe32cd0d34b4d9c5fe186261493d7dca4b8dc4edd67a3293c27f4f",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "签约客户的企业管理员申请API，所需信息正确。",
+          "evidence": [
+            "D07/D07-C01",
+            "D07/D07-C02",
+            "F02.json Trace step 2: search_documents {'query': '企业API权限申请 申请人资格', 'top_k': 8} ok=True",
+            "F02.json Trace step 3: search_documents {'query': 'API 权限 开通 审批流程', 'top_k': 8} ok=True",
+            "F02.json Trace step 5: read_document {'doc_id': 'D07'} ok=False",
+            "F02.json Trace step 7: read_document {'doc_id': 'D07', 'chunk_ids': ['D07-C01', 'D07-C02']} ok=True",
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "恢复后读D07-C01/C02，引用有实际成功读取支撑。",
+          "evidence": [
+            "D07/D07-C01",
+            "D07/D07-C02",
+            "F02.json Trace step 2: search_documents {'query': '企业API权限申请 申请人资格', 'top_k': 8} ok=True",
+            "F02.json Trace step 3: search_documents {'query': 'API 权限 开通 审批流程', 'top_k': 8} ok=True",
+            "F02.json Trace step 5: read_document {'doc_id': 'D07'} ok=False",
+            "F02.json Trace step 7: read_document {'doc_id': 'D07', 'chunk_ids': ['D07-C01', 'D07-C02']} ok=True",
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "API签约条件不与标准/专业套餐自动权益混淆。",
+          "evidence": [
+            "D07/D07-C01",
+            "D07/D07-C02",
+            "F02.json Trace step 2: search_documents {'query': '企业API权限申请 申请人资格', 'top_k': 8} ok=True",
+            "F02.json Trace step 3: search_documents {'query': 'API 权限 开通 审批流程', 'top_k': 8} ok=True",
+            "F02.json Trace step 5: read_document {'doc_id': 'D07'} ok=False",
+            "F02.json Trace step 7: read_document {'doc_id': 'D07', 'chunk_ids': ['D07-C01', 'D07-C02']} ok=True",
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未允许普通成员直接申请。",
+          "evidence": [
+            "D07/D07-C01",
+            "D07/D07-C02",
+            "F02.json Trace step 2: search_documents {'query': '企业API权限申请 申请人资格', 'top_k': 8} ok=True",
+            "F02.json Trace step 3: search_documents {'query': 'API 权限 开通 审批流程', 'top_k': 8} ok=True",
+            "F02.json Trace step 5: read_document {'doc_id': 'D07'} ok=False",
+            "F02.json Trace step 7: read_document {'doc_id': 'D07', 'chunk_ids': ['D07-C01', 'D07-C02']} ok=True",
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "step5读整份D07异常；下一model_action后step7改为读C01/C02成功，体现观察失败后调整参数并恢复。",
+          "evidence": [
+            "D07/D07-C01",
+            "D07/D07-C02",
+            "F02.json Trace step 2: search_documents {'query': '企业API权限申请 申请人资格', 'top_k': 8} ok=True",
+            "F02.json Trace step 3: search_documents {'query': 'API 权限 开通 审批流程', 'top_k': 8} ok=True",
+            "F02.json Trace step 5: read_document {'doc_id': 'D07'} ok=False",
+            "F02.json Trace step 7: read_document {'doc_id': 'D07', 'chunk_ids': ['D07-C01', 'D07-C02']} ok=True",
+            "F02.json#/result/answer",
+            "F02.json#/result/gaps"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "F04",
+      "run_id": "3f3eaf839a154c7981b9041b9de169d4",
+      "artifact_sha256": "6aae8e6100df94a78fe0ef11eb91f5d0f3594dd9d0d162462fdd5b9d4558bf97",
+      "verdict": "pass",
+      "criteria": {
+        "key_facts": {
+          "verdict": "pass",
+          "reason": "关键D01无法读取，明确无法完成查证，没有给15或30天。",
+          "evidence": [
+            "F04.json Trace step 2: search_documents {'query': '报销提交截止时间 几天', 'top_k': 8} ok=True",
+            "F04.json Trace step 3: search_documents {'query': '费用报销 提交时限 规定', 'top_k': 8} ok=True",
+            "F04.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "F04.json Trace step 6: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 8: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 10: read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02', 'D01-C04']} ok=False",
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps"
+          ]
+        },
+        "citation_support": {
+          "verdict": "pass",
+          "reason": "虽读到D02，最终没有用其单方作完整期限结论。",
+          "evidence": [
+            "F04.json Trace step 2: search_documents {'query': '报销提交截止时间 几天', 'top_k': 8} ok=True",
+            "F04.json Trace step 3: search_documents {'query': '费用报销 提交时限 规定', 'top_k': 8} ok=True",
+            "F04.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "F04.json Trace step 6: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 8: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 10: read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02', 'D01-C04']} ok=False",
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps"
+          ]
+        },
+        "scope_conflict": {
+          "verdict": "pass",
+          "reason": "保留可能冲突的关键证据缺口。",
+          "evidence": [
+            "F04.json Trace step 2: search_documents {'query': '报销提交截止时间 几天', 'top_k': 8} ok=True",
+            "F04.json Trace step 3: search_documents {'query': '费用报销 提交时限 规定', 'top_k': 8} ok=True",
+            "F04.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "F04.json Trace step 6: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 8: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 10: read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02', 'D01-C04']} ok=False",
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps"
+          ]
+        },
+        "must_not": {
+          "verdict": "pass",
+          "reason": "未忽略不可读D01而直接答15天。",
+          "evidence": [
+            "F04.json Trace step 2: search_documents {'query': '报销提交截止时间 几天', 'top_k': 8} ok=True",
+            "F04.json Trace step 3: search_documents {'query': '费用报销 提交时限 规定', 'top_k': 8} ok=True",
+            "F04.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "F04.json Trace step 6: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 8: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 10: read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02', 'D01-C04']} ok=False",
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps"
+          ]
+        },
+        "failure_status": {
+          "verdict": "pass",
+          "reason": "step6/8/10读取D01失败三次，换chunk未清零；六次总工具调用，tool_failure_limit结束。",
+          "evidence": [
+            "F04.json Trace step 2: search_documents {'query': '报销提交截止时间 几天', 'top_k': 8} ok=True",
+            "F04.json Trace step 3: search_documents {'query': '费用报销 提交时限 规定', 'top_k': 8} ok=True",
+            "F04.json Trace step 5: read_document {'doc_id': 'D02'} ok=True",
+            "F04.json Trace step 6: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 8: read_document {'doc_id': 'D01'} ok=False",
+            "F04.json Trace step 10: read_document {'doc_id': 'D01', 'chunk_ids': ['D01-C02', 'D01-C04']} ok=False",
+            "F04.json#/result/answer",
+            "F04.json#/result/gaps"
+          ]
+        }
+      }
+    }
+  ],
+  "reviewed_at": "2026-11-01T07:59:54.051474+00:00",
+  "review_note": "Codex逐题阅读实际回答、引用、缺口与Trace后记录；非独立人工评审，非自动字符串判分。C03事实/状态正确但范围和额外引用完整性仍不通过。"
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>星映 · 知识问答</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="星映知识问答首页"><span class="brand-icon">✳</span><span>星映<span class="brand-small">KNOWLEDGE</span></span></a>
+    <button id="new-chat" class="new-chat"><span>＋</span> 新建对话</button>
+    <div class="nav-label">工作空间</div>
+    <div class="nav-active"><span>◉</span> 知识问答</div>
+    <div class="library"><span class="library-icon">▤</span><div>企业知识库<small>8 份文档 · 32 个知识片段</small></div><span class="live-dot"></span></div>
+    <div class="sidebar-bottom"><span class="avatar">星</span><div>星映科技<small>合成资料 · 演示工作空间</small></div></div>
+  </aside>
+  <main>
+    <header><div>知识问答 <span class="header-slash">/</span> <span class="muted">企业知识助手</span></div><span id="connection" class="connection">正在连接</span></header>
+    <div id="scroll-area" class="scroll-area">
+      <section id="welcome" class="welcome">
+        <div class="eyebrow"><span class="live-dot"></span> 从知识中找到依据</div>
+        <h1>你的工作问题，<br><span>让知识来回答。</span></h1>
+        <p>查询公司制度与产品规则。每个回答都有原文可查，<br class="desktop-break">遇到资料缺口或规则冲突，我们会清楚告诉你。</p>
+        <div class="suggestions">
+          <button data-question="团队标准版最多支持几名活跃成员？"><span class="topic">产品协作 <span>↗</span></span><strong>标准版能邀请多少人？</strong><small>了解成员数量与适用范围</small></button>
+          <button data-question="公司员工费用报销最晚多少天内提交？"><span class="topic">财务制度 <span>↗</span></span><strong>报销最晚什么时候提交？</strong><small>核对制度与补充通知</small></button>
+          <button data-question="企业 API 开通权限应该由谁申请？"><span class="topic">开发者支持 <span>↗</span></span><strong>谁可以申请 API 权限？</strong><small>查看开通流程与申请资格</small></button>
+        </div>
+        <div class="source-note"><span>✓ 原文引用</span><span>✓ 范围核对</span><span>✓ 冲突说明</span></div>
+      </section>
+      <section id="messages" class="messages" aria-label="对话记录" aria-live="polite"></section>
+    </div>
+    <div class="composer-wrap">
+      <div id="error" class="error" role="alert" hidden></div>
+      <form id="question-form" class="composer">
+        <label for="question" class="sr-only">输入你的问题</label>
+        <textarea id="question" rows="2" maxlength="4000" placeholder="问问制度、产品规则，或接着追问…"></textarea>
+        <div class="composer-bottom"><span id="composer-hint"><span class="live-dot"></span> 基于企业知识库回答</span><button id="send" type="submit" aria-label="发送问题">↑</button></div>
+      </form>
+      <p class="footer-note">资料为虚构的合成数据，仅供演示。重要事项请核对引用原文。</p>
+    </div>
+  </main>
+</body>
+</html>
+
